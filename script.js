@@ -1,35 +1,73 @@
-# Kyle Young Engineering Portfolio
+'use strict';
 
-Static portfolio website built with HTML, CSS, and JavaScript. Designed for free hosting on GitHub Pages or Cloudflare Pages.
+// Sticky nav state + active section highlight
+(function initNav() {
+  const nav = document.getElementById('siteNav');
+  const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
 
-## Files
+  function update() {
+    nav.classList.toggle('scrolled', window.scrollY > 16);
+    let current = sections[0]?.id || '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.id;
+    });
+    links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
+  }
 
-- `index.html` — all page content and entries
-- `style.css` — layout, typography, responsive design, and image styling
-- `script.js` — mobile nav, reveal animations, active nav links, and image fallbacks
-- `images/` — add project photos here
-- `resume.pdf` — add your resume PDF with this exact filename
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
 
-## Image filenames already referenced
+// Mobile nav
+(function initMobileNav() {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
 
-Add images using these exact names if you want them to appear automatically:
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
 
-- `images/headshot.jpg` — hero headshot next to the title
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
 
-- `images/bfr-shock-packaging.jpg`
-- `images/bellcrank-optimization.jpg`
-- `images/anti-roll-bar-fixture.jpg`
-- `images/csf-flow-analysis.jpg`
-- `images/sf-unity-shooter.jpg`
-- `images/novelforge-products.jpg`
+// Reveal animations
+(function initReveal() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targets = document.querySelectorAll('.reveal');
+  if (prefersReduced) {
+    targets.forEach(target => target.classList.add('visible'));
+    return;
+  }
 
-If an image is missing, the site shows a clean placeholder instead of a broken image icon.
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
 
-## GitHub Pages
+  targets.forEach(target => observer.observe(target));
+})();
 
-Upload all files to the root of your GitHub repository, then go to:
-
-`Settings -> Pages -> Deploy from a branch -> main -> /root -> Save`
-
-
-Latest update: removed the airspeed sensor, microfluidic-scale manufacturing exploration, and Pilipinos in Engineering; updated LinkedIn to https://www.linkedin.com/in/kyoung28; kept BFR/SF Unity under Leadership; and replaced the hero Portfolio Focus card with a headshot panel.
+// Replace missing images with clean placeholders so the site never shows broken icons.
+(function initImageFallbacks() {
+  document.querySelectorAll('img[data-fallback]').forEach(img => {
+    img.addEventListener('error', () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'media-placeholder';
+      fallback.textContent = img.dataset.fallback || 'Add project image here';
+      img.replaceWith(fallback);
+    }, { once: true });
+  });
+})();
