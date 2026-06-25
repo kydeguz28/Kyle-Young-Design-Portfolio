@@ -3,6 +3,8 @@
 // Sticky nav state + active section highlight
 (function initNav() {
   const nav = document.getElementById('siteNav');
+  if (!nav) return; // Some pages (project detail pages) don't include the site nav
+
   const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
   const sections = links
     .map(link => document.querySelector(link.getAttribute('href')))
