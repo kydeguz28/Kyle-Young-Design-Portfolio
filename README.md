@@ -1,18 +1,32 @@
 # Kyle Young Engineering Portfolio
 
-Static portfolio site built with HTML, CSS, and JavaScript. It is ready for GitHub Pages or Cloudflare Pages.
+Static portfolio website built with HTML, CSS, and JavaScript. Designed for free hosting on GitHub Pages or Cloudflare Pages.
 
 ## Files
-- `index.html` — main site content
-- `style.css` — visual styling
-- `script.js` — animations, mobile nav, contact form mailto behavior
-- `resume.pdf` — add your resume PDF with this exact filename before publishing
 
-## Before publishing
-1. Add your real resume as `resume.pdf` in this folder.
-2. Add image assets in an `/images` folder if you want project visuals.
-3. Double-check the LinkedIn and GitHub URLs in the contact section.
-4. Replace the email if you prefer a different public contact email.
+- `index.html` — all page content and entries
+- `style.css` — layout, typography, responsive design, and image styling
+- `script.js` — mobile nav, reveal animations, active nav links, and image fallbacks
+- `images/` — add project photos here
+- `resume.pdf` — add your resume PDF with this exact filename
 
-## Free deployment
-Upload these files to a GitHub repo, then enable GitHub Pages from `Settings > Pages > Deploy from a branch > main > /root`.
+## Image filenames already referenced
+
+Add images using these exact names if you want them to appear automatically:
+
+- `images/bfr-shock-packaging.jpg`
+- `images/bellcrank-optimization.jpg`
+- `images/airspeed-sensor.jpg`
+- `images/anti-roll-bar-fixture.jpg`
+- `images/csf-flow-analysis.jpg`
+- `images/sf-unity-shooter.jpg`
+- `images/novelforge-products.jpg`
+- `images/microfluidic-printing.jpg`
+
+If an image is missing, the site shows a clean placeholder instead of a broken image icon.
+
+## GitHub Pages
+
+Upload all files to the root of your GitHub repository, then go to:
+
+`Settings -> Pages -> Deploy from a branch -> main -> /root -> Save`
