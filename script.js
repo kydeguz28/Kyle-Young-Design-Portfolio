@@ -21,6 +21,9 @@
   update();
 })();
 
+// Remove the `no-js` marker so CSS knows JS is available and animations can run
+document.documentElement.classList.remove('no-js');
+
 // Mobile nav
 (function initMobileNav() {
   const toggle = document.getElementById('navToggle');
