@@ -189,8 +189,7 @@ img { max-width: 100%; display: block; }
   padding: 28px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 360px;
+  justify-content: flex-start;
   background:
     linear-gradient(135deg, rgba(255,253,248,0.92), rgba(255,253,248,0.70)),
     repeating-linear-gradient(45deg, transparent 0 12px, rgba(180,101,39,0.10) 12px 13px);
