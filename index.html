@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyle Young — Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Kyle Young — UCLA Mechanical Engineering student focused on mechanical design, Formula SAE, robotics, research, manufacturing, and product development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KY<span class="accent">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="reticleCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="mono">&lt;mechanical engineer&gt;</span></p>
+      <h1 class="hero-name">Kyle<br /><span class="accent">Young</span></h1>
+      <p class="hero-sub">Mechanical Engineering · UCLA</p>
+      <p class="hero-desc">I design, build, test, and iterate real hardware — from Formula SAE suspension systems and competition robots to research tools, manufacturing fixtures, and 3D printed products.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">3.83</span>
+        <span class="stat-label">GPA · UCLA ME</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Students Mentored</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">400+</span>
+        <span class="stat-label">NovelForge Orders</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span class="mono">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;about&gt;</span></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">From concept<br />to hardware.</h2>
+          <p>I'm a UCLA Mechanical Engineering student interested in the full engineering loop: defining a problem, building a model, designing the hardware, manufacturing the parts, testing the result, and improving the next version.</p>
+          <p>My work spans motorsport engineering with <span class="accent-text">Bruin Formula Racing</span>, aerospace manufacturing experience, MEMS hardware, biomedical flow research, robotics leadership, and product design through my 3D printing business.</p>
+          <p>I like projects where analysis and fabrication meet — suspension geometry that has to package cleanly, fixtures that have to survive real use, sensors that need to validate data, and robots that have to work on the field when the clock starts.</p>
+          <div class="about-tags">
+            <span class="tag">Mechanical Design</span>
+            <span class="tag">Formula SAE</span>
+            <span class="tag">Robotics</span>
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Research</span>
+            <span class="tag">Product Development</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="card-row">
+              <span class="card-label mono">University</span>
+              <span class="card-value">UCLA</span>
+            </div>
+            <div class="card-row">
+              <span class="card-label mono">Degree</span>
+              <span class="card-value">B.S. Mechanical Engineering</span>
+            </div>
+            <div class="card-row">
+              <span class="card-label mono">Academic</span>
+              <span class="card-value">3.83 GPA · Dean's Honor List</span>
+            </div>
+            <div class="card-row">
+              <span class="card-label mono">Scholarships</span>
+              <span class="card-value">Samueli Foundation Centennial Scholar</span>
+            </div>
+            <div class="card-row">
+              <span class="card-label mono">Focus</span>
+              <span class="card-value">Design · Manufacturing · Testing</span>
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-row">
+              <span class="card-label mono">Seeking</span>
+              <span class="card-value available">Mechanical design / product / aerospace roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;experience&gt;</span></div>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">Bruin Formula Racing</span>
+                <span class="tc-badge">Formula SAE</span>
+              </div>
+              <span class="tc-date mono">UCLA</span>
+            </div>
+            <h3 class="tc-role">Shock Packaging Responsible Engineer · Suspension &amp; Aerodynamics</h3>
+            <p class="tc-desc">Currently leading shock packaging for Bruin Formula Racing, taking the subsystem from layout constraints to manufactured hardware. Previously contributed to suspension and aerodynamics through engineering drawings, machining, validation fixtures, airspeed sensor work, and vehicle packaging decisions.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">Suspension</span>
+              <span class="tag-sm">Vehicle Dynamics</span>
+              <span class="tag-sm">CAD</span>
+              <span class="tag-sm">FEA</span>
+              <span class="tag-sm">Machining</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">Northrop Grumman</span>
+                <span class="tc-badge">Aerospace Manufacturing</span>
+              </div>
+              <span class="tc-date mono">Internship</span>
+            </div>
+            <h3 class="tc-role">Engineering Intern · Module Assembly &amp; Test</h3>
+            <p class="tc-desc">Worked on manufacturing support hardware and validation in a cleanroom production environment. Designed a semi-automated cleanroom support robot, supported technician workflow improvements, reduced downtime through better process support, and produced documentation for aerospace manufacturing operations.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">Cleanroom Hardware</span>
+              <span class="tag-sm">Validation</span>
+              <span class="tag-sm">DFM</span>
+              <span class="tag-sm">Manufacturing Docs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">Atomic Machines</span>
+                <span class="tc-badge">MEMS Hardware</span>
+              </div>
+              <span class="tc-date mono">Internship</span>
+            </div>
+            <h3 class="tc-role">AMP Engineering Intern</h3>
+            <p class="tc-desc">Designed and improved hardware used in MEMS manufacturing workflows. Worked on precision fixtures, subsystem reliability, calibration support, and Python automation to help make complex manufacturing equipment more consistent and easier to operate.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">MEMS</span>
+              <span class="tag-sm">Precision Fixtures</span>
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Reliability</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">Complex Fluids &amp; Interfacial Physics Lab</span>
+                <span class="tc-badge">UCLA Research</span>
+              </div>
+              <span class="tc-date mono">Research</span>
+            </div>
+            <h3 class="tc-role">Undergraduate Research Assistant</h3>
+            <p class="tc-desc">Analyze cerebrospinal fluid flow data to support a noninvasive method for evaluating whether Chiari malformation surgery improved patient flow dynamics. Develop Python scripts to extract, clean, compare, and visualize physiological flow features in collaboration with the David Geffen School of Medicine at UCLA.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Signal Processing</span>
+              <span class="tag-sm">CSF Flow</span>
+              <span class="tag-sm">Biomedical Data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">SF Unity Robotics</span>
+                <span class="tc-badge">FIRST Robotics</span>
+              </div>
+              <span class="tc-date mono">Founder</span>
+            </div>
+            <h3 class="tc-role">Founder &amp; Captain · FRC Team 9038</h3>
+            <p class="tc-desc">Founded and captained San Francisco's only independent FIRST Robotics Competition team. Led the design, manufacturing, and integration of two 125+ lb competition robots built under six-week build seasons, mentored 50+ students, raised $55k+ through grants, and competed at the 2023 World Championship in Houston.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">Robot Design</span>
+              <span class="tag-sm">Leadership</span>
+              <span class="tag-sm">Manufacturing</span>
+              <span class="tag-sm">Subsystem Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-marker"><div class="marker-dot"></div></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-meta">
+                <span class="tc-company">NovelForge</span>
+                <span class="tc-badge">Product Design</span>
+              </div>
+              <span class="tc-date mono">Founder</span>
+            </div>
+            <h3 class="tc-role">Founder · 3D Printed Products</h3>
+            <p class="tc-desc">Started a small product business designing and selling custom 3D printed home accessories. Managed CAD, prototyping, manufacturing, customer feedback, listings, fulfillment, and quality control across 400+ orders and $3k+ in revenue while earning Etsy Star Seller for three consecutive years.</p>
+            <div class="tc-tags">
+              <span class="tag-sm">3D Printing</span>
+              <span class="tag-sm">CAD</span>
+              <span class="tag-sm">Small Business</span>
+              <span class="tag-sm">Product Iteration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;projects&gt;</span></div>
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">01</div>
+          <div class="project-body">
+            <h3 class="project-title">Formula SAE Shock Packaging</h3>
+            <p class="project-desc">Packaging shocks inside a tightly constrained Formula SAE vehicle while balancing suspension geometry, driver ergonomics, manufacturability, serviceability, and integration with surrounding chassis and aero systems.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Role</span><span class="spec-value">Responsible Engineer</span></div>
+              <div class="spec-item"><span class="spec-label mono">Output</span><span class="spec-value">CAD · Drawings · Hardware</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">SolidWorks</span><span class="tag-sm">Suspension</span><span class="tag-sm">Packaging</span><span class="tag-sm">Manufacturing</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">02</div>
+          <div class="project-body">
+            <h3 class="project-title">Bellcrank Optimization</h3>
+            <p class="project-desc">Iterated a Formula SAE bellcrank design through geometry constraints, force paths, FEA, topology-inspired material removal, and manufacturability checks to create a lighter, cleaner suspension component.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Methods</span><span class="spec-value">FEA + Design Iteration</span></div>
+              <div class="spec-item"><span class="spec-label mono">Focus</span><span class="spec-value">Strength · Weight · Packaging</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">FEA</span><span class="tag-sm">Topology</span><span class="tag-sm">Suspension</span><span class="tag-sm">DFM</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">03</div>
+          <div class="project-body">
+            <h3 class="project-title">Airspeed Sensor</h3>
+            <p class="project-desc">Built a pitot-tube-based airspeed sensor for vehicle testing, connecting a physical sensing package to data collection so aerodynamic assumptions could be checked against real-world conditions.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">System</span><span class="spec-value">Pitot Tube</span></div>
+              <div class="spec-item"><span class="spec-label mono">Purpose</span><span class="spec-value">Track Validation</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">Sensors</span><span class="tag-sm">Testing</span><span class="tag-sm">Aerodynamics</span><span class="tag-sm">Data</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">04</div>
+          <div class="project-body">
+            <h3 class="project-title">Anti-Roll Bar Test Fixture</h3>
+            <p class="project-desc">Designed and built a validation fixture to test anti-roll bar behavior and support more informed suspension tuning decisions through measured stiffness and repeatable loading.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Type</span><span class="spec-value">Validation Fixture</span></div>
+              <div class="spec-item"><span class="spec-label mono">Use</span><span class="spec-value">Suspension Testing</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">Fixture Design</span><span class="tag-sm">Machining</span><span class="tag-sm">Testing</span><span class="tag-sm">BFR</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">05</div>
+          <div class="project-body">
+            <h3 class="project-title">Cleanroom Support Robot</h3>
+            <p class="project-desc">Designed a semi-automated support robot concept for cleanroom manufacturing operations, focusing on technician workflow, repeatable handling, reduced downtime, and reduced foreign object debris risk.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Context</span><span class="spec-value">Aerospace Manufacturing</span></div>
+              <div class="spec-item"><span class="spec-label mono">Focus</span><span class="spec-value">Workflow + Reliability</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">Robotics</span><span class="tag-sm">Cleanroom</span><span class="tag-sm">Validation</span><span class="tag-sm">DFM</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">06</div>
+          <div class="project-body">
+            <h3 class="project-title">MEMS Manufacturing Hardware</h3>
+            <p class="project-desc">Designed precision hardware and fixtures for MEMS manufacturing workflows, with emphasis on calibration, subsystem reliability, alignment, and making complex equipment easier to use consistently.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Domain</span><span class="spec-value">MEMS</span></div>
+              <div class="spec-item"><span class="spec-label mono">Tools</span><span class="spec-value">CAD · Python · Testing</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">Precision Design</span><span class="tag-sm">Fixtures</span><span class="tag-sm">Automation</span><span class="tag-sm">Manufacturing</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">07</div>
+          <div class="project-body">
+            <h3 class="project-title">CSF Flow Analysis</h3>
+            <p class="project-desc">Developed Python analysis scripts for physiological flow datasets, extracting and comparing features that may help evaluate whether Chiari malformation surgery improved patient flow dynamics.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Data</span><span class="spec-value">Physiological Flow</span></div>
+              <div class="spec-item"><span class="spec-label mono">Stack</span><span class="spec-value">Python · Signal Processing</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">Research</span><span class="tag-sm">Python</span><span class="tag-sm">Biomedical</span><span class="tag-sm">Visualization</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">08</div>
+          <div class="project-body">
+            <h3 class="project-title">SF Unity Robotics</h3>
+            <p class="project-desc">Built an independent robotics organization from the ground up, leading the mechanical design team and whole-robot integration. The project I am proudest of was the shooter mechanism, where accuracy, packaging, reliability, and manufacturability all had to come together.</p>
+            <div class="project-specs">
+              <div class="spec-item"><span class="spec-label mono">Robots</span><span class="spec-value">2 × 125+ lb</span></div>
+              <div class="spec-item"><span class="spec-label mono">Result</span><span class="spec-value">2023 World Championship</span></div>
+            </div>
+            <div class="tc-tags"><span class="tag-sm">FRC</span><span class="tag-sm">Shooter Design</span><span class="tag-sm">Integration</span><span class="tag-sm">Leadership</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;skills&gt;</span></div>
+      <h2 class="section-title">Technical Toolkit</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group" data-reveal>
+          <div class="skill-group-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="skill-group-title">CAD &amp; Design</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">SolidWorks</span><div class="skill-bar"><div class="skill-fill" style="--pct: 95%"></div></div></li>
+            <li><span class="skill-name">Fusion 360</span><div class="skill-bar"><div class="skill-fill" style="--pct: 88%"></div></div></li>
+            <li><span class="skill-name">Creo</span><div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div></li>
+            <li><span class="skill-name">GD&amp;T / Drawings</span><div class="skill-bar"><div class="skill-fill" style="--pct: 86%"></div></div></li>
+            <li><span class="skill-name">Design for Manufacturing</span><div class="skill-bar"><div class="skill-fill" style="--pct: 88%"></div></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <div class="skill-group-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3 class="skill-group-title">Analysis &amp; Testing</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">FEA</span><div class="skill-bar"><div class="skill-fill" style="--pct: 84%"></div></div></li>
+            <li><span class="skill-name">CFD</span><div class="skill-bar"><div class="skill-fill" style="--pct: 70%"></div></div></li>
+            <li><span class="skill-name">Vehicle Dynamics</span><div class="skill-bar"><div class="skill-fill" style="--pct: 82%"></div></div></li>
+            <li><span class="skill-name">Experimental Validation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 86%"></div></div></li>
+            <li><span class="skill-name">Signal Processing</span><div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <div class="skill-group-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-group-title">Programming</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--pct: 88%"></div></div></li>
+            <li><span class="skill-name">MATLAB</span><div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div></li>
+            <li><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-fill" style="--pct: 70%"></div></div></li>
+            <li><span class="skill-name">Data Visualization</span><div class="skill-bar"><div class="skill-fill" style="--pct: 84%"></div></div></li>
+            <li><span class="skill-name">Automation Scripts</span><div class="skill-bar"><div class="skill-fill" style="--pct: 82%"></div></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <div class="skill-group-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="skill-group-title">Manufacturing</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Manual Mill / Lathe</span><div class="skill-bar"><div class="skill-fill" style="--pct: 86%"></div></div></li>
+            <li><span class="skill-name">CNC / CAM</span><div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div></li>
+            <li><span class="skill-name">3D Printing</span><div class="skill-bar"><div class="skill-fill" style="--pct: 94%"></div></div></li>
+            <li><span class="skill-name">Laser / Waterjet</span><div class="skill-bar"><div class="skill-fill" style="--pct: 84%"></div></div></li>
+            <li><span class="skill-name">Assembly &amp; Metrology</span><div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="certs-row" data-reveal>
+        <span class="cert-label mono">Also</span>
+        <div class="certs">
+          <span class="cert-badge">Rapid Prototyping</span>
+          <span class="cert-badge">Technical Leadership</span>
+          <span class="cert-badge">Subsystem Integration</span>
+          <span class="cert-badge">Research Collaboration</span>
+          <span class="cert-badge">Product Iteration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LEADERSHIP -->
+  <section id="leadership" class="section">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;leadership&gt;</span></div>
+      <h2 class="section-title">Teams, products,<br />and community.</h2>
+      <div class="projects-grid">
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">L01</div>
+          <div class="project-body">
+            <h3 class="project-title">SF Unity Robotics</h3>
+            <p class="project-desc">Founded an independent robotics team because I wanted students outside traditional school programs to have access to serious engineering. I helped build the team culture, led mechanical design, mentored students, raised funding, and guided the group through the pressure of real competition seasons.</p>
+            <div class="tc-tags"><span class="tag-sm">Founder</span><span class="tag-sm">Mentorship</span><span class="tag-sm">Fundraising</span><span class="tag-sm">Team Building</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">L02</div>
+          <div class="project-body">
+            <h3 class="project-title">Bruin Formula Racing</h3>
+            <p class="project-desc">Work inside a student-led engineering team where design decisions have to survive manufacturing, assembly, cost, timing, and testing. My role has grown from contributing parts and validation projects to owning shock packaging as a responsible engineer.</p>
+            <div class="tc-tags"><span class="tag-sm">Responsible Engineer</span><span class="tag-sm">Subsystem Ownership</span><span class="tag-sm">Collaboration</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">L03</div>
+          <div class="project-body">
+            <h3 class="project-title">NovelForge</h3>
+            <p class="project-desc">Turned CAD and 3D printing into a real product pipeline: design, print, list, sell, package, ship, listen to feedback, then improve the product. It taught me that engineering quality is not just whether something works once — it is whether it works repeatedly for customers.</p>
+            <div class="tc-tags"><span class="tag-sm">Founder</span><span class="tag-sm">Product Design</span><span class="tag-sm">Customer Feedback</span></div>
+          </div>
+        </div>
+
+        <div class="project-card" data-reveal>
+          <div class="project-number mono">L04</div>
+          <div class="project-body">
+            <h3 class="project-title">Pilipinos in Engineering + Foundations Choreography</h3>
+            <p class="project-desc">Outside technical work, I stay involved in communities that build identity, creativity, and belonging. These spaces have shaped how I lead: with communication, trust, discipline, and the ability to move between analytical and creative ways of thinking.</p>
+            <div class="tc-tags"><span class="tag-sm">Community</span><span class="tag-sm">Creative Leadership</span><span class="tag-sm">Collaboration</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="section">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;resume&gt;</span></div>
+      <div class="resume-inner">
+        <div class="resume-text">
+          <h2 class="section-title">Resume</h2>
+          <p>Download the full PDF for the complete version of my education, work experience, technical projects, leadership, and skills.</p>
+          <div class="resume-actions">
+            <a href="resume.pdf" download class="btn-primary" id="resumeDownload">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download PDF
+            </a>
+            <a href="mailto:kyleyoung@g.ucla.edu?subject=Portfolio Inquiry" class="btn-ghost">Email Me</a>
+          </div>
+        </div>
+        <div class="resume-preview">
+          <div class="resume-mock">
+            <div class="rm-header"><div class="rm-name">Kyle Young</div><div class="rm-sub mono">Mechanical Engineering · UCLA</div></div>
+            <div class="rm-section"><div class="rm-section-title mono">Experience</div><div class="rm-line wide"></div><div class="rm-line med"></div><div class="rm-line short"></div></div>
+            <div class="rm-section"><div class="rm-section-title mono">Projects</div><div class="rm-line wide"></div><div class="rm-line med"></div><div class="rm-line short"></div></div>
+            <div class="rm-section"><div class="rm-section-title mono">Skills</div><div class="rm-chips"><div class="rm-chip"></div><div class="rm-chip"></div><div class="rm-chip"></div><div class="rm-chip short-chip"></div></div></div>
+            <div class="rm-overlay"><a href="resume.pdf" download class="rm-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-label"><span class="mono">&lt;contact&gt;</span></div>
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h2 class="section-title">Let's build<br />something.</h2>
+          <p>I'm interested in mechanical design, product development, aerospace, robotics, vehicle systems, manufacturing, and research-driven engineering.</p>
+          <p>Reach out for opportunities, collaborations, or just to talk through a cool engineering problem.</p>
+          <div class="contact-links">
+            <a href="mailto:kyleyoung@g.ucla.edu" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              kyleyoung@g.ucla.edu
+            </a>
+            <a href="https://www.linkedin.com/in/kyledeguz/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/kyledeguz" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group"><label class="form-label mono" for="name">Name</label><input type="text" id="name" name="name" class="form-input" placeholder="Your name" autocomplete="name" /></div>
+          <div class="form-group"><label class="form-label mono" for="email">Email</label><input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" /></div>
+          <div class="form-group"><label class="form-label mono" for="subject">Subject</label><input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?" /></div>
+          <div class="form-group"><label class="form-label mono" for="message">Message</label><textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project or opportunity..."></textarea></div>
+          <button type="submit" class="btn-primary form-submit"><span class="submit-text">Send Message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+          <p class="form-note mono" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left"><span class="nav-logo">KY<span class="accent">.</span></span><p class="footer-sub mono">Kyle Young · Mechanical Engineering Portfolio</p></div>
+        <div class="footer-center mono">Built with HTML · CSS · JS · Hosted free on GitHub Pages.</div>
+        <div class="footer-right mono"><a href="#hero">Back to top ↑</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
