@@ -246,6 +246,12 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
+.headshot-credit {
+  margin: 12px 0 0;
+  color: var(--soft);
+  font-size: 0.85rem;
+}
+
 .section {
   max-width: var(--max);
   margin: 0 auto;
