@@ -421,6 +421,18 @@ img { max-width: 100%; display: block; }
 
 .leadership-grid .featured { grid-column: span 2; }
 
+.profile-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+.profile-card .tags {
+  margin-top: 4px;
+}
+
 .contact-card {
   border-radius: calc(var(--radius) + 8px);
   padding: clamp(26px, 5vw, 54px);
@@ -439,6 +451,17 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 .site-footer a { color: var(--accent); font-weight: 800; }
+.footer-copy {
+  display: grid;
+  gap: 4px;
+}
+.footer-copy p {
+  margin: 0;
+}
+.footer-copy p + p {
+  color: var(--soft);
+  font-size: 0.82rem;
+}
 
 .reveal {
   opacity: 0;
@@ -514,6 +537,7 @@ img { max-width: 100%; display: block; }
   }
   .hero-panel { min-height: auto; gap: 18px; }
   .leadership-grid .featured { grid-column: auto; }
+  .profile-grid { grid-template-columns: 1fr; }
   .timeline-date { padding-top: 0; }
 }
 
