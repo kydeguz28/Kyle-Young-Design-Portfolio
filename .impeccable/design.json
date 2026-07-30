@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-30T00:00:00-07:00",
+  "title": "Design System: Kyle Young Engineering Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f4f0e8", "tonalRamp": ["oklch(18% 0.015 80)", "oklch(30% 0.015 80)", "oklch(44% 0.015 80)", "oklch(58% 0.015 80)", "oklch(72% 0.015 80)", "oklch(84% 0.015 80)", "#f4f0e8", "#fffdf8"] },
+      "ink": { "role": "primary", "displayName": "Ink", "canonical": "#111315", "tonalRamp": ["#111315", "#202326", "oklch(34% 0.01 250)", "oklch(48% 0.01 250)", "oklch(62% 0.01 250)", "oklch(76% 0.01 250)", "oklch(88% 0.01 250)", "oklch(96% 0.01 250)"] },
+      "ucla-blue-muted": { "role": "secondary", "displayName": "Muted UCLA Blue", "canonical": "#315f7c", "tonalRamp": ["oklch(18% 0.05 235)", "#17384e", "#315f7c", "oklch(52% 0.07 235)", "oklch(65% 0.06 235)", "oklch(78% 0.045 235)", "oklch(88% 0.028 235)", "oklch(96% 0.015 235)"] },
+      "copper-proof": { "role": "tertiary", "displayName": "Copper Proof", "canonical": "#b46527", "tonalRamp": ["oklch(18% 0.07 55)", "oklch(30% 0.09 55)", "oklch(42% 0.11 55)", "oklch(52% 0.12 55)", "#b46527", "oklch(68% 0.11 55)", "oklch(82% 0.08 55)", "oklch(94% 0.04 55)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Monumental Display", "purpose": "Homepage identity and case-study titles." },
+      "headline": { "displayName": "Editorial Headline", "purpose": "Major section transitions." },
+      "title": { "displayName": "Project Title", "purpose": "Project previews and timeline entries." },
+      "body": { "displayName": "Engineering Prose", "purpose": "Readable case-study explanation." },
+      "label": { "displayName": "Technical Metadata", "purpose": "Project IDs, dates, tools, categories, and measurement labels." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "archive-reveal", "value": "clip-path + blur, 760ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "One restrained reveal language for major content." },
+      { "name": "media-hover", "value": "scale(1.035), 420ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Signals clickable project imagery." }
+    ],
+    "breakpoints": [
+      { "name": "desktop-adjust", "value": "1080px" },
+      { "name": "tablet-stack", "value": "900px" },
+      { "name": "mobile-nav", "value": "720px" },
+      { "name": "small-mobile", "value": "430px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hard-edged ink CTA for the primary action.",
+      "html": "<button class=\"ds-btn-primary\">View selected work</button>",
+      "css": ".ds-btn-primary { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #111315; background: #111315; color: #fffdf8; font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 900; } .ds-btn-primary:hover { background: #17384e; border-color: #17384e; } .ds-btn-primary:focus-visible { outline: 3px solid rgba(180, 101, 39, 0.58); outline-offset: 4px; }"
+    },
+    {
+      "name": "Archive Row",
+      "kind": "custom",
+      "refersTo": "archive-row",
+      "description": "Compact numbered project index row.",
+      "html": "<a class=\"ds-index-row\" href=\"#\"><span>05</span><strong>Phoenix 2024</strong><em>FRC Crescendo robot / subsystem integration</em></a>",
+      "css": ".ds-index-row { display: grid; grid-template-columns: 52px minmax(180px, .32fr) 1fr; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid rgba(17,19,21,.18); color: #111315; text-decoration: none; } .ds-index-row span { color: #315f7c; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .72rem; font-weight: 800; } .ds-index-row strong { font-family: Archivo, system-ui, sans-serif; font-size: 1.16rem; line-height: 1.1; } .ds-index-row em { color: #5b6268; font-style: normal; }"
+    },
+    {
+      "name": "Metadata Grid",
+      "kind": "custom",
+      "refersTo": "project-meta",
+      "description": "Hairline metadata cells for role, tools, dates, and outcomes.",
+      "html": "<dl class=\"ds-meta\"><div><dt>Role</dt><dd>Responsible engineer</dd></div><div><dt>Tools</dt><dd>SolidWorks, FEA</dd></div></dl>",
+      "css": ".ds-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 0; padding: 1px; background: rgba(17,19,21,.18); } .ds-meta div { padding: 12px; background: rgba(255,253,248,.72); } .ds-meta dt { color: #315f7c; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; } .ds-meta dd { margin: 6px 0 0; color: #111315; font-weight: 800; line-height: 1.25; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Editorial Engineering Archive",
+    "overview": "The portfolio is a technical publication before it is a resume. It should feel like a contemporary engineering journal and premium case-study archive: off-white paper, charcoal type, muted UCLA-blue structure, copper proof marks, visible grids, numbered projects, compact metadata, and large real artifacts.",
+    "keyCharacteristics": [
+      "Monumental Archivo display type contrasted with compact JetBrains Mono metadata.",
+      "Off-white/charcoal surfaces with muted UCLA blue as the structural accent.",
+      "Square, hairline-bounded modules instead of rounded card stacks.",
+      "Real project imagery, CAD, plots, equations, posters, and photos as primary visual anchors."
+    ],
+    "rules": [
+      { "name": "The Proof-First Color Rule", "body": "Blue and copper mark structure or evidence; they do not decorate empty space.", "section": "colors" },
+      { "name": "The Paper-and-Ink Rule", "body": "The portfolio should still work if all accent color is removed; hierarchy comes first from scale, alignment, and content.", "section": "colors" },
+      { "name": "The Mono Means Metadata Rule", "body": "Use monospaced text for IDs, categories, tools, dates, and measurement labels only.", "section": "typography" },
+      { "name": "The Hairline Archive Rule", "body": "Borders and grid seams define the system; avoid soft shadow stacks unless a control truly needs overlay behavior.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do rank project evidence visibly; the strongest work should not look like every other entry.",
+      "Do use actual CAD, plots, equations, posters, and hardware photos as major visual anchors.",
+      "Do preserve factual uncertainty by labeling content gaps instead of inventing numbers or outcomes.",
+      "Do keep project pages structured around contribution, process, evidence, outcome, and reflection."
+    ],
+    "donts": [
+      "Don't use generic rounded portfolio cards, glass panels, colorful icon grids, or decorative gradients.",
+      "Don't bury case-study links under equal card stacks.",
+      "Don't use monospaced text as technical costume for ordinary prose.",
+      "Don't invent metrics, tools, dates, responsibilities, or research outcomes."
+    ]
+  }
+}

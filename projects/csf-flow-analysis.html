@@ -3,50 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSF Flow Analysis — Kyle Young</title>
-  <meta name="description" content="Kyle Young — CSF flow analysis for biomedical research." />
+  <title>CSF Flow Analysis - Kyle Young</title>
+  <meta name="description" content="Case study: Python workflow for cerebrospinal-fluid flow analysis in Chiari malformation surgical-outcome research." />
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
-  <a class="project-topbar" href="../index.html#technical-projects">← Back to projects</a>
-  <main class="section about-section">
-    <div class="section-heading reveal">
-      <p class="section-kicker">Biomedical Research</p>
-      <h2>CSF Flow Analysis</h2>
-    </div>
-    <div class="about-copy reveal">
-      <p>
-        Built Python workflows to extract, clean, compare, and visualize cerebrospinal fluid (CSF) flow features from
-        medical imaging and physiological datasets. The project supported research into noninvasive assessment of
-        Chiari malformation surgical outcomes.
-      </p>
-      <p>
-        I developed a reproducible pipeline to import raw flow data, remove noise, normalize metrics across subjects,
-        and compute derived features such as peak velocity, waveform shape, and pulsatility. The analysis was designed
-        to be transparent and repeatable for the research team.
-      </p>
-      <p>
-        My visualizations translated complex fluid dynamics into intuitive comparisons between preoperative and
-        postoperative cases, helping clinicians and researchers identify meaningful changes and improve surgical
-        outcome assessment.
-      </p>
-    </div>
+<body class="case-page theme-csf">
+  <nav class="project-topbar" aria-label="Project navigation">
+    <a href="../index.html#work">Back to work index</a>
+    <a href="../YoungKyle_Resume.pdf" download>Resume</a>
+  </nav>
 
-    <div class="media-section reveal">
-      <h3>Analysis Workflow</h3>
-      <p>
-        Below is a snapshot of the core workflow used to process and compare CSF flow data. Repository access is not
-        currently published from this portfolio, so this page shows only the verified project artifact on hand.
-      </p>
-      <div class="media-container">
-        <img src="../images/CSF1.png" alt="Python workflow for CSF flow analysis" />
+  <main>
+    <header class="case-hero">
+      <div>
+        <p class="kicker">Project 03 / Biomedical flow research</p>
+        <h1>CSF Flow Analysis</h1>
+        <p class="case-summary">A Python workflow for extracting, cleaning, comparing, and visualizing cerebrospinal-fluid flow features from medical imaging and physiological datasets.</p>
       </div>
-    </div>
+      <dl class="project-meta">
+        <div><dt>Role</dt><dd>Pipeline, cleaning, visualization</dd></div>
+        <div><dt>Research area</dt><dd>Chiari malformation outcome assessment</dd></div>
+        <div><dt>Tools</dt><dd>Python workflow</dd></div>
+        <div><dt>Features</dt><dd>Peak velocity, waveform shape, pulsatility</dd></div>
+      </dl>
+      <figure class="case-hero-figure reveal">
+        <img src="../images/csf-flow-analysis.jpg" alt="CSF flow analysis visualization" />
+        <figcaption class="figure-caption">Biomedical data made legible through repeatable processing and comparison.</figcaption>
+      </figure>
+    </header>
+
+    <section class="case-section">
+      <div><p class="kicker">Context</p><h2>Making physiological flow comparable.</h2></div>
+      <div class="case-copy reveal">
+        <p>The research needed transparent analysis of CSF flow features so preoperative and postoperative cases could be compared consistently. The challenge was to clean and normalize complex flow data without hiding the processing steps from the research team.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Contribution</p><h2>Reproducible analysis, not black-box plots.</h2></div>
+      <div class="case-copy reveal">
+        <p>Kyle developed a reproducible pipeline to import raw flow data, remove noise, normalize metrics across subjects, compute derived features, and generate visual comparisons. The goal was clarity: researchers should be able to trace how each result was produced.</p>
+        <aside class="engineering-callout">
+          <span>Individual contribution</span>
+          <strong>Pipeline, cleaning, derived features, and visual comparison outputs.</strong>
+          <p>The portfolio does not publish the dataset or repository, so the case study keeps the evidence boundary explicit.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Process</p><h2>From raw signal to clinical comparison.</h2></div>
+      <div class="case-copy reveal">
+        <div class="process-timeline">
+          <div class="process-step"><span>01</span><div><strong>Import</strong><p>Bring medical imaging and physiological flow datasets into a repeatable Python workflow.</p></div></div>
+          <div class="process-step"><span>02</span><div><strong>Clean</strong><p>Remove noise and prepare comparable signals for feature extraction.</p></div></div>
+          <div class="process-step"><span>03</span><div><strong>Normalize</strong><p>Align metrics across subjects so changes can be interpreted more consistently.</p></div></div>
+          <div class="process-step"><span>04</span><div><strong>Visualize</strong><p>Translate waveform behavior into comparisons that clinicians and researchers can inspect.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Technical evidence</p><h2>Workflow artifact.</h2></div>
+      <div class="case-copy reveal">
+        <p>Repository access is not published from this portfolio, so this case study shows only verified artifacts already present in the site.</p>
+      </div>
+      <div class="figure-grid reveal">
+        <figure class="technical-figure"><img src="../images/CSF1.png" alt="Python workflow and plotted output for CSF flow analysis" loading="lazy" /><figcaption class="figure-caption">Python workflow and analysis output.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Outcome / reflection</p><h2>What changed.</h2></div>
+      <div class="case-copy reveal">
+        <p>The workflow helped translate fluid-dynamics signals into intuitive preoperative and postoperative comparisons. The most important design choice was transparency: a research tool is more useful when the team can understand the data path.</p>
+        <aside class="engineering-callout compact">
+          <span>Design decision</span>
+          <strong>Favor traceability over black-box automation.</strong>
+        </aside>
+        <p>A future portfolio update should add richer captions around the dataset structure and any confirmed validation results once Kyle can share them publicly.</p>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <a href="differential-wrist-mechanism.html">
+        <span class="project-number">Next</span>
+        <strong>Differential Wrist Mechanism</strong>
+        <span class="text-link">Continue</span>
+      </a>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <p>Kyle Young · Mechanical Engineering · UCLA</p>
-    <a href="../index.html">Back to home ↑</a>
+    <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
+    <a href="../index.html#top">Back to home</a>
   </footer>
   <script src="../script.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
+<!-- impeccable-live-end -->
 </body>
 </html>

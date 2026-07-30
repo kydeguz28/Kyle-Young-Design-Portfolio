@@ -3,80 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shock Packaging — Kyle Young</title>
-  <meta name="description" content="Kyle Young — responsible engineer for Bruin Formula Racing shock packaging." />
+  <title>Shock Packaging - Kyle Young</title>
+  <meta name="description" content="Case study: Kyle Young's Bruin Formula Racing shock packaging work across CAD, FEA, topology optimization, lug analysis, and vehicle packaging." />
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
-  <a class="project-topbar" href="../index.html#technical-projects">← Back to projects</a>
-  <main class="section about-section">
-    <div class="section-heading reveal">
-      <p class="section-kicker">Formula SAE Project</p>
-      <h2>Shock Packaging</h2>
-    </div>
-    <div class="about-copy reveal">
-      <p>
-        As the responsible engineer for Bruin Formula Racing shock packaging, I drove the subsystem from concept to
-        production-ready hardware. The work was centered on packaging a complete shock assembly within the space
-        available around the upright while running kinematic analysis to hit vehicle dynamics motion ratio targets,
-        preserving steering travel, brake clearance, and serviceability.
-      </p>
-      <p>
-        I built detailed SolidWorks models of the bellcranks, shocks, and mounting, then iterated to avoid interferences with other subsystems and hit our motion ratio within 5% deviation. The design also incorporated
-        adjustable damping access and durable hardpoints for repeated loading during dynamic events at competition. 
-      </p>
-      <p>
-        The finished package required close coordination with the chassis, drivetrain, and aerodynamics teams to ensure the
-        shock system fit the full vehicle architecture. I validated the layout with interference checks, assembly
-        walkthroughs, and design reviews before releasing drawings for machined and welded components.
-      </p>
-    </div>
+<body class="case-page theme-formula">
+  <nav class="project-topbar" aria-label="Project navigation">
+    <a href="../index.html#work">Back to work index</a>
+    <a href="../YoungKyle_Resume.pdf" download>Resume</a>
+  </nav>
 
-    <div class="media-section reveal">
-      <h3>Finite Element Analysis (FEA)</h3>
-      <p>
-        FEA simulations were performed on critical mounting brackets and load-carrying components to verify structural
-        integrity under dynamic racing loads. These analyses helped optimize bracket thickness, material selection, and
-        weld geometry to ensure durability while minimizing weight.
-      </p>
-      <div class="media-container">
-        <img src="../images/ShockPackagingFEA1.png" alt="FEA stress analysis of shock mounting brackets" />
-        <img src="../images/ShockPackagingFEA2.png" alt="FEA mesh and boundary conditions" />
-        <img src="../images/ShockPackagingFEA3.png" alt="Additional FEA analysis" />
+  <main>
+    <header class="case-hero">
+      <div>
+        <p class="kicker">Project 01 / Formula SAE suspension</p>
+        <h1>Shock Packaging</h1>
+        <p class="case-summary">Responsible-engineer work translating suspension geometry, packaging constraints, FEA, lug analysis, and design-review feedback into manufacturable Bruin Formula Racing shock hardware.</p>
       </div>
-    </div>
+      <dl class="project-meta">
+        <div><dt>Role</dt><dd>Shock Packaging Responsible Engineer</dd></div>
+        <div><dt>Team</dt><dd>Bruin Formula Racing</dd></div>
+        <div><dt>Tools</dt><dd>SolidWorks, Altair Inspire, FEA, drawings</dd></div>
+        <div><dt>Disciplines</dt><dd>Suspension, CAD, DFM, structural analysis</dd></div>
+      </dl>
+      <figure class="case-hero-figure reveal">
+        <img src="../images/bfr-shock-packaging.jpg" alt="Formula SAE shock packaging CAD and hardware context" />
+        <figcaption class="figure-caption">Primary visual artifact: suspension packaging around vehicle interfaces.</figcaption>
+      </figure>
+    </header>
 
-    <div class="media-section reveal">
-      <h3>Topology Optimization</h3>
-      <p>
-        Topology optimization in altair inspire was used to explore efficient bracket designs that maintained stiffness while reducing
-        material and weight. The analysis guided the final geometry of mounting plates and was determined by load paths through the
-        suspension structure.
-      </p>
-      <div class="media-container">
-        <img src="../images/ShockPackagingTopOp1.png" alt="Topology optimization of shock bracket" />
-        <img src="../images/ShockPackagingTopOp2.png" alt="Optimized bracket geometry" />
+    <section class="case-section">
+      <div>
+        <p class="kicker">Context</p>
+        <h2>Why the package mattered.</h2>
       </div>
-    </div>
+      <div class="case-copy reveal">
+        <p>The shock system had to fit inside the vehicle architecture without becoming a fragile afterthought. The design needed to respect upright geometry, steering travel, brake clearance, service access, and motion-ratio targets while remaining practical to fabricate and assemble.</p>
+        <p>Kyle's responsibility was to keep those constraints visible at the same time: a suspension package that looks correct in isolation is not enough if it interferes with neighboring subsystems or cannot be serviced during competition.</p>
+      </div>
+    </section>
 
-    <div class="media-section reveal">
-      <h3>Lug Analysis & Fastener Design</h3>
-      <p>
-        The shock linkage connects to the upright and control arm through welded lugs that experience complex multi-axial
-        loading during cornering and braking. Detailed analysis of lug stress concentration, fastener preload, and 
-        bearing interaction ensured these critical joints could withstand the full operational envelope without fatigue
-        cracking or slippage.
-      </p>
-      <div class="media-container">
-        <img src="../images/ShockPackagingLug1.png" alt="Lug stress concentration analysis" />
-        <img src="../images/ShockPackagingLug2.png" alt="Tab and fastener connection details" />
+    <section class="case-section">
+      <div>
+        <p class="kicker">Challenge</p>
+        <h2>Constrained geometry, real load paths.</h2>
       </div>
-    </div>
+      <div class="case-copy reveal">
+        <p>The technical problem was not simply placing a shock. The package had to preserve motion-ratio behavior, avoid interferences, create durable hardpoints, and survive repeated dynamic loading through lugs, brackets, and welded interfaces.</p>
+        <dl class="spec-grid">
+          <div><dt>Success criteria</dt><dd>Motion ratio within 5% deviation</dd></div>
+          <div><dt>Constraints</dt><dd>Steering, braking, chassis, aerodynamics, serviceability</dd></div>
+          <div><dt>Evidence</dt><dd>CAD interference checks, FEA, topology optimization, lug analysis</dd></div>
+        </dl>
+        <aside class="engineering-callout">
+          <span>Key result</span>
+          <strong>Motion-ratio target held within 5% deviation.</strong>
+          <p>That result matters because shock packaging is only valuable if it preserves the suspension behavior the vehicle model expects.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div>
+        <p class="kicker">Process</p>
+        <h2>From target to released geometry.</h2>
+      </div>
+      <div class="case-copy reveal">
+        <div class="process-timeline">
+          <div class="process-step"><span>01</span><div><strong>Requirements</strong><p>Map suspension geometry, motion-ratio needs, service access, and neighboring subsystem envelopes.</p></div></div>
+          <div class="process-step"><span>02</span><div><strong>CAD packaging</strong><p>Build detailed SolidWorks models of bellcranks, shocks, mounts, and hardpoints.</p></div></div>
+          <div class="process-step"><span>03</span><div><strong>Analysis</strong><p>Run FEA on critical mounting brackets and load-carrying components; use topology optimization to study efficient load paths.</p></div></div>
+          <div class="process-step"><span>04</span><div><strong>Review and release</strong><p>Validate layout through interference checks, assembly walkthroughs, design reviews, and drawings for machined/welded parts.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div>
+        <p class="kicker">Technical evidence</p>
+        <h2>Analysis artifacts.</h2>
+      </div>
+      <div class="case-copy reveal">
+        <p>FEA and topology studies were used as design inputs rather than decorative outputs: they helped tune bracket thickness, geometry, weld considerations, and the final load path.</p>
+        <aside class="engineering-callout compact">
+          <span>Technical decision</span>
+          <strong>Use analysis artifacts to choose geometry, not just to illustrate the finished part.</strong>
+        </aside>
+      </div>
+      <div class="figure-grid three reveal">
+        <figure class="technical-figure"><img src="../images/ShockPackagingFEA1.png" alt="FEA stress analysis for shock packaging component" loading="lazy" /><figcaption class="figure-caption">FEA stress result.</figcaption></figure>
+        <figure class="technical-figure"><img src="../images/ShockPackagingFEA2.png" alt="FEA mesh and boundary conditions for shock bracket" loading="lazy" /><figcaption class="figure-caption">Mesh and boundary conditions.</figcaption></figure>
+        <figure class="technical-figure"><img src="../images/ShockPackagingFEA3.png" alt="Additional FEA result for shock packaging" loading="lazy" /><figcaption class="figure-caption">Additional structural check.</figcaption></figure>
+      </div>
+      <div class="figure-grid reveal">
+        <figure class="technical-figure"><img src="../images/ShockPackagingTopOp1.png" alt="Topology optimization load path study" loading="lazy" /><figcaption class="figure-caption">Topology optimization study.</figcaption></figure>
+        <figure class="technical-figure"><img src="../images/ShockPackagingLug1.png" alt="Lug stress concentration analysis" loading="lazy" /><figcaption class="figure-caption">Lug and fastener analysis.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div>
+        <p class="kicker">Outcome / reflection</p>
+        <h2>What changed.</h2>
+      </div>
+      <div class="case-copy reveal">
+        <p>The final package gave the team a manufacturable shock system that fit the broader vehicle architecture and could be reviewed against analysis evidence. The work reinforced that Formula SAE design quality depends on interface ownership: the best part is not the most isolated part, it is the part that survives contact with the whole car.</p>
+        <p>Next time, Kyle would want even earlier physical fit checks and clearer comparison tables between candidate geometries so design-review decisions are easier to trace later.</p>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <a href="anti-roll-bar-test-fixture.html">
+        <span class="project-number">Next</span>
+        <strong>Anti-Roll Bar Test Fixture</strong>
+        <span class="text-link">Continue</span>
+      </a>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <p>Kyle Young · Mechanical Engineering · UCLA</p>
-    <a href="../index.html">Back to home ↑</a>
+    <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
+    <a href="../index.html#top">Back to home</a>
   </footer>
   <script src="../script.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
+<!-- impeccable-live-end -->
 </body>
 </html>

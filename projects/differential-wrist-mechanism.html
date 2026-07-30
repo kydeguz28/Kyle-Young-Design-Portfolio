@@ -3,65 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Differential Wrist Mechanism — Kyle Young</title>
-  <meta name="description" content="Kyle Young — custom differential wrist mechanism prototype for a robotic arm." />
+  <title>Differential Wrist Mechanism - Kyle Young</title>
+  <meta name="description" content="Case study: compact differential wrist prototype designed, printed, machined, and actuated by Kyle Young." />
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
-  <a class="project-topbar" href="../index.html#technical-projects">← Back to projects</a>
-  <main class="section about-section">
-    <div class="section-heading reveal">
-      <p class="section-kicker">Technical Project</p>
-      <h2>Differential Wrist Mechanism</h2>
-    </div>
-    <div class="about-copy reveal">
-      <p>
-        Designed a custom end-effector wrist prototype as part 1 of a 5/6-axis robotic arm. The CAD and prototype were
-        completed within two days, and all parts were custom 3D printed and finished on the machine shop lathe.
-      </p>
-      <p>
-        The mechanism is driven by two NEMA 17 stepper motors and controlled by an Arduino. I calculated the pulley and
-        gear ratios from scratch to create a compact differential wrist that uses a 1.25:1 reduction from power
-        transmission to output.
-      </p>
-      <p>
-        The design focuses on small form factor, torque efficiency, and precise motion control. Differential gearing
-        allowed the wrist to remain compact while providing clean stepper-based actuation and reliable output behavior.
-      </p>
-      <p>
-        The prototype includes custom printed gears and housings, integrated bearing supports, and detailed mounting
-        features for a future multi-axis arm. It demonstrates a rapid engineering cycle from CAD to physical hardware.
-      </p>
-    </div>
+<body class="case-page theme-robotics">
+  <nav class="project-topbar" aria-label="Project navigation">
+    <a href="../index.html#work">Back to work index</a>
+    <a href="../YoungKyle_Resume.pdf" download>Resume</a>
+  </nav>
 
-    <div class="media-section reveal">
-      <h3>CAD Design</h3>
-      <p>
-        Below are renderings and detailed views of the CAD model. The design shows the differential gearing arrangement,
-        stepper motor integration, and compact 3D-printable geometry optimized for the NEMA 17 actuators.
-      </p>
-      <div class="media-container">
-        <img src="../images/DiffyWrist1.png" alt="Complete CAD assembly of differential wrist" />
-        <img src="../images/DiffyWrist2.png" alt="Detailed view of gear arrangement and motor mounts" />
+  <main>
+    <header class="case-hero">
+      <div>
+        <p class="kicker">Project 04 / Robotics mechanism</p>
+        <h1>Differential Wrist Mechanism</h1>
+        <p class="case-summary">A compact end-effector wrist prototype completed in a two-day CAD-to-hardware cycle, driven by two NEMA 17 stepper motors and controlled with Arduino.</p>
       </div>
-    </div>
+      <dl class="project-meta">
+        <div><dt>Role</dt><dd>Design, ratio calculation, prototype build</dd></div>
+        <div><dt>System</dt><dd>Part 1 of a 5/6-axis robotic arm</dd></div>
+        <div><dt>Actuation</dt><dd>Two NEMA 17 steppers, Arduino control</dd></div>
+        <div><dt>Transmission</dt><dd>1.25:1 reduction</dd></div>
+      </dl>
+      <figure class="case-hero-figure reveal">
+        <img src="../images/DiffyWrist1.png" alt="CAD model of differential wrist mechanism" />
+        <figcaption class="figure-caption">CAD assembly showing compact differential gearing and motor placement.</figcaption>
+      </figure>
+    </header>
 
-    <div class="media-section reveal">
-      <h3>Assembly & Prototype</h3>
-      <p>
-        These photos document the physical prototype after 3D printing, machining, and assembly. The wrist includes
-        all custom gears, printed housings, bearing components, and stepper motor integration ready for control system
-        integration.
-      </p>
-      <div class="media-container">
-        <img src="../images/differential-wrist.jpg" alt="Assembled differential wrist mechanism" />
+    <section class="case-section">
+      <div><p class="kicker">Challenge</p><h2>Small package, real actuation.</h2></div>
+      <div class="case-copy reveal">
+        <p>The design had to make differential wrist motion compact enough for a future multi-axis arm while still leaving room for motors, gears, bearings, housings, and mounting features. The project compressed the full loop into two days: calculate, model, print, finish, assemble.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Contribution</p><h2>From ratio math to prototype.</h2></div>
+      <div class="case-copy reveal">
+        <p>Kyle calculated pulley and gear ratios from scratch, designed the CAD assembly, produced custom 3D printed components, finished parts on the machine-shop lathe, and integrated the stepper-driven layout.</p>
+        <div class="process-timeline">
+          <div class="process-step"><span>01</span><div><strong>Architecture</strong><p>Define a differential wrist layout that could support a compact robotic end effector.</p></div></div>
+          <div class="process-step"><span>02</span><div><strong>CAD</strong><p>Model gears, housings, bearing supports, motor mounting, and future arm interfaces.</p></div></div>
+          <div class="process-step"><span>03</span><div><strong>Fabrication</strong><p>3D print custom parts, finish key surfaces, and assemble the prototype.</p></div></div>
+          <div class="process-step"><span>04</span><div><strong>Integration</strong><p>Prepare the mechanism for Arduino-controlled NEMA 17 actuation.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Technical evidence</p><h2>CAD and hardware.</h2></div>
+      <div class="case-copy reveal">
+        <p>The available artifacts show the mechanism at both design and prototype stages: differential gearing arrangement, motor placement, and the physical assembled wrist.</p>
+      </div>
+      <div class="figure-grid reveal">
+        <figure class="technical-figure"><img src="../images/DiffyWrist2.png" alt="Detailed view of differential wrist gearing and motor mounts" loading="lazy" /><figcaption class="figure-caption">Gear train and motor-mount detail.</figcaption></figure>
+        <figure class="technical-figure photo"><img src="../images/differential-wrist.jpg" alt="Assembled differential wrist prototype" loading="lazy" /><figcaption class="figure-caption">Assembled prototype hardware.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Reflection</p><h2>Fast loops expose interfaces.</h2></div>
+      <div class="case-copy reveal">
+        <p>The project reinforced how much mechatronics depends on physical interfaces: motors, bearings, gears, housings, and control choices all constrain each other. A next iteration would spend more time on test instrumentation and backlash characterization.</p>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <a href="phoenix-2024.html">
+        <span class="project-number">Next</span>
+        <strong>Phoenix 2024</strong>
+        <span class="text-link">Continue</span>
+      </a>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <p>Kyle Young · Mechanical Engineering · UCLA</p>
-    <a href="../index.html">Back to home ↑</a>
+    <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
+    <a href="../index.html#top">Back to home</a>
   </footer>
   <script src="../script.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
+<!-- impeccable-live-end -->
 </body>
 </html>

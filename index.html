@@ -3,426 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyle Young — Engineering Portfolio</title>
-  <meta name="description" content="Kyle Young engineering portfolio — mechanical design, Formula SAE, robotics, manufacturing, biomedical flow research, and product development." />
+  <title>Kyle Young - Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Kyle Young is a UCLA mechanical engineer, researcher, and builder working across Formula SAE suspension, robotics, manufacturing, biomedical flow research, and product development." />
+  <meta property="og:title" content="Kyle Young - Mechanical Engineering Portfolio" />
+  <meta property="og:description" content="Design, simulation, testing, manufacturing, robotics, biomedical flow analysis, and technical leadership." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/bfr-shock-packaging.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="site-nav" id="siteNav">
+<body class="home-page">
+  <!--
+    THESIS: A mechanical-engineering portfolio can behave like a design-studio editorial site without losing proof.
+    OWN-WORLD: Black-and-white type, near-black case-study surfaces, off-white editorial sections, muted UCLA blue, amber metrics, neon only inside research/simulation modules.
+    STORY: Recruiters first see identity and discipline, then scan selected work, artifacts, ownership, experience, and contact.
+    FIRST VIEWPORT: "Kyle Young" dominates the viewport while an engineering portrait/project cutout overlaps the letterforms.
+    FORM: Responsive editorial bento plus cinematic case-study system; no SaaS landing-page grid.
+  -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
     <a class="brand-lockup" href="#top" aria-label="Kyle Young home">
       <span class="brand-mark">KY</span>
       <span class="brand-text">
         <span class="brand-name">Kyle Young</span>
-        <span class="brand-role">Mechanical Engineering</span>
+        <span class="brand-role">Mechanical Engineer</span>
       </span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
       <span></span><span></span><span></span>
     </button>
-    <div class="nav-links" id="navLinks">
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#technical-projects">Technical Projects</a>
-      <a href="#professional-experience">Professional</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#background">Background</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-    </div>
-    <a class="nav-mail" href="mailto:kyledeguz@gmail.com">Email</a>
-  </nav>
+      <a class="nav-resume" href="YoungKyle_Resume.pdf" download>Resume</a>
+    </nav>
+  </header>
 
-  <header class="hero" id="top">
-    <div class="hero-grid">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Mechanical Engineer · Founder · Builder</p>
-        <h1>Kyle Young</h1>
-        <p class="hero-subtitle">
-          UCLA mechanical engineer turning constraints into tested hardware: mechanism design, manufacturable CAD,
-          validation fixtures, robotics systems, and research tools built from problem definition through proof.
-        </p>
-        <div class="proof-strip" aria-label="Engineering focus areas">
-          <div>
-            <span>Mechanisms</span>
-            <strong>Suspension, linkages, wrist prototypes</strong>
-          </div>
-          <div>
-            <span>Build + Validate</span>
-            <strong>Fixtures, FEA, cleanroom workflows</strong>
-          </div>
-          <div>
-            <span>Ownership</span>
-            <strong>Subsystems, teams, shipped products</strong>
-          </div>
+  <main id="main">
+    <section class="studio-hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-navline" aria-hidden="true">
+        <span>UCLA / Mechanical Engineering</span>
+        <span>CAD - Simulation - Manufacturing - Research</span>
+      </div>
+      <div class="hero-type" data-speed="0.08">
+        <span>Kyle</span>
+        <span>Young</span>
+      </div>
+      <figure class="hero-subject reveal" data-speed="-0.06">
+        <img src="images/headshot.jpg" alt="Kyle Young portrait in Bruin Formula Racing shirt" />
+      </figure>
+      <div class="hero-panel reveal">
+        <p class="kicker">Mechanical Engineer / Researcher / Builder</p>
+        <h1 id="hero-title">Kyle Young</h1>
+        <p>Building credible engineering systems through design, simulation, testing, manufacturing, code, and team leadership.</p>
+        <div class="positioning-stack" aria-label="Core engineering capabilities">
+          <span>Mechanical design</span>
+          <span>Quantitative validation</span>
+          <span>Hands-on manufacturing</span>
         </div>
         <div class="hero-actions">
-          <a class="button primary" href="#technical-projects">View Projects</a>
+          <a class="button primary" href="#work">View Selected Work</a>
           <a class="button secondary" href="YoungKyle_Resume.pdf" download>Download Resume</a>
         </div>
       </div>
-      <div class="headshot-panel reveal">
-        <div class="headshot-frame">
-          <img src="images/headshot.jpg" alt="Kyle Young headshot" data-fallback="Add headshot: images/headshot.jpg" />
-        </div>
-        <p class="headshot-credit">Photo credit: Matthew Medina</p>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="section about-section" id="about">
-      <div class="section-heading reveal">
-        <p class="section-kicker">About Me</p>
-        <h2>From model to hardware to test data.</h2>
-      </div>
-      <div class="about-layout">
-        <div class="about-copy reveal">
-          <p>
-            I am a UCLA Mechanical Engineering student focused on the full engineering loop: defining the problem,
-            designing the system, validating the idea, manufacturing the hardware, and learning from testing. I am drawn
-            to work where analytical engineering and hands-on execution meet.
-          </p>
-          <p>
-            My experience spans Formula SAE suspension design, aerospace manufacturing support systems, MEMS hardware,
-            biomedical fluid-flow research, robotics, and 3D printed product development. Across these projects, I care
-            most about building things that are useful, manufacturable, testable, and thoughtfully engineered.
-          </p>
-          <p>
-            You can also find me keeping up with current events, questing for the best burger in SF, climbing, Ultimate Frisbee, RC planes,
-            board games, sci-fi movies, and dance. If any of these things resonate with you—whether in engineering or
-            interests—I'd love to connect and chat about what we're working on.
-          </p>
-        </div>
-        <div class="about-facts reveal">
-          <div class="fact"><span>School</span><strong>UCLA</strong></div>
-          <div class="fact"><span>Degree</span><strong>B.S. Mechanical Engineering</strong></div>
-          <div class="fact"><span>GPA</span><strong>3.855</strong></div>
-          <div class="fact"><span>Recognition</span><strong>Samueli Foundation Centennial Scholar · Richard L. Gay Trust Scholar · Dean's Honor List · Samueli Research Scholar</strong></div>
-          <div class="fact"><span>Hometown</span><strong>San Francisco</strong></div>
-        </div>
+      <div class="hero-metrics" aria-label="Portfolio proof summary">
+        <div><span data-count="5">0</span><p>Featured domains</p></div>
+        <div><span data-count="150">0</span><p>Students reached through robotics</p></div>
+        <div><span data-count="400">0</span><p>NovelForge orders</p></div>
       </div>
     </section>
 
-    <section class="section" id="technical-projects">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Technical Projects</p>
-        <h2>Flagship engineering evidence.</h2>
-        <p class="section-intro">
-          Start here for the work that best shows problem framing, personal contribution, constraints, and proof.
-        </p>
+    <section class="section work-section" id="work" aria-labelledby="work-title">
+      <div class="editorial-heading">
+        <p class="kicker">Selected Work</p>
+        <h2 id="work-title">Physical systems, research artifacts, and build leadership.</h2>
+        <p>Each module is ranked by available evidence. Projects without shareable artifacts are clearly marked instead of inflated into finished case studies.</p>
       </div>
 
-      <div class="card-grid projects-grid">
-        <a class="entry-card project-card project-card-featured reveal project-link" href="projects/shock-packaging.html">
-          <div class="project-media">
-            <img src="images/bfr-shock-packaging.jpg" alt="Formula SAE shock packaging CAD or prototype" data-fallback="Add project image: images/bfr-shock-packaging.jpg" />
-          </div>
-          <div class="entry-meta">Flagship · Formula SAE · Suspension</div>
-          <h3>Shock Packaging</h3>
-          <p>
-            Responsible engineer for Bruin Formula Racing shock packaging, translating suspension geometry, serviceability,
-            and packaging constraints into manufacturable hardware.
-          </p>
-          <dl class="evidence-grid">
-            <div><dt>Problem</dt><dd>Fit shocks around vehicle interfaces</dd></div>
-            <div><dt>Proof</dt><dd>CAD, FEA, lug analysis, design reviews</dd></div>
-            <div><dt>Role</dt><dd>Responsible engineer</dd></div>
+      <div class="bento-grid">
+        <article class="work-card bento-large neon-panel artifact-pending">
+          <div class="work-topline"><span>01</span><span>Research / Thermal</span></div>
+          <h3>Additive Manufacturing Thermal Research</h3>
+          <p>Known work area involving thermal-camera and simulation content. Shareable repo artifacts are not present yet, so this module is framed as an artifact gap.</p>
+          <div class="work-result">Evidence gap called out intentionally: thermal imagery and validation data are needed before this becomes a full case study.</div>
+          <div class="thermal-map" aria-hidden="true"></div>
+          <dl>
+            <div><dt>Skills</dt><dd>Thermal analysis, additive manufacturing, COMSOL/MATLAB context</dd></div>
+            <div><dt>Status</dt><dd>Needs public images/data before full case study</dd></div>
           </dl>
-          <div class="tags"><span>SolidWorks</span><span>DFM</span><span>Subsystem Ownership</span></div>
+        </article>
+
+        <a class="work-card bento-wide image-card" href="projects/shock-packaging.html">
+          <img src="images/bfr-shock-packaging.jpg" alt="Formula SAE shock packaging assembly" loading="lazy" />
+          <div class="work-overlay">
+            <div class="work-topline"><span>02</span><span>Formula SAE / Suspension</span></div>
+            <h3>Bruin Formula Racing Suspension</h3>
+            <p>Responsible-engineer shock packaging with CAD, FEA, topology optimization, lug analysis, and motion-ratio target work.</p>
+            <div class="work-result">Motion ratio within 5% deviation.</div>
+            <dl><div><dt>Result</dt><dd>Motion ratio within 5% deviation</dd></div><div><dt>Role</dt><dd>Responsible engineer</dd></div></dl>
+          </div>
         </a>
 
-        <a class="entry-card project-card project-card-featured reveal project-link" href="projects/anti-roll-bar-test-fixture.html">
-          <div class="project-media">
-            <img src="images/anti-roll-bar-fixture.jpg" alt="Anti-roll bar test fixture" data-fallback="Add project image: images/anti-roll-bar-fixture.jpg" />
+        <a class="work-card bento-tall image-card" href="projects/karl-2023.html">
+          <img src="images/KarlDesignPoster.jpg" alt="Karl FRC robot design poster" loading="lazy" />
+          <div class="work-overlay">
+            <div class="work-topline"><span>03</span><span>FIRST Robotics</span></div>
+            <h3>SF Unity Robotics</h3>
+            <p>Fabrication, build coordination, grants, sponsorship, and team infrastructure across competition robots.</p>
+            <div class="work-result">150+ students across nine schools.</div>
+            <dl><div><dt>Scale</dt><dd>150+ students across nine schools</dd></div><div><dt>Proof</dt><dd>Robot posters and team media</dd></div></dl>
           </div>
-          <div class="entry-meta">Flagship · Formula SAE · Validation</div>
-          <h3>Anti-Roll Bar Test Fixture</h3>
-          <p>
-            Designed and built a validation fixture for anti-roll bar stiffness testing, translating a vehicle dynamics
-            question into repeatable bench data.
-          </p>
-          <dl class="evidence-grid">
-            <div><dt>Problem</dt><dd>Turn stiffness targets into bench measurements</dd></div>
-            <div><dt>Proof</dt><dd>Fixture hardware and repeatable test data</dd></div>
-            <div><dt>Role</dt><dd>Design, fabrication, validation</dd></div>
-          </dl>
-          <div class="tags"><span>Fixtures</span><span>Manufacturing</span><span>Test Data</span></div>
         </a>
 
-        <a class="entry-card project-card project-card-featured reveal project-link" href="projects/csf-flow-analysis.html">
-          <div class="project-media">
-            <img src="images/csf-flow-analysis.jpg" alt="CSF flow analysis visualization" data-fallback="Add project image: images/csf-flow-analysis.jpg" />
-          </div>
-          <div class="entry-meta">Flagship · Research · Biomedical Flow</div>
-          <h3>CSF Flow Analysis</h3>
-          <p>
-            Built Python tools to extract, clean, compare, and visualize cerebrospinal fluid datasets for research
-            into Chiari malformation surgical outcomes.
-          </p>
-          <dl class="evidence-grid">
-            <div><dt>Problem</dt><dd>Make physiological flow data comparable</dd></div>
-            <div><dt>Proof</dt><dd>Python workflow and visual analysis outputs</dd></div>
-            <div><dt>Role</dt><dd>Pipeline, cleaning, visualization</dd></div>
-          </dl>
-          <div class="tags"><span>Python</span><span>Signal Processing</span><span>Research</span></div>
+        <a class="work-card bento-medium research-card" href="projects/csf-flow-analysis.html">
+          <div class="work-topline"><span>04</span><span>Biomedical Flow</span></div>
+          <h3>CSF Flow Research</h3>
+          <p>Python workflow for extracting, cleaning, comparing, and visualizing cerebrospinal-fluid flow features.</p>
+          <div class="work-result">Research value: traceable signal processing rather than black-box plots.</div>
+          <img src="images/CSF1.png" alt="Python workflow and CSF flow analysis output" loading="lazy" />
+          <dl><div><dt>Shown</dt><dd>Workflow image</dd></div><div><dt>Not shown</dt><dd>Dataset / repository</dd></div></dl>
         </a>
 
-        <a class="entry-card project-card reveal project-link" href="projects/differential-wrist-mechanism.html">
-          <div class="project-media">
-            <img src="images/differential-wrist.jpg" alt="Differential wrist mechanism prototype" data-fallback="Add project image: images/differential-wrist.jpg" />
-          </div>
-          <div class="entry-meta">Robotics · Mechanism Design</div>
-          <h3>Differential Wrist Mechanism</h3>
-          <p>
-            Part 1 of a 5/6-axis robotic arm: a custom end-effector wrist prototype driven by two NEMA 17 stepper motors.
-          </p>
-          <div class="tags"><span>Robotics</span><span>Stepper Control</span><span>Mechanisms</span></div>
-        </a>
+        <article class="work-card bento-medium neon-panel artifact-pending">
+          <div class="work-topline"><span>05</span><span>Microfluidics</span></div>
+          <h3>Microfluidics / Manufacturing</h3>
+          <p>Requested domain is relevant to the portfolio, but this repo currently has no public case-study asset for it.</p>
+          <div class="work-result">Not promoted as finished until images, process notes, tools, and outcomes are available.</div>
+          <div class="micro-grid" aria-hidden="true"></div>
+          <dl><div><dt>Status</dt><dd>Content gap, not a fabricated case study</dd></div><div><dt>Needed</dt><dd>Images, process notes, tools, outcomes</dd></div></dl>
+        </article>
 
-        <a class="entry-card project-card reveal project-link" href="projects/flite-test-tutor.html">
-          <div class="project-media">
-            <img src="images/flite-test-tutor-complete.jpg" alt="Flite Test Tutor RC plane build with Power Pack B electronics" />
+        <a class="work-card bento-medium image-card" href="projects/anti-roll-bar-test-fixture.html">
+          <img src="images/ARBStiffnessExperiment1.png" alt="Anti-roll bar stiffness worksheet" loading="lazy" />
+          <div class="work-overlay">
+            <div class="work-topline"><span>06</span><span>Validation Fixture</span></div>
+            <h3>Anti-Roll Bar Test Fixture</h3>
+            <p>Known load to measured deflection to stiffness feedback for Formula SAE suspension tuning.</p>
+            <div class="work-result">Physical test data fed back into suspension tuning decisions.</div>
           </div>
-          <div class="entry-meta">RC Aviation · Foamboard Build</div>
-          <h3>Flite Test Tutor</h3>
-          <p>
-            Built and integrated a Flite Test Tutor trainer using Power Pack B, turning a kit build into a flyable,
-            repairable RC plane to learn on with friends.
-          </p>
-          <div class="tags"><span>RC Planes</span><span>Foamboard</span><span>Hands-On Build</span></div>
-        </a>
-
-        <a class="entry-card project-card reveal project-link" href="projects/phoenix-2024.html">
-          <div class="project-media">
-            <img src="images/phoenix-2024.jpg" alt="Phoenix 2024 FRC robot" data-fallback="Add project image: images/phoenix-2024.jpg" />
-          </div>
-          <div class="entry-meta">Robotics · FRC Crescendo 2024</div>
-          <h3>Phoenix</h3>
-          <p>
-            Built Phoenix for FRC Crescendo 2024, contributing to drivetrain packaging, subsystem design/integration, and robust
-            field performance.
-          </p>
-          <div class="tags"><span>FRC</span><span>Robot Design</span><span>Systems Integration</span></div>
-        </a>
-
-        <a class="entry-card project-card reveal project-link" href="projects/karl-2023.html">
-          <div class="project-media">
-            <img src="images/karl-2023.jpg" alt="Karl 2023 FRC robot" data-fallback="Add project image: images/karl-2023.jpg" />
-          </div>
-          <div class="entry-meta">Robotics · FRC Charged Up 2023</div>
-          <h3>Karl</h3>
-          <p>
-            Karl was SF Unity's first 2023 Charged Up robot: we adapted the Everybot base to lower CG, improve scoring,
-            and keep the design compact and reliable for competition. I led fabrication, build-season coordination,
-            sponsorship/grants, and team infrastructure while the robot qualified for the FIRST World Championship.
-          </p>
-          <div class="tags"><span>FRC</span><span>Fabrication</span><span>Team Leadership</span></div>
-        </a>
-
-        <a class="entry-card project-card reveal project-link" href="projects/novelforge-products.html">
-          <div class="project-media">
-            <img src="images/novelforge-products.jpg" alt="NovelForge 3D printed product lineup" data-fallback="Add project image: images/novelforge-products.jpg" />
-          </div>
-          <div class="entry-meta">Product Design · Additive Manufacturing</div>
-          <h3>NovelForge Products</h3>
-          <p>
-            Designed, manufactured, and sold custom 3D printed home accessories through NovelForge, combining CAD,
-            print production, and small-batch product development.
-          </p>
-          <div class="tags"><span>3D Printing</span><span>Product Design</span><span>Entrepreneurship</span></div>
         </a>
       </div>
     </section>
 
-    <section class="section section-alt" id="professional-experience">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Professional Experience</p>
-        <h2>Industry engineering roles.</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <div class="timeline-date">Summer 2025</div>
-          <div class="timeline-content">
-            <h3>Northrop Grumman — Engineering Intern, Module Assembly &amp; Test</h3>
-            <p>
-              Automated manual workflows with custom-designed software and hardware for cleanroom manufacturing support,
-              helping boost training efficiency, reduce machine downtime, and eliminate FOD risk. Also supported material
-              qualification work for flight-hardware testing by validating and documenting performance to aerospace standards.
-            </p>
-            <div class="tags"><span>Cleanroom Manufacturing</span><span>Automation</span><span>Validation</span><span>Aerospace Documentation</span></div>
+    <section class="section editorial-section" id="about" aria-labelledby="about-title">
+      <div class="editorial-split">
+        <div>
+          <p class="kicker">About</p>
+          <h2 id="about-title">A builder who moves between analysis and hardware.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>I am a UCLA Mechanical Engineering student focused on work where analytical engineering and hands-on execution meet. My projects span Formula SAE suspension design, aerospace manufacturing support systems, MEMS hardware, biomedical fluid-flow research, robotics, and 3D printed product development.</p>
+          <p>I care most about building things that are useful, manufacturable, testable, and thoughtfully engineered.</p>
+          <div class="tool-index" aria-label="Selected tools">
+            <span>SolidWorks</span><span>CAD</span><span>DFM</span><span>Python</span><span>MATLAB</span><span>FEA</span><span>3D printing</span><span>Manual mill</span><span>Laser cutting</span>
           </div>
-        </article>
-
-        <article class="timeline-item reveal">
-          <div class="timeline-date">Summer 2023</div>
-          <div class="timeline-content">
-            <h3>Atomic Machines — AMP Engineering Intern</h3>
-            <p>
-              Prototyped and fabricated production hardware for a MEMS manufacturing platform, designing components in
-              SolidWorks and producing parts using a metal laser cutter and manual mill. Developed Python calibration scripts
-              for testing platforms and modified existing code to improve accuracy and streamline testing workflows.
-            </p>
-            <div class="tags"><span>MEMS Hardware</span><span>SolidWorks</span><span>Manual Mill</span><span>Python Calibration</span></div>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="leadership">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Leadership</p>
-        <h2>Teams, products, and communities I helped build.</h2>
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="editorial-heading">
+        <p class="kicker">Experience</p>
+        <h2 id="experience-title">Engineering roles with public context.</h2>
       </div>
-
-      <div class="card-grid leadership-grid">
-        <a class="entry-card leadership-card featured reveal" href="https://www.sfunityrobotics.com/" target="_blank" rel="noopener">
-          <div class="entry-meta">Founder · Captain · FIRST Robotics</div>
-          <h3>SF Unity Robotics</h3>
-          <p>
-            Founded and captained San Francisco's only independent FIRST Robotics Competition team, building the
-            organization from the ground up. Led the design, manufacturing, and integration of two 125+ pound robots,
-            each built in six weeks, then competed at the 2023 World Championship in Houston and earned a team award.
-          </p>
-          <p>
-            Beyond leading the broader design team, I was especially proud of the shooter mechanism, where the team had
-            to balance performance, reliability, manufacturing limits, and match-to-match robustness under real schedule
-            pressure.
-          </p>
-          <div class="tags"><span>50+ Students Mentored</span><span>$55k+ Raised</span><span>World Championship</span><span>125+ lb Robots</span></div>
-        </a>
-
-        <a class="entry-card leadership-card reveal" href="projects/novelforge-products.html">
-          <div class="entry-meta">Founder · Product Development</div>
-          <h3>NovelForge</h3>
-          <p>
-            Founded a 3D printed product business focused on custom home accessories. Designed products, managed
-            fabrication, handled customer feedback, and shipped 400+ orders while earning Etsy Star Seller recognition
-            for three consecutive years.
-          </p>
-          <div class="tags"><span>400+ Orders</span><span>$3k+ Revenue</span><span>3D Printing</span><span>Customer-Driven Design</span></div>
-        </a>
-
-        <a class="entry-card leadership-card reveal" href="https://www.bruinformula.com/" target="_blank" rel="noopener">
-          <div class="entry-meta">Engineering Leadership</div>
-          <h3>Bruin Formula Racing</h3>
-          <p>
-            Serve as a Shock Packaging Responsible Engineer on UCLA's Formula SAE team after contributing to suspension
-            and aerodynamics work on Mk. X. Lead design decisions across vehicle interfaces and help maintain a team culture
-            built around design reviews, manufacturing ownership, iteration, and testing-driven engineering.
-          </p>
-          <div class="tags"><span>Formula SAE</span><span>Shock Packaging</span><span>Subsystem Ownership</span><span>Team Integration</span></div>
-        </a>
-        <a class="entry-card leadership-card reveal" href="https://www.instagram.com/foundationschoreo/?hl=en" target="_blank" rel="noopener">
-          <div class="entry-meta">Creative Endeavor</div>
-          <h3>Foundations Choreography</h3>
-          <p>
-            General member of Foundations Choreography! Joined on a whim in Spring 2026 and learned how to dance. It was fun,
-            collaborative, and a great way to grow comfortable performing, learning choreography quickly, and supporting
-            the team.
-          </p>
-          <div class="tags"><span>Collaboration</span><span>Performance</span><span>Teamwork</span></div>
-        </a>
-        <article class="entry-card leadership-card reveal">
-          <div class="entry-meta">Contributor · CFIP</div>
-          <h3>CFIP</h3>
-          <p>
-            Contributed to CFIP's program development and community coordination, focusing on collaborative
-            engineering processes, stakeholder outreach, and operational support.
-          </p>
-          <div class="tags"><span>Program Development</span><span>Community</span><span>Collaboration</span></div>
-        </article>
+      <div class="experience-list">
+        <article><span>2025</span><h3>Northrop Grumman - Module Assembly and Test</h3><p>Automated manual workflows with custom software and hardware for cleanroom manufacturing support; supported material qualification documentation for flight-hardware testing.</p></article>
+        <article><span>2023</span><h3>Atomic Machines - AMP Engineering Intern</h3><p>Prototyped and fabricated MEMS manufacturing hardware, designed SolidWorks components, and developed Python calibration scripts for testing platforms.</p></article>
+        <article><span>Current</span><h3>Bruin Formula Racing - Suspension</h3><p>Shock Packaging Responsible Engineer across vehicle interfaces, design reviews, manufacturing ownership, iteration, and testing-driven engineering.</p></article>
+        <article><span>Founder</span><h3>SF Unity Robotics</h3><p>Founded and captained an independent FIRST Robotics team; supported design, manufacturing, sponsorship, grants, and infrastructure for 150+ students across nine schools.</p></article>
       </div>
     </section>
 
-    <section class="section section-alt profile-section" id="background">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Background</p>
-        <h2>Tools, classes, and life outside engineering.</h2>
-      </div>
-
-      <div class="card-grid profile-grid">
-        <article class="entry-card profile-card reveal">
-          <div class="profile-card-top">
-            <div class="profile-mark">01</div>
-            <div>
-              <div class="entry-meta">Engineering Toolkit</div>
-              <h3>Skills</h3>
-            </div>
-          </div>
-          <p>Tools I use to move from idea, to model, to hardware, to test data.</p>
-          <div class="tags profile-tags">
-            <span>SolidWorks</span>
-            <span>CAD</span>
-            <span>DFM</span>
-            <span>Python</span>
-            <span>MATLAB</span>
-            <span>FEA</span>
-            <span>Rapid Prototyping</span>
-            <span>3D Printing</span>
-            <span>Manual Mill</span>
-            <span>Laser Cutting</span>   
-            <span>Technical Documentation</span>
-          </div>
-        </article>
-
-        <article class="entry-card profile-card reveal">
-          <div class="profile-card-top">
-            <div class="profile-mark">02</div>
-            <div>
-              <div class="entry-meta">UCLA Mechanical Engineering</div>
-              <h3>Relevant Coursework</h3>
-            </div>
-          </div>
-          <p>Core mechanical engineering classes that support my design, analysis, and testing work.</p>
-          <div class="tags profile-tags">
-            <span>Statics</span>
-            <span>Dynamics</span>
-            <span>Mechanics of Materials</span>
-            <span>Thermodynamics</span>
-            <span>Fluid Mechanics</span>
-            <span>Mechanism Design</span>
-            <span>Manufacturing Processes</span>
-            <span>Control Systems</span>
-          </div>
-        </article>
-
-        <article class="entry-card profile-card reveal">
-          <div class="profile-card-top">
-            <div class="profile-mark">03</div>
-            <div>
-              <div class="entry-meta">Outside The Lab</div>
-              <h3>Fun Interests</h3>
-            </div>
-          </div>
-          <p>The things that keep me curious, social, and happily tinkering when I am not in project mode.</p>
-          <div class="tags profile-tags">
-            <span>NYT Mini Crossword</span>
-            <span>Finding the Best Burger in SF</span>
-            <span>Climbing</span>
-            <span>Ultimate Frisbee</span>
-            <span>RC Planes</span>
-            <span>Board Games</span>
-            <span>Sci-Fi Movies</span>
-            <span>Hip Hop Dance</span>
-            <span>Side questing</span>
-            <span>Exploring LA!</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="contact-card reveal">
-        <p class="section-kicker">Contact</p>
-        <h2>Let's build something.</h2>
-        <p>
-          I am interested in mechanism design, robotics, aerospace, manufacturing, vehicle dynamics, product development,
-          and research-focused engineering roles.
-        </p>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel reveal">
+        <p class="kicker">Contact</p>
+        <h2 id="contact-title">Let's talk about mechanical design, robotics, manufacturing, testing, and research-focused engineering roles.</h2>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:kyledeguz@gmail.com">Email Me</a>
+          <a class="button primary" href="mailto:kyledeguz@gmail.com">Email Kyle</a>
           <a class="button secondary" href="YoungKyle_Resume.pdf" download>Download Resume</a>
           <a class="button secondary" href="https://www.linkedin.com/in/kyoung28" target="_blank" rel="noopener">LinkedIn</a>
           <a class="button secondary" href="https://github.com/kydeguz28" target="_blank" rel="noopener">GitHub</a>
@@ -432,13 +195,13 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-copy">
-      <p>Made with love in Westwood, CA · Kyle Young</p>
-      <p>© 2026 Kyle Young. Built with HTML, CSS, and JavaScript for GitHub Pages.</p>
-    </div>
-    <a href="#top">Back to top ↑</a>
+    <div><strong>Kyle Young</strong><span>Mechanical Engineer / Researcher / Builder</span></div>
+    <a href="#top">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
+<!-- impeccable-live-end -->
 </body>
 </html>

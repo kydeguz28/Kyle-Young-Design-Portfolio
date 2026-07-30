@@ -3,60 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anti-Roll Bar Test Fixture — Kyle Young</title>
-  <meta name="description" content="Kyle Young — designed and built an anti-roll bar test fixture for Formula SAE validation." />
+  <title>Anti-Roll Bar Test Fixture - Kyle Young</title>
+  <meta name="description" content="Case study: anti-roll bar stiffness validation fixture designed and built by Kyle Young for Formula SAE suspension development." />
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
-  <a class="project-topbar" href="../index.html#technical-projects">← Back to projects</a>
-  <main class="section about-section">
-    <div class="section-heading reveal">
-      <p class="section-kicker">Formula SAE Project</p>
-      <h2>Anti-Roll Bar Test Fixture</h2>
-    </div>
-    <div class="about-copy reveal">
-      <p>
-        Designed and built a bench fixture to validate anti-roll bar stiffness, mounting geometry, and material
-        behavior as part of Formula SAE suspension development. The goal was to turn a vehicle-level question into a
-        repeatable, testable lab setup.
-      </p>
-      <p>
-        I selected dial gauges and displacement sensors, created modular clamping hardware, and arranged the fixture so
-        it could accept multiple bar geometries with consistent alignment. The design prioritized ease of setup, robust
-        measurement, and clear connection to suspension tuning parameters.
-      </p>
-      <p>
-        Running controlled tests with the fixture provided quantitative data on roll stiffness and mounting stiffness,
-        which informed design decisions for anti-roll bar sizing, linkage geometry, and FLLTD values that we fed back into our vehicle dyanmics simulations.
-      </p>
-    </div>
+<body class="case-page theme-formula">
+  <nav class="project-topbar" aria-label="Project navigation">
+    <a href="../index.html#work">Back to work index</a>
+    <a href="../YoungKyle_Resume.pdf" download>Resume</a>
+  </nav>
 
-    <div class="media-section reveal">
-      <h3>Test Data & Analysis</h3>
-      <p>
-        Below are snapshots of the experimental setup, fully manufactured from laser cut mounts mounted to a rigid test frame. The known load applied versus the deflection mounted by our dial gauge gave us the stiffness of the anti roll bar. 
-      </p>
-      <div class="media-container">
-        <img src="../images/ARBStiffnessExperiment1.png" alt="Spreadsheet analysis of anti-roll bar stiffness data" />
+  <main>
+    <header class="case-hero">
+      <div>
+        <p class="kicker">Project 02 / Formula SAE validation</p>
+        <h1>Anti-Roll Bar Test Fixture</h1>
+        <p class="case-summary">A bench fixture that turned a vehicle dynamics question into repeatable load-deflection data for anti-roll bar stiffness and suspension tuning decisions.</p>
       </div>
-    </div>
+      <dl class="project-meta">
+        <div><dt>Role</dt><dd>Design, fabrication, validation</dd></div>
+        <div><dt>System</dt><dd>Formula SAE anti-roll bar</dd></div>
+        <div><dt>Tools</dt><dd>Dial gauges, displacement sensors, laser-cut mounts</dd></div>
+        <div><dt>Disciplines</dt><dd>Testing, fixture design, vehicle dynamics</dd></div>
+      </dl>
+      <figure class="case-hero-figure reveal">
+        <img src="../images/anti-roll-bar-fixture.jpg" alt="Anti-roll bar test fixture hardware" />
+        <figcaption class="figure-caption">Validation hardware for controlled stiffness measurement.</figcaption>
+      </figure>
+    </header>
 
-    <div class="media-section reveal">
-      <h3>Equations & Calculations</h3>
-      <p>
-        These are the key equations and derivations used to process fixture data and validate anti-roll bar
-        performance against suspension design targets.
-      </p>
-      <div class="media-container">
-        <img src="../images/ARBStiffnessEquation1.png" alt="Stiffness calculation equations" />
-        <img src="../images/ARBStiffnessEquation2.png" alt="Additional fixture analysis equations" />
+    <section class="case-section">
+      <div><p class="kicker">Context</p><h2>Bench data for a vehicle-level decision.</h2></div>
+      <div class="case-copy reveal">
+        <p>Anti-roll bar tuning affects vehicle balance, but the team needed a way to connect design targets to repeatable measurements. The fixture made stiffness testable outside the car, giving suspension decisions a clearer data path.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Contribution</p><h2>Fixture as measurement system.</h2></div>
+      <div class="case-copy reveal">
+        <p>Kyle selected measurement hardware, designed modular clamping, and arranged the fixture to accept multiple bar geometries with consistent alignment. The work prioritized setup repeatability, robust measurements, and a direct connection back to suspension tuning parameters.</p>
+        <dl class="spec-grid">
+          <div><dt>Input</dt><dd>Known applied load</dd></div>
+          <div><dt>Measurement</dt><dd>Dial-gauge deflection</dd></div>
+          <div><dt>Output</dt><dd>Anti-roll bar stiffness for simulation feedback</dd></div>
+        </dl>
+        <aside class="engineering-callout">
+          <span>Measurement loop</span>
+          <strong>Known load to measured deflection to stiffness feedback.</strong>
+          <p>The fixture turns a setup-sensitive hardware question into repeatable data the suspension team can use.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Process</p><h2>Load, measure, calculate, feed back.</h2></div>
+      <div class="case-copy reveal">
+        <div class="process-timeline">
+          <div class="process-step"><span>01</span><div><strong>Define stiffness target</strong><p>Connect roll-stiffness questions to a measurable bench setup.</p></div></div>
+          <div class="process-step"><span>02</span><div><strong>Design fixture</strong><p>Create modular clamping and alignment hardware for multiple bar geometries.</p></div></div>
+          <div class="process-step"><span>03</span><div><strong>Run controlled tests</strong><p>Apply known load, measure deflection, and preserve consistent setup conditions.</p></div></div>
+          <div class="process-step"><span>04</span><div><strong>Return to model</strong><p>Use stiffness data to inform anti-roll bar sizing, linkage geometry, and FLLTD values.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Technical evidence</p><h2>Data and derivation.</h2></div>
+      <div class="case-copy reveal">
+        <p>The calculation artifacts show how the fixture translated physical displacement into useful suspension-development data.</p>
+      </div>
+      <div class="figure-grid reveal">
+        <figure class="technical-figure"><img src="../images/ARBStiffnessExperiment1.png" alt="Anti-roll bar stiffness experiment data and calculations" loading="lazy" /><figcaption class="figure-caption">Load-deflection analysis worksheet.</figcaption></figure>
+        <figure class="technical-figure"><img src="../images/ARBStiffnessEquation1.png" alt="Anti-roll bar stiffness equation derivation" loading="lazy" /><figcaption class="figure-caption">Key stiffness derivation.</figcaption></figure>
+      </div>
+      <div class="figure-grid reveal">
+        <figure class="technical-figure"><img src="../images/ARBStiffnessEquation2.png" alt="Additional anti-roll bar stiffness calculation" loading="lazy" /><figcaption class="figure-caption">Additional calculation reference.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div><p class="kicker">Outcome / reflection</p><h2>What the fixture changed.</h2></div>
+      <div class="case-copy reveal">
+        <p>The fixture gave the team quantitative stiffness data instead of relying only on assumptions. It reinforced the value of designing the test as carefully as the part: alignment, access, and repeatability are engineering decisions.</p>
+        <aside class="engineering-callout compact">
+          <span>Result</span>
+          <strong>Suspension tuning moved from assumption toward bench-measured stiffness.</strong>
+        </aside>
+        <p>If expanded, the next version would document setup uncertainty more explicitly and make comparisons across bar geometries easier to review at a glance.</p>
+      </div>
+    </section>
+
+    <section class="next-project">
+      <a href="csf-flow-analysis.html">
+        <span class="project-number">Next</span>
+        <strong>CSF Flow Analysis</strong>
+        <span class="text-link">Continue</span>
+      </a>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <p>Kyle Young · Mechanical Engineering · UCLA</p>
-    <a href="../index.html">Back to home ↑</a>
+    <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
+    <a href="../index.html#top">Back to home</a>
   </footer>
   <script src="../script.js"></script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
+<!-- impeccable-live-end -->
 </body>
 </html>
