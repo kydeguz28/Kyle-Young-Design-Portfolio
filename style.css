@@ -1,17 +1,18 @@
 :root {
-  --bg: #f7f3ed;
-  --bg-alt: #efe8dd;
-  --ink: #14120f;
-  --muted: #6f675d;
-  --soft: #aaa096;
-  --card: #fffdf8;
-  --border: #ded4c7;
+  --bg: #f5f2ec;
+  --bg-alt: #e9eef0;
+  --ink: #161719;
+  --muted: #5f6468;
+  --soft: #8b9093;
+  --card: #fffefa;
+  --border: #d8d2c8;
   --accent: #b46527;
   --accent-dark: #814619;
-  --accent-alt: #b46527;
-  --shadow: 0 18px 60px rgba(30, 23, 16, 0.10);
-  --shadow-soft: 0 10px 30px rgba(30, 23, 16, 0.08);
-  --radius: 16px;
+  --accent-alt: #2f6f73;
+  --steel: #315260;
+  --shadow: 0 18px 44px rgba(22, 23, 25, 0.12);
+  --shadow-soft: 0 10px 26px rgba(22, 23, 25, 0.08);
+  --radius: 8px;
   --max: 1180px;
   --font-display: 'Archivo', system-ui, sans-serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
@@ -23,8 +24,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 18% 2%, rgba(96, 123, 153, 0.14), transparent 34rem),
-    radial-gradient(circle at 90% 8%, rgba(20, 18, 15, 0.10), transparent 28rem),
+    linear-gradient(180deg, rgba(233, 238, 240, 0.72) 0 34rem, transparent 34rem),
+    linear-gradient(90deg, rgba(49, 82, 96, 0.08) 0 1px, transparent 1px) 50% 0 / min(100%, 1180px) 100% no-repeat,
     var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
@@ -55,7 +56,7 @@ button:focus-visible {
 }
 
 .site-nav.scrolled {
-  background: rgba(247, 243, 237, 0.86);
+  background: rgba(245, 242, 236, 0.9);
   backdrop-filter: blur(18px);
   border-bottom-color: rgba(20, 18, 15, 0.10);
   box-shadow: 0 10px 35px rgba(20, 18, 15, 0.06);
@@ -77,7 +78,7 @@ button:focus-visible {
   width: 44px;
   height: 44px;
   border: 1px solid rgba(20, 18, 15, 0.12);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--ink);
   color: #fff;
   font-family: var(--font-display);
@@ -119,9 +120,9 @@ button:focus-visible {
   min-height: 38px;
   padding: 8px 14px;
   border: 1px solid rgba(20, 18, 15, 0.12);
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
-  color: var(--accent);
+  color: var(--steel);
   font-size: 0.84rem;
   font-weight: 800;
   transition: color 180ms ease, background 180ms ease, border 180ms ease;
@@ -143,7 +144,7 @@ button:focus-visible {
   font-weight: 700;
   color: var(--muted);
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: 8px;
   transition: color 180ms ease, background 180ms ease;
 }
 .nav-links a:hover,
@@ -157,7 +158,7 @@ button:focus-visible {
   width: 42px;
   height: 42px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
 }
 .nav-toggle span {
@@ -177,9 +178,9 @@ button:focus-visible {
   align-items: center;
   min-height: 42px;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255, 253, 248, 0.9);
-  color: var(--accent-dark);
+  color: var(--steel);
   box-shadow: 0 10px 28px rgba(20, 18, 15, 0.08);
   font-size: 0.9rem;
   font-weight: 800;
@@ -192,7 +193,7 @@ button:focus-visible {
 .hero {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 154px clamp(18px, 4vw, 42px) 88px;
+  padding: 144px clamp(18px, 4vw, 42px) 96px;
 }
 .hero-grid {
   display: grid;
@@ -210,7 +211,7 @@ button:focus-visible {
   letter-spacing: 0.12em;
 }
 .eyebrow {
-  color: var(--accent);
+  color: var(--steel);
   font-size: 0.78rem;
   font-weight: 700;
   margin: 0 0 18px;
@@ -219,12 +220,12 @@ button:focus-visible {
   font-family: var(--font-display);
   font-size: clamp(4rem, 8vw, 6rem);
   line-height: 0.88;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   margin: 0 0 28px;
 }
 .hero-subtitle {
   max-width: 720px;
-  color: var(--muted);
+  color: #41464a;
   font-size: clamp(1.12rem, 2.2vw, 1.5rem);
   line-height: 1.5;
   margin: 0 0 24px;
@@ -239,9 +240,8 @@ button:focus-visible {
 .proof-strip div {
   min-width: 0;
   padding: 14px 14px 15px;
-  border-top: 1px solid rgba(20, 18, 15, 0.16);
-  background:
-    linear-gradient(180deg, rgba(255, 253, 248, 0.72), rgba(255, 253, 248, 0.42));
+  border-top: 2px solid var(--accent-alt);
+  background: rgba(255, 254, 250, 0.62);
 }
 .proof-strip span,
 .evidence-grid dt {
@@ -267,7 +267,7 @@ button:focus-visible {
   gap: 1px;
   margin: 4px 0 18px;
   padding: 1px;
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(20, 18, 15, 0.10);
   overflow: hidden;
 }
@@ -295,7 +295,7 @@ button:focus-visible {
   justify-content: center;
   min-height: 46px;
   padding: 12px 20px;
-  border-radius: 14px;
+  border-radius: 8px;
   font-weight: 800;
   border: 1px solid var(--border);
   transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
@@ -310,7 +310,7 @@ button:focus-visible {
 .button.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .button.secondary {
   background: rgba(255, 255, 255, 0.78);
-  color: var(--accent);
+  color: var(--steel);
 }
 
 .project-link {
@@ -326,7 +326,6 @@ button:focus-visible {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(222, 212, 199, 0.92);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(12px);
 }
 .hero-panel {
   border-radius: var(--radius);
@@ -372,11 +371,11 @@ button:focus-visible {
 .headshot-frame {
   width: 100%;
   aspect-ratio: 4 / 5.1;
-  border-radius: 26px;
+  border-radius: 12px;
   overflow: hidden;
   border: 0;
   background: linear-gradient(135deg, rgba(180,101,39,0.18), rgba(20,18,15,0.07));
-  box-shadow: 0 24px 60px rgba(20, 18, 15, 0.14);
+  box-shadow: 0 24px 52px rgba(22, 23, 25, 0.15);
 }
 
 .headshot-frame img {
@@ -397,8 +396,8 @@ button:focus-visible {
   width: fit-content;
   margin: -22px 0 0 20px;
   padding: 10px 16px;
-  border-radius: 12px;
-  background: var(--accent);
+  border-radius: 8px;
+  background: var(--steel);
   color: #fff;
   box-shadow: 0 14px 28px rgba(180, 101, 39, 0.20);
   font-family: var(--font-mono);
@@ -413,17 +412,17 @@ button:focus-visible {
 .section {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 92px clamp(18px, 4vw, 42px);
+  padding: 88px clamp(18px, 4vw, 42px);
 }
 .section-alt {
   max-width: none;
-  background: rgba(239, 232, 221, 0.68);
+  background: rgba(233, 238, 240, 0.64);
   border-block: 1px solid rgba(20, 18, 15, 0.06);
 }
 .section-alt > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
 .section-heading { margin-bottom: 34px; }
 .section-kicker {
-  color: var(--accent);
+  color: var(--steel);
   font-size: 0.75rem;
   font-weight: 800;
   margin: 0 0 10px;
@@ -451,11 +450,12 @@ button:focus-visible {
 .about-copy {
   font-size: 1.06rem;
   color: var(--muted);
+  max-width: 72ch;
 }
 .about-copy p:first-child { margin-top: 0; }
 .about-facts {
   border-radius: var(--radius);
-  padding: 8px 24px;
+  padding: 6px 22px;
 }
 .fact {
   display: grid;
@@ -477,11 +477,11 @@ button:focus-visible {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 .entry-card {
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 22px;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 .entry-card:hover {
@@ -493,16 +493,22 @@ button:focus-visible {
   cursor: pointer;
 }
 .entry-card[href]:hover {
-  background: rgba(255, 249, 240, 0.95);
-  border-color: rgba(180, 101, 39, 0.5);
+  background: rgba(255, 254, 250, 0.98);
+  border-color: rgba(47, 111, 115, 0.45);
 }
 .entry-card[href] .entry-meta,
 .entry-card[href] .tags span {
-  color: var(--accent-dark);
+  color: var(--steel);
 }
 .entry-card[href] h3 {
-  text-decoration: underline;
-  text-decoration-color: rgba(180, 101, 39, 0.35);
+  text-decoration: none;
+}
+.entry-card[href] h3::after {
+  content: " ->";
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  white-space: nowrap;
 }
 .project-card {
   display: flex;
@@ -512,7 +518,7 @@ button:focus-visible {
   grid-column: span 2;
   display: grid;
   grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1fr);
-  column-gap: 24px;
+  column-gap: 26px;
   align-items: start;
 }
 .project-card-featured .project-media {
@@ -528,7 +534,7 @@ button:focus-visible {
 .project-media {
   width: 100%;
   aspect-ratio: 16 / 10;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: linear-gradient(135deg, rgba(180,101,39,0.16), rgba(20,18,15,0.06));
@@ -553,7 +559,7 @@ button:focus-visible {
   line-height: 1.4;
 }
 .entry-meta {
-  color: var(--accent);
+  color: var(--steel);
   font-size: 0.68rem;
   font-weight: 800;
   margin-bottom: 10px;
@@ -590,7 +596,7 @@ button:focus-visible {
   align-items: start;
 }
 .timeline-date {
-  color: var(--accent);
+  color: var(--steel);
   font-size: 0.78rem;
   font-weight: 800;
   padding-top: 20px;
@@ -598,6 +604,15 @@ button:focus-visible {
 .timeline-content {
   border-radius: var(--radius);
   padding: 24px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  inset: 24px auto 24px -18px;
+  width: 1px;
+  background: var(--accent);
 }
 
 .leadership-grid .featured { grid-column: span 2; }
@@ -605,6 +620,26 @@ button:focus-visible {
 .profile-section {
   padding-top: 82px;
   padding-bottom: 82px;
+}
+.profile-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.profile-mark {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(49, 82, 96, 0.22);
+  border-radius: 8px;
+  color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
 }
 .background-panel {
   display: grid;
@@ -679,8 +714,11 @@ button:focus-visible {
 }
 
 .contact-card {
-  border-radius: calc(var(--radius) + 8px);
+  border-radius: var(--radius);
   padding: clamp(26px, 5vw, 54px);
+  background:
+    linear-gradient(90deg, rgba(49, 82, 96, 0.10), transparent 34%),
+    rgba(255, 254, 250, 0.9);
 }
 .contact-card p { max-width: 760px; font-size: 1.08rem; }
 .contact-actions { margin-top: 26px; }
