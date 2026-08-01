@@ -1,106 +1,195 @@
 ---
-name: Kyle Young Engineering Portfolio
-description: A polished mechanical-engineering portfolio with a black-and-white typographic studio hero, dark cinematic case studies, modular research panels, and warm editorial recruiter sections.
+name: Kyle Young Swiss Engineering Dossier
+description: A mechanical-engineering portfolio system built from Swiss editorial typography, technical drawing language, a framed hero, layered identity type, a monochrome portrait cutout, Golden Gate bridge linework, and evidence-led project sections.
 colors:
-  black: "#06080d"
-  navy: "#0b1522"
-  ink: "#121417"
-  off-white: "#f4efe7"
-  warm-paper: "#fffaf1"
-  paper-deep: "#e7ded1"
-  muted-ucla-blue: "#4f7f9f"
-  light-blue: "#8bb3cc"
-  amber: "#d28a35"
-  thermal-pink: "#ff4fb8"
-  thermal-purple: "#6d4dff"
-  evidence-panel: "#101723"
-  evidence-panel-deep: "#0d1118"
+  paper: "#F1EFE8"
+  paperSoft: "#FBFAF4"
+  ink: "#0B0C0C"
+  charcoal: "#161818"
+  muted: "#737574"
+  rule: "#D8D5CC"
+  steelBlue: "#587B9B"
+  uclaBlueMuted: "#315F7C"
 typography:
   display:
-    fontFamily: "Archivo, system-ui, sans-serif"
+    fontFamily: "Archivo, Arial, Helvetica, sans-serif"
     fontWeight: 900
     lineHeight: 0.78
-    letterSpacing: "0"
-  editorial:
-    fontFamily: "Libre Baskerville, Georgia, serif"
-    fontWeight: 400
-    lineHeight: 1.7
+    letterSpacing: "-0.038em"
+  headline:
+    fontFamily: "Archivo, Arial, Helvetica, sans-serif"
+    fontWeight: 700
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
   body:
-    fontFamily: "Source Sans 3, system-ui, sans-serif"
-    fontWeight: 400
-    lineHeight: 1.58
-  metadata:
-    fontFamily: "JetBrains Mono, ui-monospace, monospace"
-    fontWeight: 900
-    letterSpacing: "0.08em"
+    fontFamily: "Archivo, Arial, Helvetica, sans-serif"
+    fontWeight: 500
+    lineHeight: 1.5
+    letterSpacing: "0"
+  label:
+    fontFamily: "IBM Plex Mono, Consolas, monospace"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "0.04em"
 rounded:
-  default: "0"
+  none: "0"
+  small: "6px"
+  mobileFrame: "16px"
+  frame: "clamp(14px, 2vw, 24px)"
 spacing:
-  gutter: "clamp(18px, 4vw, 56px)"
-  section: "clamp(72px, 10vw, 144px)"
+  gutter: "clamp(18px, 4vw, 60px)"
+  section: "clamp(56px, 8vw, 132px)"
+  framePadding: "clamp(14px, 2vw, 26px)"
+  tight: "8px"
+  medium: "18px"
+  wide: "32px"
 components:
-  studio-hero:
-    backgroundColor: "{colors.off-white}"
-    heading: "Oversized black-and-white Kyle Young wordmark with portrait overlap"
-  bento-work-grid:
-    backgroundColor: "{colors.black}"
-    behavior: "Varied card spans, image-led priority, neon only for research/simulation artifact gaps"
-  cinematic-case-study:
-    backgroundColor: "{colors.black}"
-    behavior: "Large project title, sparse metadata, decision/result callouts, wide technical imagery, sticky desktop TOC"
+  heroFrame:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.frame}"
+    padding: "{spacing.framePadding}"
+  primaryButton:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paperSoft}"
+    typography: "{typography.label}"
+    padding: "12px 18px"
+    height: "48px"
+  secondaryButton:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    padding: "12px 18px"
+    height: "48px"
 ---
 
-# Design System: Kyle Young Engineering Portfolio
+# Design System: Kyle Young Swiss Engineering Dossier
 
-## Creative North Star
+## 1. Overview
 
-**Studio Engineering Editorial.**
+The portfolio presents Kyle Young as a mechanical engineer, researcher, builder, and suspension lead through a precise editorial-technical visual system. The homepage should feel like a museum poster crossed with an engineering presentation board: large black grotesk type, high-contrast portraiture, sparse technical annotations, Golden Gate bridge linework, and real project evidence.
 
-The portfolio should feel like mechanical engineering work presented by a design studio: oversized black-and-white identity, cinematic dark case-study surfaces, restrained UCLA-blue metadata, amber proof marks, warm editorial sections, and technical artifacts treated as the primary visual evidence.
+The hero is the identity anchor. A near-full-viewport rounded frame contains minimal navigation, oversized layered "KYLE YOUNG" typography, a black-and-white portrait cutout, SVG bridge construction lines, coordinate marks, social links, and a restrained role statement. The name and portrait must interlock through explicit duplicate text layers and clipping, not a single z-indexed title.
 
-It must not read like a generic software portfolio or SaaS landing page. Physical systems, data, drawings, CAD, test evidence, and individual ownership are the center of the interface.
+Below the hero, the site transitions directly into evidence: additive-manufacturing thermal research, Bruin Formula Racing suspension, SF Unity robotics, cerebrospinal fluid flow research, and microfluidic device development.
 
-## Visual Rules
+## 2. Colors
 
-- Use monumental type selectively: identity, major section transitions, and project titles.
-- Keep body copy readable and warm, especially in About, Experience, and Contact.
-- Use JetBrains Mono only for project numbers, metadata, dates, skills, tools, captions, and quantitative proof.
-- Preserve hard rectangular modules and precise borders. Rounded cards are not a defining motif.
-- Use neon pink/purple only inside thermal, simulation, and research visualization modules.
-- If a project lacks public artifacts, label the gap clearly instead of fabricating polish.
+Use a quiet off-white system with near-black typography and steel-blue technical overlays.
 
-## Layout System
+- `paper` `#F1EFE8`: primary page and hero field.
+- `paperSoft` `#FBFAF4`: lighter panel interiors, button text, and elevated surfaces.
+- `ink` `#0B0C0C`: primary typography, navigation, bridge silhouettes, and rules.
+- `charcoal` `#161818`: secondary dark text and dense technical marks.
+- `muted` `#737574`: supporting copy and low-priority metadata.
+- `rule` `#D8D5CC`: construction lines, borders, contour strokes, and quiet dividers.
+- `steelBlue` `#587B9B`: bridge shadow layer, displacement fields, and restrained engineering data accents.
+- `uclaBlueMuted` `#315F7C`: optional deeper blue accent for UCLA or systems references.
 
-The homepage is a curated recruiter scan:
+Do not introduce bright gradients, neon colors, glassmorphism, blueprint textures, glowing effects, or broad copper/orange accents. Blue is a technical signal, not a full-page theme.
 
-- Typographic hero with Kyle Young as the dominant visual object.
-- Selected Work bento grid with varied composition and rank.
-- Warm editorial About.
-- Structured Experience list optimized for quick recruiter scanning.
-- High-contrast Contact close.
+## 3. Typography
 
-Case studies use a dark cinematic publication model:
+Display type uses `Archivo` with the visual weight of a condensed grotesk. It should feel structural, vertical, and architectural. The hero name is intentionally monumental and may crop against the frame.
 
-- Sparse top navigation.
-- Large project title and one-sentence problem statement.
-- Metadata grid for category, role, tools, dates, team, and duration where available.
-- Wide hero image or artifact.
-- Structured sections for context, constraints, process, decisions, validation, manufacturing, results, and reflection where the project supports them.
-- Decision/result callouts for the strongest recruiter evidence.
-- Desktop sticky table of contents generated from section metadata.
+- Hero display: `Archivo`, `900`, `clamp(6.6rem, 18.6vw, 19.8rem)`, line-height `0.78`, letter-spacing `-0.038em`.
+- Section headline: `Archivo`, `700`, `clamp(2.5rem, 6vw, 6.8rem)`, line-height `0.92`, letter-spacing `-0.035em`.
+- Body: `Archivo`, `500`, `1rem` to `1.08rem`, line-height around `1.5`.
+- Technical label: `IBM Plex Mono`, `700`, `0.62rem` to `0.78rem`, uppercase, letter-spacing `0.04em`.
 
-## Content Rules
+Keep text readable when layered over the portrait. Foreground name fragments should only cover selected portions of letters so the portrait remains recognizable and the identity remains legible.
 
-- Do not invent metrics, tools, dates, outcomes, employers, awards, or responsibilities.
-- Make Kyle's individual contribution explicit wherever the source content supports it.
-- Prefer evidence-driven copy: designed, analyzed, fabricated, tested, automated, coordinated, calibrated.
-- Use callout blocks for results, constraints, and engineering decisions that a recruiter should see in five seconds.
-- Avoid vague claims such as "innovative problem solver" unless immediately supported by project evidence.
-- Keep artifact gaps visible for research and microfluidics until public images, datasets, or notes are added.
+## 4. Layout
 
-## Interaction Rules
+The homepage opens with `.hero-dossier`, a framed composition that nearly fills the viewport. The frame is separated from the page by a thin dark border and a subtle shadow. Navigation sits inside the frame, not in a heavy external bar.
 
-- Use restrained motion: reveal-on-scroll, animated counters, light hero movement, image scale on hover.
+Layer order for the hero:
+
+1. Off-white page background.
+2. Hero frame field.
+3. Pale technical grid, contour lines, and steel-blue bridge shadow.
+4. Oversized background name layer.
+5. Primary black bridge drawing.
+6. Monochrome portrait cutout.
+7. Clipped foreground name fragments.
+8. Navigation, role text, social links, scale marks, and labels.
+
+Desktop should preserve the dramatic horizontal bridge composition and the portrait near the right edge. Tablet reduces annotation density. Mobile stacks "KYLE" and "YOUNG", keeps the portrait central, reduces bridge span to a compact tower/cable motif, and removes nonessential labels to prevent horizontal overflow.
+
+Sections below the hero use full-width editorial bands and alternating case rows. Avoid conventional portfolio card grids in the hero; use cards only for repeated project items or constrained tool panels outside the hero.
+
+## 5. Elevation & Depth
+
+Depth is restrained and mostly graphic:
+
+- Hero frame shadow: `0 18px 44px rgba(11, 12, 12, 0.08)`.
+- Portrait shadow: subtle drop shadow only, enough to separate the cutout from type.
+- Bridge depth: achieved with offset steel-blue and black SVG layers.
+- Case-study depth: created through spacing, rule lines, and media scale, not heavy shadows.
+
+Avoid glossy surfaces, floating panels, glass effects, dramatic blur, or heavy card shadows.
+
+## 6. Shapes
+
+Use precise, low-radius geometry.
+
+- Hero frame radius: `clamp(14px, 2vw, 24px)`.
+- Mobile hero frame radius: `16px`.
+- Small repeated items: `6px` maximum unless an existing component requires otherwise.
+- Buttons and text controls: hard-edged or minimally rounded.
+- Technical overlays: thin rules, crosshairs, ticks, dashed leaders, axes, and contour paths.
+
+No decorative blobs, orbs, bokeh, fake HUD frames, or rounded pill navigation.
+
+## 7. Components
+
+### HeroFrame
+
+`.hero-frame` owns the near-full-viewport poster field. It contains internal navigation, bridge SVG layers, layered name typography, portrait cutout, social links, role statement, annotations, and scale marks. It must reserve stable space with `min-height`, responsive padding, and clipping so animation does not cause layout shift.
+
+### HeroNavigation
+
+`.hero-nav` is a sparse monospaced row: `KYLE YOUNG`, `WORK`, `RESEARCH`, `SYSTEMS`, `ABOUT`, and `MECHANICAL ENGINEER`. Links use thin underline/rule hover states and visible keyboard focus. No desktop hamburger, pill shell, heavy divider, or large logo treatment.
+
+### LayeredName
+
+`.layered-name` renders duplicate name layers. `.name-layer-back` sits behind the portrait. `.name-layer-front` contains clipped fragments such as `.front-kyle` and `.front-young` that pass in front of selected portrait regions. This is the core illusion and should not be replaced by a single text element.
+
+### PortraitCutout
+
+`.hero-portrait` uses `images/headshot-cutout.png`, a transparent cutout derived from Kyle's authentic portrait. It is displayed in high-contrast black and white with preserved clothing and object texture. Do not blur, posterize, or make it look like a generic corporate headshot.
+
+### BridgeLinework
+
+The Golden Gate bridge is an SVG motif, not a tourist image. Use towers, deck lines, suspension cables, and hangers as compositional structure. Any numeric engineering values in decorative annotations must be clearly illustrative unless backed by real project analysis.
+
+### SocialLinks
+
+`.hero-socials` is a quiet vertical link group in the lower-left. Links must have accessible labels, keyboard focus states, and monochrome visual treatment.
+
+### WorkIndex
+
+The selected work section proves the hero claim. Rows should foreground project evidence and outcomes. The current order is additive manufacturing, Bruin Formula Racing suspension, SF Unity robotics, cerebrospinal fluid flow research, and microfluidics.
+
+## 8. Do's and Don'ts
+
+Do:
+
+- Preserve the Swiss-editorial engineering identity.
+- Keep the hero composition integrated, cropped, and confident.
+- Use SVG for bridge and technical linework so it stays sharp.
+- Keep annotations sparse and explicitly illustrative when not sourced from real data.
 - Respect `prefers-reduced-motion`.
-- Never hide important information behind hover.
-- Keep keyboard focus visible and mobile navigation touch-friendly.
+- Use GSAP only for restrained load reveals, bridge draw-in, subtle parallax, and scroll-dependent offsets.
+- Keep focus states visible and contrast strong.
+- Let real projects and real artifacts carry the engineering credibility.
+
+Don't:
+
+- Restore the old horizontal scrolling showreel as the homepage hero.
+- Use generic cards, pill nav, bright gradients, glassmorphism, blueprints, glowing UI, or fake futuristic overlays.
+- Animate bridge deformation, individual letters, or cartoon-like structural motion.
+- Suggest Kyle designed the Golden Gate Bridge.
+- Present invented technical values as factual analysis.
+- Allow mobile horizontal overflow.
+- Replace the portrait/name interlock with a single z-indexed title.

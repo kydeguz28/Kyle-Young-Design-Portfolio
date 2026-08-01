@@ -4,189 +4,384 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kyle Young - Mechanical Engineering Portfolio</title>
-  <meta name="description" content="Kyle Young is a UCLA mechanical engineer, researcher, and builder working across Formula SAE suspension, robotics, manufacturing, biomedical flow research, and product development." />
+  <meta name="description" content="Kyle Young is a UCLA mechanical engineer designing, modeling, testing, manufacturing, and leading ambitious physical systems across suspension, research, robotics, and biomedical analysis." />
   <meta property="og:title" content="Kyle Young - Mechanical Engineering Portfolio" />
-  <meta property="og:description" content="Design, simulation, testing, manufacturing, robotics, biomedical flow analysis, and technical leadership." />
+  <meta property="og:description" content="Mechanical design, simulation, testing, manufacturing, research, robotics leadership, and practical engineering evidence." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/bfr-shock-packaging.jpg" />
+  <meta property="og:image" content="images/headshot.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="home-page">
+<body class="home-page dossier-home">
   <!--
-    THESIS: A mechanical-engineering portfolio can behave like a design-studio editorial site without losing proof.
-    OWN-WORLD: Black-and-white type, near-black case-study surfaces, off-white editorial sections, muted UCLA blue, amber metrics, neon only inside research/simulation modules.
-    STORY: Recruiters first see identity and discipline, then scan selected work, artifacts, ownership, experience, and contact.
-    FIRST VIEWPORT: "Kyle Young" dominates the viewport while an engineering portrait/project cutout overlaps the letterforms.
-    FORM: Responsive editorial bento plus cinematic case-study system; no SaaS landing-page grid.
+    THESIS: Kyle Young's portfolio behaves like a Swiss-editorial engineering poster, proving that personal identity and mechanical evidence can occupy the same technical field.
+    OWN-WORLD: Warm off-white page, thin framed hero, oversized black grotesk type, monochrome portrait cutout, steel-blue Golden Gate linework, sparse coordinate labels.
+    STORY: Recruiters see identity, capability, proof, research, leadership, and contact without losing factual accuracy.
+    FIRST VIEWPORT: A framed poster composition layers KYLE YOUNG behind and in front of the portrait, with bridge linework, social links, and role text inside the frame.
+    FORM: Swiss-editorial engineering hero; GSAP scroll parallax, SVG bridge line drawing, layered typography masks, and static fallbacks.
   -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="siteHeader">
-    <a class="brand-lockup" href="#top" aria-label="Kyle Young home">
-      <span class="brand-mark">KY</span>
-      <span class="brand-text">
-        <span class="brand-name">Kyle Young</span>
-        <span class="brand-role">Mechanical Engineer</span>
-      </span>
+  <header class="dossier-nav" id="siteHeader">
+    <a class="dossier-brand" href="#top" aria-label="Kyle Young home">
+      <span>Kyle Young</span>
+      <small>Mechanical Engineer</small>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+    <nav class="dossier-links" id="siteNav" aria-label="Primary navigation">
       <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#leadership">Leadership</a>
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-resume" href="YoungKyle_Resume.pdf" download>Resume</a>
+      <a href="YoungKyle_Resume.pdf" download>Resume</a>
+      <a href="mailto:kyledeguz@gmail.com">Contact</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="studio-hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-navline" aria-hidden="true">
-        <span>UCLA / Mechanical Engineering</span>
-        <span>CAD - Simulation - Manufacturing - Research</span>
-      </div>
-      <div class="hero-type" data-speed="0.08">
-        <span>Kyle</span>
-        <span>Young</span>
-      </div>
-      <figure class="hero-subject reveal" data-speed="-0.06">
-        <img src="images/headshot.jpg" alt="Kyle Young portrait in Bruin Formula Racing shirt" />
-      </figure>
-      <div class="hero-panel reveal">
-        <p class="kicker">Mechanical Engineer / Researcher / Builder</p>
-        <h1 id="hero-title">Kyle Young</h1>
-        <p>Building credible engineering systems through design, simulation, testing, manufacturing, code, and team leadership.</p>
-        <div class="positioning-stack" aria-label="Core engineering capabilities">
-          <span>Mechanical design</span>
-          <span>Quantitative validation</span>
-          <span>Hands-on manufacturing</span>
+    <section class="hero-dossier" id="top" aria-labelledby="hero-title" data-hero>
+      <div class="hero-frame">
+        <nav class="hero-nav" aria-label="Hero navigation">
+          <a class="hero-nav-brand" href="#top">© Kyle Young</a>
+          <div class="hero-nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Projects</a>
+            <a href="YoungKyle_Resume.pdf" download>Resume</a>
+          </div>
+          <a href="mailto:kyledeguz@gmail.com">Contact</a>
+        </nav>
+
+        <div class="hero-technical-field" aria-hidden="true">
+          <svg class="hero-bridge hero-bridge-blue" viewBox="0 0 1400 620" preserveAspectRatio="none">
+            <path class="bridge-cable" d="M-90 378 C220 92 590 92 140 378 S1170 664 1490 378" />
+            <path class="bridge-deck" d="M-80 390 H1480" />
+            <path class="bridge-tower" d="M310 392 V148 M1090 392 V148" />
+            <path class="bridge-cap" d="M270 158 H350 M1050 158 H1130" />
+            <g class="bridge-hangers">
+              <path d="M120 340 V390 M205 277 V390 M290 202 V390 M375 164 V390 M460 143 V390 M545 132 V390 M630 137 V390 M715 156 V390 M800 191 V390 M885 245 V390 M970 316 V390 M1055 378 V390 M1140 326 V390 M1225 272 V390 M1310 333 V390" />
+            </g>
+          </svg>
+          <svg class="hero-bridge hero-bridge-black" viewBox="0 0 1400 620" preserveAspectRatio="none">
+            <path class="bridge-cable" d="M-90 378 C220 92 590 92 140 378 S1170 664 1490 378" />
+            <path class="bridge-deck" d="M-80 390 H1480" />
+            <path class="bridge-tower" d="M310 392 V148 M1090 392 V148" />
+            <path class="bridge-cap" d="M270 158 H350 M1050 158 H1130" />
+            <g class="bridge-hangers">
+              <path d="M120 340 V390 M205 277 V390 M290 202 V390 M375 164 V390 M460 143 V390 M545 132 V390 M630 137 V390 M715 156 V390 M800 191 V390 M885 245 V390 M970 316 V390 M1055 378 V390 M1140 326 V390 M1225 272 V390 M1310 333 V390" />
+            </g>
+          </svg>
+          <div class="contour-lines"></div>
         </div>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">View Selected Work</a>
-          <a class="button secondary" href="YoungKyle_Resume.pdf" download>Download Resume</a>
+
+        <div class="hero-composition">
+          <p class="hero-figure">Fig. KY-01 / Identity study</p>
+          <div class="layered-name" aria-label="Kyle Young">
+            <h1 id="hero-title" class="name-layer name-layer-back">Kyle Young</h1>
+            <figure class="hero-portrait">
+              <img src="images/headshot-cutout.png" alt="Kyle Young portrait" fetchpriority="high" />
+            </figure>
+            <div class="name-layer name-layer-front" aria-hidden="true">
+              <span class="front-kyle">Kyle</span>
+              <span class="front-young">Young</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="hero-metrics" aria-label="Portfolio proof summary">
-        <div><span data-count="5">0</span><p>Featured domains</p></div>
-        <div><span data-count="150">0</span><p>Students reached through robotics</p></div>
-        <div><span data-count="400">0</span><p>NovelForge orders</p></div>
+
+        <div class="hero-annotations" aria-hidden="true">
+          <span>37°48′N</span>
+          <span>122°28′W</span>
+          <span>Illustrative structural overlay</span>
+        </div>
+
+        <div class="hero-socials" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/kyoung28" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9.5V19M6.5 5.5v.1M10.5 19v-9.5M10.5 13.6c.55-2.7 5.1-3.2 5.1.6V19" /></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/kydeguz28" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-5.5-2.5M15 22v-3.4c.1-1-.3-1.7-.8-2.1 2.7-.3 5.6-1.4 5.6-6A4.6 4.6 0 0 0 18.5 7c.2-.8.2-1.7-.2-2.8 0 0-1-.3-3.3 1.2a11.4 11.4 0 0 0-6 0C6.7 3.9 5.7 4.2 5.7 4.2A4.7 4.7 0 0 0 5.5 7a4.6 4.6 0 0 0-1.3 3.5c0 4.6 2.8 5.7 5.6 6-.4.3-.8.9-.8 1.8V22" /></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:kyledeguz@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" /><path d="m4 7 8 6 8-6" /></svg>
+            <span>Email</span>
+          </a>
+        </div>
+
+        <div class="hero-role-statement">
+          <p>Mechanical Engineer</p>
+          <span>Researcher / Builder</span>
+          <small>Suspension Lead</small>
+        </div>
+
+        <div class="hero-scale" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
       </div>
     </section>
 
-    <section class="section work-section" id="work" aria-labelledby="work-title">
-      <div class="editorial-heading">
-        <p class="kicker">Selected Work</p>
-        <h2 id="work-title">Physical systems, research artifacts, and build leadership.</h2>
-        <p>Each module is ranked by available evidence. Projects without shareable artifacts are clearly marked instead of inflated into finished case studies.</p>
+    <section class="showreel showreel-retired" aria-label="Retired engineering showreel" hidden>
+      <div class="showreel-pin">
+        <div class="showreel-progress" aria-hidden="true"><span></span></div>
+        <div class="scene-counter" aria-live="polite">01 / 05</div>
+        <div class="showreel-track">
+          <article class="showreel-scene scene-identity is-dark" data-scene="01">
+            <div class="bridge-plate bridge-fog" aria-hidden="true"></div>
+            <svg class="bridge-lines" viewBox="0 0 1200 700" aria-hidden="true">
+              <path d="M70 428 C360 116 796 116 1130 428" />
+              <path d="M180 410 L180 160 M1010 410 L1010 160" />
+              <path d="M180 170 L1010 170" />
+              <path d="M150 426 L1045 426" />
+            </svg>
+            <figure class="portrait-cutout">
+              <img src="images/headshot-cutout.png" alt="Kyle Young portrait" fetchpriority="high" />
+            </figure>
+            <div class="scene-copy">
+              <p class="scene-label">Scene 01 / Identity</p>
+              <h1>Kyle Young</h1>
+              <p class="scene-lede">Mechanical Engineer — UCLA</p>
+            </div>
+            <dl class="scene-meta">
+              <div><dt>Coord.</dt><dd>37°48′N 122°28′W</dd></div>
+              <div><dt>Doc.</dt><dd>KY-PORTFOLIO / REV. 01</dd></div>
+              <div><dt>Base</dt><dd>Los Angeles / San Francisco</dd></div>
+            </dl>
+          </article>
+
+          <article class="showreel-scene scene-suspension" data-scene="02">
+            <div class="scene-media">
+              <img src="images/generated/formula-sae-suspension-macro.png" alt="Generated atmospheric macro of suspension hardware, not project documentation" loading="eager" />
+              <img class="media-inset" src="images/ShockPackagingFEA1.png" alt="Real FEA result for shock packaging component" loading="lazy" />
+            </div>
+            <div class="datum-grid" aria-hidden="true"></div>
+            <div class="scene-copy">
+              <p class="scene-label">Scene 02 / Suspension</p>
+              <h2>Built to withstand it.</h2>
+              <p class="scene-lede">Suspension systems designed around real loads, packaging constraints, and vehicle-dynamics targets.</p>
+            </div>
+            <dl class="scene-meta metric-strip">
+              <div><dt>Target</dt><dd>Within 5%</dd></div>
+              <div><dt>System</dt><dd>Shock packaging</dd></div>
+              <div><dt>Role</dt><dd>Suspension lead</dd></div>
+            </dl>
+          </article>
+
+          <article class="showreel-scene scene-thermal is-dark" data-scene="03">
+            <div class="scene-media">
+              <img src="images/generated/thermal-research-printer.png" alt="Generated atmospheric thermal research printer image, not project documentation" loading="lazy" />
+              <img class="media-inset" src="images/CSF1.png" alt="Real Python workflow and plotted analysis output" loading="lazy" />
+            </div>
+            <div class="thermal-contours" aria-hidden="true"></div>
+            <div class="scene-copy">
+              <p class="scene-label">Scene 03 / Thermal Research</p>
+              <h2>Measure what the model cannot predict.</h2>
+              <p class="scene-lede">Infrared experiments, transient heat transfer, deposition modeling, and physics-informed analysis.</p>
+            </div>
+            <dl class="scene-meta metric-strip">
+              <div><dt>Instrument</dt><dd>IR camera</dd></div>
+              <div><dt>Physics</dt><dd>Transient heat transfer</dd></div>
+              <div><dt>Tools</dt><dd>COMSOL / MATLAB / Python</dd></div>
+            </dl>
+          </article>
+
+          <article class="showreel-scene scene-robotics" data-scene="04">
+            <div class="scene-media">
+              <img src="images/Karl2.jpg" alt="Real SF Unity Robotics robot fabrication and competition media" loading="lazy" />
+              <img class="media-inset" src="images/KarlDesignPoster.jpg" alt="Real Karl robot design poster" loading="lazy" />
+            </div>
+            <div class="bridge-plate bridge-linework" aria-hidden="true"></div>
+            <div class="scene-copy">
+              <p class="scene-label">Scene 04 / Robotics</p>
+              <h2>Build the machine. Build the team.</h2>
+              <p class="scene-lede">Competition robots and an independent program grown to more than 150 students across nine schools.</p>
+            </div>
+            <dl class="scene-meta metric-strip">
+              <div><dt>Team</dt><dd>SF Unity</dd></div>
+              <div><dt>Scale</dt><dd>150+ students / 9 schools</dd></div>
+              <div><dt>Proof</dt><dd>2023 World Championship</dd></div>
+            </dl>
+          </article>
+
+          <article class="showreel-scene scene-systems is-dark" data-scene="05">
+            <div class="systems-montage" aria-hidden="true">
+              <img src="images/bfr-shock-packaging.jpg" alt="" loading="lazy" />
+              <img src="images/ShockPackagingTopOp2.png" alt="" loading="lazy" />
+              <img src="images/CSF1.png" alt="" loading="lazy" />
+              <img src="images/anti-roll-bar-fixture.jpg" alt="" loading="lazy" />
+            </div>
+            <svg class="bridge-lines bridge-lines-final" viewBox="0 0 1200 700" aria-hidden="true">
+              <path d="M40 454 C348 142 790 142 1160 454" />
+              <path d="M128 452 L1090 452" />
+              <path d="M260 410 L260 220 M940 410 L940 220" />
+            </svg>
+            <div class="scene-copy">
+              <p class="scene-label">Scene 05 / Systems</p>
+              <h2>Engineering across hardware, computation, and experiment.</h2>
+              <p class="scene-lede">A transition into selected work.</p>
+              <a class="text-cta" href="#work">Explore selected work</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity-statement technical-transition" id="about" aria-labelledby="identity-title">
+      <p class="section-marker">KY / 00</p>
+      <h2 id="identity-title">Mechanical systems, measured.</h2>
+      <svg class="transition-bridge" viewBox="0 0 1200 260" aria-hidden="true">
+        <path d="M20 180 C250 36 500 36 600 180 S950 324 1180 180" />
+        <path d="M20 190 H1180" />
+        <path d="M240 190 V72 M960 190 V72" />
+        <path d="M240 82 H960" />
+        <path d="M140 160 V190 M220 118 V190 M300 78 V190 M380 56 V190 M460 50 V190 M540 72 V190 M620 118 V190 M700 168 V190 M780 162 V190 M860 116 V190 M940 78 V190 M1020 116 V190 M1100 160 V190" />
+      </svg>
+      <p>Kyle Young is a UCLA mechanical engineering student working across Formula SAE suspension, additive-manufacturing thermal research, biomedical flow analysis, robotics, aerospace manufacturing support, MEMS hardware, and 3D printed products. The common thread is practical engineering evidence: constraints made visible, parts made real, and results tied back to decisions.</p>
+    </section>
+
+    <section class="work-index" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <p class="section-marker">Selected Work / 01</p>
+        <h2 id="work-title">Case studies in hardware, computation, and validation.</h2>
       </div>
 
-      <div class="bento-grid">
-        <article class="work-card bento-large neon-panel artifact-pending">
-          <div class="work-topline"><span>01</span><span>Research / Thermal</span></div>
-          <h3>Additive Manufacturing Thermal Research</h3>
-          <p>Known work area involving thermal-camera and simulation content. Shareable repo artifacts are not present yet, so this module is framed as an artifact gap.</p>
-          <div class="work-result">Evidence gap called out intentionally: thermal imagery and validation data are needed before this becomes a full case study.</div>
-          <div class="thermal-map" aria-hidden="true"></div>
+      <div class="case-row case-row-large">
+        <figure class="case-media technical">
+          <img src="images/generated/thermal-research-printer.png" alt="Generated atmospheric thermal research printer image, not project documentation" loading="lazy" />
+        </figure>
+        <div class="case-copy">
+          <p class="case-number">01 / Additive Manufacturing Thermal Research</p>
+          <h3>Thermal Research</h3>
+          <p>Infrared and simulation-led investigation of material deposition, transient heat transfer, and the gap between model prediction and physical measurement.</p>
           <dl>
-            <div><dt>Skills</dt><dd>Thermal analysis, additive manufacturing, COMSOL/MATLAB context</dd></div>
-            <div><dt>Status</dt><dd>Needs public images/data before full case study</dd></div>
+            <div><dt>Role</dt><dd>Research analysis and experimental framing</dd></div>
+            <div><dt>Methods</dt><dd>IR camera context, COMSOL, MATLAB, Python</dd></div>
+            <div><dt>Status</dt><dd>Public thermal artifacts are not yet in this repo</dd></div>
           </dl>
-        </article>
+        </div>
+      </div>
 
-        <a class="work-card bento-wide image-card" href="projects/shock-packaging.html">
+      <div class="case-row case-row-reverse">
+        <a class="case-media" href="projects/shock-packaging.html">
           <img src="images/bfr-shock-packaging.jpg" alt="Formula SAE shock packaging assembly" loading="lazy" />
-          <div class="work-overlay">
-            <div class="work-topline"><span>02</span><span>Formula SAE / Suspension</span></div>
-            <h3>Bruin Formula Racing Suspension</h3>
-            <p>Responsible-engineer shock packaging with CAD, FEA, topology optimization, lug analysis, and motion-ratio target work.</p>
-            <div class="work-result">Motion ratio within 5% deviation.</div>
-            <dl><div><dt>Result</dt><dd>Motion ratio within 5% deviation</dd></div><div><dt>Role</dt><dd>Responsible engineer</dd></div></dl>
-          </div>
         </a>
+        <div class="case-copy">
+          <p class="case-number">02 / Bruin Formula Racing Suspension</p>
+          <h3><a href="projects/shock-packaging.html">Shock Packaging</a></h3>
+          <p>Packaging suspension hardware that preserves motion-ratio targets, avoids subsystem interference, and survives dynamic load paths.</p>
+          <dl>
+            <div><dt>Role</dt><dd>Shock Packaging Responsible Engineer</dd></div>
+            <div><dt>Methods</dt><dd>SolidWorks, FEA, topology optimization, lug analysis</dd></div>
+            <div><dt>Result</dt><dd>Motion-ratio target held within 5% deviation</dd></div>
+          </dl>
+        </div>
+      </div>
 
-        <a class="work-card bento-tall image-card" href="projects/karl-2023.html">
-          <img src="images/KarlDesignPoster.jpg" alt="Karl FRC robot design poster" loading="lazy" />
-          <div class="work-overlay">
-            <div class="work-topline"><span>03</span><span>FIRST Robotics</span></div>
-            <h3>SF Unity Robotics</h3>
-            <p>Fabrication, build coordination, grants, sponsorship, and team infrastructure across competition robots.</p>
-            <div class="work-result">150+ students across nine schools.</div>
-            <dl><div><dt>Scale</dt><dd>150+ students across nine schools</dd></div><div><dt>Proof</dt><dd>Robot posters and team media</dd></div></dl>
-          </div>
+      <div class="case-row">
+        <a class="case-media media-duo" href="projects/sf-unity.html">
+          <img src="images/karl-2023.jpg" alt="SF Unity Robotics Karl competition robot" loading="lazy" />
+          <img src="images/phoenix-2024.jpg" alt="SF Unity Robotics Phoenix competition robot" loading="lazy" />
         </a>
+        <div class="case-copy">
+          <p class="case-number">03 / FIRST Robotics</p>
+          <h3><a href="projects/sf-unity.html">SF Unity</a></h3>
+          <p>Karl 2023 and Phoenix 2024 sit under one robotics project: founding, funding, fabricating, packaging, repairing, and scaling an independent FRC program.</p>
+          <dl>
+            <div><dt>Role</dt><dd>Founder, captain, fabrication lead</dd></div>
+            <div><dt>Scale</dt><dd>150+ students across nine schools</dd></div>
+            <div><dt>Robots</dt><dd>Karl 2023 / Phoenix 2024</dd></div>
+          </dl>
+        </div>
+      </div>
 
-        <a class="work-card bento-medium research-card" href="projects/csf-flow-analysis.html">
-          <div class="work-topline"><span>04</span><span>Biomedical Flow</span></div>
-          <h3>CSF Flow Research</h3>
-          <p>Python workflow for extracting, cleaning, comparing, and visualizing cerebrospinal-fluid flow features.</p>
-          <div class="work-result">Research value: traceable signal processing rather than black-box plots.</div>
+      <div class="case-row case-row-reverse case-row-large">
+        <a class="case-media technical" href="projects/csf-flow-analysis.html">
           <img src="images/CSF1.png" alt="Python workflow and CSF flow analysis output" loading="lazy" />
-          <dl><div><dt>Shown</dt><dd>Workflow image</dd></div><div><dt>Not shown</dt><dd>Dataset / repository</dd></div></dl>
         </a>
+        <div class="case-copy">
+          <p class="case-number">04 / Cerebrospinal Fluid Flow Research</p>
+          <h3><a href="projects/csf-flow-analysis.html">CSF Flow Analysis</a></h3>
+          <p>A reproducible Python workflow for extracting, cleaning, comparing, and visualizing cerebrospinal-fluid flow features.</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Make physiological flow comparable across cases</dd></div>
+            <div><dt>Methods</dt><dd>Signal cleaning, normalization, feature extraction</dd></div>
+            <div><dt>Result</dt><dd>Traceable analysis rather than black-box plots</dd></div>
+          </dl>
+        </div>
+      </div>
 
-        <article class="work-card bento-medium neon-panel artifact-pending">
-          <div class="work-topline"><span>05</span><span>Microfluidics</span></div>
-          <h3>Microfluidics / Manufacturing</h3>
-          <p>Requested domain is relevant to the portfolio, but this repo currently has no public case-study asset for it.</p>
-          <div class="work-result">Not promoted as finished until images, process notes, tools, and outcomes are available.</div>
-          <div class="micro-grid" aria-hidden="true"></div>
-          <dl><div><dt>Status</dt><dd>Content gap, not a fabricated case study</dd></div><div><dt>Needed</dt><dd>Images, process notes, tools, outcomes</dd></div></dl>
+      <div class="case-row">
+        <figure class="case-media technical work-placeholder">
+          <div class="technical-placeholder" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </figure>
+        <div class="case-copy">
+          <p class="case-number">05 / Microfluidic Device Development</p>
+          <h3>Microfluidic Devices</h3>
+          <p>MEMS and microfluidic hardware work is part of Kyle's engineering range, but public project images and a standalone case study are not yet available in this repo.</p>
+          <dl>
+            <div><dt>Domain</dt><dd>MEMS hardware / microfluidic device development</dd></div>
+            <div><dt>Evidence</dt><dd>Project documentation pending</dd></div>
+            <div><dt>Status</dt><dd>Listed as capability, not presented as a finished public case</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-band" id="research" aria-labelledby="research-title">
+      <div>
+        <p class="section-marker">Research / 02</p>
+        <h2 id="research-title">Research work is shown as process, not polish.</h2>
+      </div>
+      <div class="research-list">
+        <article>
+          <span>AM-Thermal</span>
+          <h3>Additive Manufacturing Thermal Research</h3>
+          <p>Work area involving infrared experiments, transient heat transfer, deposition modeling, COMSOL, MATLAB, and Python. The homepage labels the public artifact gap instead of presenting generated imagery as proof.</p>
         </article>
+        <article>
+          <span>CSF-Flow</span>
+          <h3>Cerebrospinal Fluid Flow Analysis</h3>
+          <p>Python workflow for importing, cleaning, normalizing, and visualizing physiological flow signals in Chiari malformation outcome assessment.</p>
+          <a href="projects/csf-flow-analysis.html">Read case study</a>
+        </article>
+      </div>
+    </section>
 
-        <a class="work-card bento-medium image-card" href="projects/anti-roll-bar-test-fixture.html">
-          <img src="images/ARBStiffnessExperiment1.png" alt="Anti-roll bar stiffness worksheet" loading="lazy" />
-          <div class="work-overlay">
-            <div class="work-topline"><span>06</span><span>Validation Fixture</span></div>
-            <h3>Anti-Roll Bar Test Fixture</h3>
-            <p>Known load to measured deflection to stiffness feedback for Formula SAE suspension tuning.</p>
-            <div class="work-result">Physical test data fed back into suspension tuning decisions.</div>
+    <section class="leadership-band" id="leadership" aria-labelledby="leadership-title">
+      <div class="section-heading">
+        <p class="section-marker">Leadership / 03</p>
+        <h2 id="leadership-title">Engineering leadership under physical constraints.</h2>
+      </div>
+      <div class="leadership-grid">
+        <article class="leadership-feature">
+          <div class="leadership-media-pair">
+            <img src="images/KarlDesignPoster.jpg" alt="Karl robot design poster" loading="lazy" />
+            <img src="images/PhoenixDesignPoster.png" alt="Phoenix robot design poster" loading="lazy" />
           </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section editorial-section" id="about" aria-labelledby="about-title">
-      <div class="editorial-split">
-        <div>
-          <p class="kicker">About</p>
-          <h2 id="about-title">A builder who moves between analysis and hardware.</h2>
-        </div>
-        <div class="editorial-copy">
-          <p>I am a UCLA Mechanical Engineering student focused on work where analytical engineering and hands-on execution meet. My projects span Formula SAE suspension design, aerospace manufacturing support systems, MEMS hardware, biomedical fluid-flow research, robotics, and 3D printed product development.</p>
-          <p>I care most about building things that are useful, manufacturable, testable, and thoughtfully engineered.</p>
-          <div class="tool-index" aria-label="Selected tools">
-            <span>SolidWorks</span><span>CAD</span><span>DFM</span><span>Python</span><span>MATLAB</span><span>FEA</span><span>3D printing</span><span>Manual mill</span><span>Laser cutting</span>
+          <div>
+            <span>SF Unity Robotics</span>
+            <h3>Founded and captained an independent FIRST Robotics program; Karl and Phoenix are chapters of the same build system.</h3>
+            <p>Supported fabrication, subsystem packaging, grants, sponsorship, repair habits, and operating structure for more than 150 students across nine schools.</p>
+            <a class="text-link" href="projects/sf-unity.html">Read SF Unity case</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
-      <div class="editorial-heading">
-        <p class="kicker">Experience</p>
-        <h2 id="experience-title">Engineering roles with public context.</h2>
+    <section class="about-footer" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="section-marker">About / Contact / 04</p>
+        <h2 id="contact-title">Mechanical design, manufacturing, testing, robotics, and research-focused engineering roles.</h2>
       </div>
-      <div class="experience-list">
-        <article><span>2025</span><h3>Northrop Grumman - Module Assembly and Test</h3><p>Automated manual workflows with custom software and hardware for cleanroom manufacturing support; supported material qualification documentation for flight-hardware testing.</p></article>
-        <article><span>2023</span><h3>Atomic Machines - AMP Engineering Intern</h3><p>Prototyped and fabricated MEMS manufacturing hardware, designed SolidWorks components, and developed Python calibration scripts for testing platforms.</p></article>
-        <article><span>Current</span><h3>Bruin Formula Racing - Suspension</h3><p>Shock Packaging Responsible Engineer across vehicle interfaces, design reviews, manufacturing ownership, iteration, and testing-driven engineering.</p></article>
-        <article><span>Founder</span><h3>SF Unity Robotics</h3><p>Founded and captained an independent FIRST Robotics team; supported design, manufacturing, sponsorship, grants, and infrastructure for 150+ students across nine schools.</p></article>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-panel reveal">
-        <p class="kicker">Contact</p>
-        <h2 id="contact-title">Let's talk about mechanical design, robotics, manufacturing, testing, and research-focused engineering roles.</h2>
+      <div class="contact-block">
+        <p>I care most about building things that are useful, manufacturable, testable, and thoughtfully engineered. Current tools and contexts include SolidWorks, CAD, DFM, Python, MATLAB, FEA, 3D printing, manual mill work, and laser cutting.</p>
         <div class="contact-actions">
           <a class="button primary" href="mailto:kyledeguz@gmail.com">Email Kyle</a>
-          <a class="button secondary" href="YoungKyle_Resume.pdf" download>Download Resume</a>
+          <a class="button secondary" href="YoungKyle_Resume.pdf" download>Resume</a>
           <a class="button secondary" href="https://www.linkedin.com/in/kyoung28" target="_blank" rel="noopener">LinkedIn</a>
           <a class="button secondary" href="https://github.com/kydeguz28" target="_blank" rel="noopener">GitHub</a>
         </div>
@@ -194,14 +389,13 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div><strong>Kyle Young</strong><span>Mechanical Engineer / Researcher / Builder</span></div>
+  <footer class="site-footer dossier-footer">
+    <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js"></script>
-<!-- impeccable-live-start -->
-<script src="http://localhost:8400/live.js?token=0467a835-e37a-4544-8fc3-758a348b866c"></script>
-<!-- impeccable-live-end -->
+  <script src="node_modules/gsap/dist/gsap.min.js" defer></script>
+  <script src="node_modules/gsap/dist/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

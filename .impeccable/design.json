@@ -1,85 +1,184 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-30T00:00:00-07:00",
-  "title": "Design System: Kyle Young Engineering Portfolio",
+  "generatedAt": "2026-07-31T14:25:04.6303883-07:00",
+  "title": "Design System: Kyle Young Swiss Engineering Dossier",
   "extensions": {
     "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f4f0e8", "tonalRamp": ["oklch(18% 0.015 80)", "oklch(30% 0.015 80)", "oklch(44% 0.015 80)", "oklch(58% 0.015 80)", "oklch(72% 0.015 80)", "oklch(84% 0.015 80)", "#f4f0e8", "#fffdf8"] },
-      "ink": { "role": "primary", "displayName": "Ink", "canonical": "#111315", "tonalRamp": ["#111315", "#202326", "oklch(34% 0.01 250)", "oklch(48% 0.01 250)", "oklch(62% 0.01 250)", "oklch(76% 0.01 250)", "oklch(88% 0.01 250)", "oklch(96% 0.01 250)"] },
-      "ucla-blue-muted": { "role": "secondary", "displayName": "Muted UCLA Blue", "canonical": "#315f7c", "tonalRamp": ["oklch(18% 0.05 235)", "#17384e", "#315f7c", "oklch(52% 0.07 235)", "oklch(65% 0.06 235)", "oklch(78% 0.045 235)", "oklch(88% 0.028 235)", "oklch(96% 0.015 235)"] },
-      "copper-proof": { "role": "tertiary", "displayName": "Copper Proof", "canonical": "#b46527", "tonalRamp": ["oklch(18% 0.07 55)", "oklch(30% 0.09 55)", "oklch(42% 0.11 55)", "oklch(52% 0.12 55)", "#b46527", "oklch(68% 0.11 55)", "oklch(82% 0.08 55)", "oklch(94% 0.04 55)"] }
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#F1EFE8",
+        "tonalRamp": ["#161513", "#34312B", "#5D594F", "#8E887C", "#C8C2B8", "#E5E1D9", "#F1EFE8", "#FBFAF4"]
+      },
+      "paperSoft": {
+        "role": "surface",
+        "displayName": "Soft Paper",
+        "canonical": "#FBFAF4",
+        "tonalRamp": ["#1A1916", "#3B3832", "#676158", "#A29B8F", "#DCD6CA", "#F1EFE8", "#FBFAF4", "#FFFFFF"]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "#0B0C0C",
+        "tonalRamp": ["#0B0C0C", "#161818", "#2A2D2D", "#454949", "#696D6D", "#969A99", "#CDD0CE", "#F4F5F2"]
+      },
+      "muted": {
+        "role": "secondary",
+        "displayName": "Muted Text",
+        "canonical": "#737574",
+        "tonalRamp": ["#1C1D1D", "#333535", "#4D504F", "#737574", "#999B99", "#BFC0BC", "#DDDED8", "#F4F3EC"]
+      },
+      "rule": {
+        "role": "border",
+        "displayName": "Construction Rule",
+        "canonical": "#D8D5CC",
+        "tonalRamp": ["#292824", "#4C4942", "#706C62", "#969186", "#BAB5AB", "#D8D5CC", "#E9E6DE", "#F8F6EF"]
+      },
+      "steelBlue": {
+        "role": "accent",
+        "displayName": "Steel Blue",
+        "canonical": "#587B9B",
+        "tonalRamp": ["#122132", "#213A53", "#365D7A", "#587B9B", "#7D9AB4", "#A7BACB", "#D1DCE5", "#EEF3F6"]
+      },
+      "uclaBlueMuted": {
+        "role": "accent-strong",
+        "displayName": "Muted UCLA Blue",
+        "canonical": "#315F7C",
+        "tonalRamp": ["#0C1A25", "#17384E", "#315F7C", "#4B7E9E", "#719CB8", "#A0BDD0", "#D1E0EA", "#F0F6F9"]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Monumental Display", "purpose": "Homepage identity and case-study titles." },
-      "headline": { "displayName": "Editorial Headline", "purpose": "Major section transitions." },
-      "title": { "displayName": "Project Title", "purpose": "Project previews and timeline entries." },
-      "body": { "displayName": "Engineering Prose", "purpose": "Readable case-study explanation." },
-      "label": { "displayName": "Technical Metadata", "purpose": "Project IDs, dates, tools, categories, and measurement labels." }
+      "display": {
+        "displayName": "Monumental Grotesk",
+        "purpose": "Layered hero identity, oversized project titles, and architectural headline moments."
+      },
+      "headline": {
+        "displayName": "Editorial Headline",
+        "purpose": "Large section transitions and project narrative statements."
+      },
+      "body": {
+        "displayName": "Engineering Prose",
+        "purpose": "Readable descriptions, case-study context, and supporting project copy."
+      },
+      "label": {
+        "displayName": "Technical Metadata",
+        "purpose": "Navigation, coordinates, figure labels, roles, systems tags, and measurement marks."
+      }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "hero-frame",
+        "value": "0 18px 44px rgba(11, 12, 12, 0.08)",
+        "purpose": "Separate the framed poster field from the off-white page without making it feel like a card."
+      },
+      {
+        "name": "portrait-cutout",
+        "value": "0 22px 34px rgba(11, 12, 12, 0.16)",
+        "purpose": "Give the monochrome portrait enough separation to interlock with the typography."
+      }
+    ],
     "motion": [
-      { "name": "archive-reveal", "value": "clip-path + blur, 760ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "One restrained reveal language for major content." },
-      { "name": "media-hover", "value": "scale(1.035), 420ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Signals clickable project imagery." }
+      {
+        "name": "bridge-draw",
+        "value": "stroke-dashoffset reveal, 1600ms cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "purpose": "Initial bridge linework draw-in."
+      },
+      {
+        "name": "hero-load-reveal",
+        "value": "opacity + translateY, 720ms cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "purpose": "Navigation, social, role, and annotation entrance."
+      },
+      {
+        "name": "scroll-parallax",
+        "value": "GSAP ScrollTrigger scrub offsets from 6px to 18px",
+        "purpose": "Subtle scroll-dependent shifts between portrait, bridge layers, and name layers."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "Disable parallax and reveal transforms under prefers-reduced-motion.",
+        "purpose": "Accessibility and motion comfort."
+      }
     ],
     "breakpoints": [
-      { "name": "desktop-adjust", "value": "1080px" },
-      { "name": "tablet-stack", "value": "900px" },
-      { "name": "mobile-nav", "value": "720px" },
+      { "name": "wide-hero-adjust", "value": "1180px" },
+      { "name": "tablet-composition", "value": "900px" },
+      { "name": "mobile-work-stack", "value": "820px" },
+      { "name": "mobile-hero", "value": "560px" },
       { "name": "small-mobile", "value": "430px" }
     ]
   },
   "components": [
     {
+      "name": "Hero Frame",
+      "kind": "composition",
+      "refersTo": "heroFrame",
+      "description": "Near-full-viewport framed Swiss poster field for the homepage identity composition.",
+      "html": "<section class=\"ds-hero-frame\"><nav class=\"ds-hero-nav\">KYLE YOUNG</nav><div class=\"ds-layered-name\">KYLE YOUNG</div></section>",
+      "css": ".ds-hero-frame { min-height: calc(100vh - 36px); border: 1px solid #0B0C0C; border-radius: clamp(14px, 2vw, 24px); background: #F1EFE8; color: #0B0C0C; box-shadow: 0 18px 44px rgba(11, 12, 12, 0.08); overflow: hidden; padding: clamp(14px, 2vw, 26px); }"
+    },
+    {
+      "name": "Hero Navigation",
+      "kind": "navigation",
+      "refersTo": "heroNavigation",
+      "description": "Small monospaced internal navigation distributed across the top of the hero frame.",
+      "html": "<nav class=\"ds-hero-nav\" aria-label=\"Primary\"><a href=\"#work\">WORK</a><a href=\"#research\">RESEARCH</a><a href=\"#about\">ABOUT</a></nav>",
+      "css": ".ds-hero-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; font: 700 0.68rem/1.2 'IBM Plex Mono', Consolas, monospace; letter-spacing: 0.04em; text-transform: uppercase; } .ds-hero-nav a { color: #0B0C0C; text-decoration: none; border-bottom: 1px solid transparent; } .ds-hero-nav a:hover, .ds-hero-nav a:focus-visible { border-bottom-color: currentColor; outline: none; }"
+    },
+    {
+      "name": "Layered Name",
+      "kind": "typography",
+      "refersTo": "layeredName",
+      "description": "Duplicate display typography layers that move behind and in front of the portrait cutout.",
+      "html": "<div class=\"ds-layered-name\"><div class=\"ds-name-back\">KYLE YOUNG</div><img class=\"ds-portrait\" src=\"images/headshot-cutout.png\" alt=\"Kyle Young\"><div class=\"ds-name-front\"><span>KYLE</span><span>YOUNG</span></div></div>",
+      "css": ".ds-layered-name { position: relative; display: grid; place-items: center; min-height: 56vh; overflow: visible; } .ds-name-back, .ds-name-front { font: 900 clamp(6.6rem, 18.6vw, 19.8rem)/0.78 Archivo, Arial, sans-serif; letter-spacing: -0.038em; text-transform: uppercase; white-space: nowrap; } .ds-name-back { z-index: 2; } .ds-portrait { position: absolute; z-index: 3; max-height: 80%; filter: grayscale(1) contrast(1.12); } .ds-name-front { position: absolute; z-index: 4; pointer-events: none; }"
+    },
+    {
+      "name": "Bridge Linework",
+      "kind": "svg",
+      "refersTo": "bridgeLinework",
+      "description": "Responsive Golden Gate bridge drawing used as compositional structure, not as tourist imagery.",
+      "html": "<svg class=\"ds-bridge\" viewBox=\"0 0 1200 360\" aria-hidden=\"true\"><path d=\"M40 238 C290 68 910 68 1160 238\"/><path d=\"M80 246 H1120\"/></svg>",
+      "css": ".ds-bridge { position: absolute; inset: 18% -8% auto -8%; width: 116%; height: auto; overflow: visible; } .ds-bridge path { fill: none; stroke: #0B0C0C; stroke-width: 3; vector-effect: non-scaling-stroke; } .ds-bridge.is-blue path { stroke: #587B9B; opacity: 0.42; }"
+    },
+    {
+      "name": "Role Statement",
+      "kind": "text",
+      "refersTo": "roleStatement",
+      "description": "Lower-right secondary identity label that supports but does not compete with the name.",
+      "html": "<p class=\"ds-role\">Mechanical Engineer<br><span>Researcher / Builder</span></p>",
+      "css": ".ds-role { position: absolute; right: clamp(18px, 4vw, 60px); bottom: clamp(32px, 7vw, 84px); margin: 0; max-width: 18ch; font: 700 clamp(1.45rem, 3vw, 3.1rem)/0.98 Archivo, Arial, sans-serif; letter-spacing: -0.03em; text-align: right; } .ds-role span { color: #587B9B; }"
+    },
+    {
+      "name": "Social Links",
+      "kind": "links",
+      "refersTo": "socialLinks",
+      "description": "Quiet vertical social link stack placed in the lower-left of the hero frame.",
+      "html": "<div class=\"ds-socials\" aria-label=\"Social links\"><a href=\"#\">LinkedIn</a><a href=\"#\">GitHub</a><a href=\"mailto:kyle@example.com\">Email</a></div>",
+      "css": ".ds-socials { position: absolute; left: clamp(18px, 4vw, 60px); bottom: clamp(28px, 6vw, 76px); display: grid; gap: 9px; font: 700 0.68rem/1.2 'IBM Plex Mono', Consolas, monospace; letter-spacing: 0.04em; text-transform: uppercase; } .ds-socials a { color: #0B0C0C; text-decoration: none; } .ds-socials a:focus-visible { outline: 2px solid #315F7C; outline-offset: 4px; }"
+    },
+    {
       "name": "Primary Button",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Hard-edged ink CTA for the primary action.",
-      "html": "<button class=\"ds-btn-primary\">View selected work</button>",
-      "css": ".ds-btn-primary { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #111315; background: #111315; color: #fffdf8; font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 900; } .ds-btn-primary:hover { background: #17384e; border-color: #17384e; } .ds-btn-primary:focus-visible { outline: 3px solid rgba(180, 101, 39, 0.58); outline-offset: 4px; }"
+      "refersTo": "primaryButton",
+      "description": "Hard-edged ink action button for primary case-study links outside the hero.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#work\">View selected work</a>",
+      "css": ".ds-btn-primary { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #0B0C0C; background: #0B0C0C; color: #FBFAF4; font: 700 0.72rem/1.2 'IBM Plex Mono', Consolas, monospace; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; } .ds-btn-primary:hover { background: #315F7C; border-color: #315F7C; } .ds-btn-primary:focus-visible { outline: 3px solid rgba(49, 95, 124, 0.48); outline-offset: 4px; }"
     },
     {
-      "name": "Archive Row",
-      "kind": "custom",
-      "refersTo": "archive-row",
-      "description": "Compact numbered project index row.",
-      "html": "<a class=\"ds-index-row\" href=\"#\"><span>05</span><strong>Phoenix 2024</strong><em>FRC Crescendo robot / subsystem integration</em></a>",
-      "css": ".ds-index-row { display: grid; grid-template-columns: 52px minmax(180px, .32fr) 1fr; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid rgba(17,19,21,.18); color: #111315; text-decoration: none; } .ds-index-row span { color: #315f7c; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .72rem; font-weight: 800; } .ds-index-row strong { font-family: Archivo, system-ui, sans-serif; font-size: 1.16rem; line-height: 1.1; } .ds-index-row em { color: #5b6268; font-style: normal; }"
+      "name": "Work Row",
+      "kind": "content",
+      "refersTo": "workIndex",
+      "description": "Editorial selected-work row that proves engineering capability without turning the hero into a card grid.",
+      "html": "<article class=\"ds-work-row\"><p class=\"ds-work-kicker\">01 / RESEARCH</p><h3>Additive Manufacturing Thermal Research</h3><p>Thermal imaging, test data, and process analysis.</p></article>",
+      "css": ".ds-work-row { display: grid; grid-template-columns: minmax(140px, 0.35fr) minmax(0, 1fr); gap: clamp(18px, 4vw, 56px); padding: clamp(28px, 5vw, 72px) 0; border-top: 1px solid #D8D5CC; } .ds-work-row h3 { margin: 0; font: 700 clamp(2rem, 4.8vw, 5.6rem)/0.92 Archivo, Arial, sans-serif; letter-spacing: -0.035em; } .ds-work-kicker { font: 700 0.68rem/1.2 'IBM Plex Mono', Consolas, monospace; letter-spacing: 0.04em; color: #587B9B; }"
     },
     {
-      "name": "Metadata Grid",
-      "kind": "custom",
-      "refersTo": "project-meta",
-      "description": "Hairline metadata cells for role, tools, dates, and outcomes.",
-      "html": "<dl class=\"ds-meta\"><div><dt>Role</dt><dd>Responsible engineer</dd></div><div><dt>Tools</dt><dd>SolidWorks, FEA</dd></div></dl>",
-      "css": ".ds-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 0; padding: 1px; background: rgba(17,19,21,.18); } .ds-meta div { padding: 12px; background: rgba(255,253,248,.72); } .ds-meta dt { color: #315f7c; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; } .ds-meta dd { margin: 6px 0 0; color: #111315; font-weight: 800; line-height: 1.25; }"
+      "name": "Technical Placeholder",
+      "kind": "media",
+      "refersTo": "technicalPlaceholder",
+      "description": "Evidence-pending media treatment for projects that need real CAD, plots, or test artifacts before final polish.",
+      "html": "<div class=\"ds-technical-placeholder\"><span>Evidence pending</span></div>",
+      "css": ".ds-technical-placeholder { min-height: 260px; display: grid; place-items: center; border: 1px solid #D8D5CC; background: linear-gradient(90deg, rgba(88, 123, 155, 0.08), transparent); color: #737574; font: 700 0.72rem/1.2 'IBM Plex Mono', Consolas, monospace; letter-spacing: 0.04em; text-transform: uppercase; }"
     }
-  ],
-  "narrative": {
-    "northStar": "The Editorial Engineering Archive",
-    "overview": "The portfolio is a technical publication before it is a resume. It should feel like a contemporary engineering journal and premium case-study archive: off-white paper, charcoal type, muted UCLA-blue structure, copper proof marks, visible grids, numbered projects, compact metadata, and large real artifacts.",
-    "keyCharacteristics": [
-      "Monumental Archivo display type contrasted with compact JetBrains Mono metadata.",
-      "Off-white/charcoal surfaces with muted UCLA blue as the structural accent.",
-      "Square, hairline-bounded modules instead of rounded card stacks.",
-      "Real project imagery, CAD, plots, equations, posters, and photos as primary visual anchors."
-    ],
-    "rules": [
-      { "name": "The Proof-First Color Rule", "body": "Blue and copper mark structure or evidence; they do not decorate empty space.", "section": "colors" },
-      { "name": "The Paper-and-Ink Rule", "body": "The portfolio should still work if all accent color is removed; hierarchy comes first from scale, alignment, and content.", "section": "colors" },
-      { "name": "The Mono Means Metadata Rule", "body": "Use monospaced text for IDs, categories, tools, dates, and measurement labels only.", "section": "typography" },
-      { "name": "The Hairline Archive Rule", "body": "Borders and grid seams define the system; avoid soft shadow stacks unless a control truly needs overlay behavior.", "section": "elevation" }
-    ],
-    "dos": [
-      "Do rank project evidence visibly; the strongest work should not look like every other entry.",
-      "Do use actual CAD, plots, equations, posters, and hardware photos as major visual anchors.",
-      "Do preserve factual uncertainty by labeling content gaps instead of inventing numbers or outcomes.",
-      "Do keep project pages structured around contribution, process, evidence, outcome, and reflection."
-    ],
-    "donts": [
-      "Don't use generic rounded portfolio cards, glass panels, colorful icon grids, or decorative gradients.",
-      "Don't bury case-study links under equal card stacks.",
-      "Don't use monospaced text as technical costume for ordinary prose.",
-      "Don't invent metrics, tools, dates, responsibilities, or research outcomes."
-    ]
-  }
+  ]
 }

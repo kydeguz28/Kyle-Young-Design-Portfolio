@@ -1,0 +1,145 @@
+[
+  {
+    "filename": "images/headshot.jpg",
+    "source": "real",
+    "project association": "Identity portrait",
+    "generation prompt file": null,
+    "attribution notes": "Original Kyle Young headshot from existing repository. Not regenerated.",
+    "alt text": "Kyle Young portrait",
+    "poster image": null,
+    "dimensions": "1002x1204",
+    "file size": 1720458
+  },
+  {
+    "filename": "images/bfr-shock-packaging.jpg",
+    "source": "real",
+    "project association": "Suspension and Vehicle Dynamics",
+    "generation prompt file": null,
+    "attribution notes": "Existing project media.",
+    "alt text": "Formula SAE shock packaging assembly",
+    "poster image": null,
+    "dimensions": "1492x985",
+    "file size": 425811
+  },
+  {
+    "filename": "images/ShockPackagingFEA1.png",
+    "source": "real",
+    "project association": "Suspension and Vehicle Dynamics",
+    "generation prompt file": null,
+    "attribution notes": "Existing project FEA artifact.",
+    "alt text": "FEA result for shock packaging component",
+    "poster image": null,
+    "dimensions": "739x403",
+    "file size": 110243
+  },
+  {
+    "filename": "images/ShockPackagingTopOp2.png",
+    "source": "real",
+    "project association": "Suspension and Vehicle Dynamics",
+    "generation prompt file": null,
+    "attribution notes": "Existing topology optimization artifact.",
+    "alt text": "Topology optimization artifact from shock packaging work",
+    "poster image": null,
+    "dimensions": "1705x931",
+    "file size": 130491
+  },
+  {
+    "filename": "images/CSF1.png",
+    "source": "real",
+    "project association": "Cerebrospinal Fluid Flow Analysis",
+    "generation prompt file": null,
+    "attribution notes": "Existing analysis workflow image.",
+    "alt text": "Python workflow and CSF flow analysis output",
+    "poster image": null,
+    "dimensions": "1771x994",
+    "file size": 472939
+  },
+  {
+    "filename": "images/karl-2023.jpg",
+    "source": "real",
+    "project association": "SF Unity Robotics",
+    "generation prompt file": null,
+    "attribution notes": "Existing robot project media.",
+    "alt text": "SF Unity Robotics Karl competition robot",
+    "poster image": null,
+    "dimensions": "796x637",
+    "file size": 933388
+  },
+  {
+    "filename": "images/Karl2.jpg",
+    "source": "real",
+    "project association": "SF Unity Robotics",
+    "generation prompt file": null,
+    "attribution notes": "Existing robot media.",
+    "alt text": "SF Unity Robotics robot fabrication and competition media",
+    "poster image": null,
+    "dimensions": "3024x4032",
+    "file size": 1950507
+  },
+  {
+    "filename": "images/KarlDesignPoster.jpg",
+    "source": "real",
+    "project association": "SF Unity Robotics",
+    "generation prompt file": null,
+    "attribution notes": "Existing robot design poster.",
+    "alt text": "Karl robot design poster",
+    "poster image": null,
+    "dimensions": "1124x2490",
+    "file size": 257612
+  },
+  {
+    "filename": "images/phoenix-2024.jpg",
+    "source": "real",
+    "project association": "SF Unity Robotics",
+    "generation prompt file": null,
+    "attribution notes": "Existing robot project media.",
+    "alt text": "Phoenix 2024 competition robot",
+    "poster image": null,
+    "dimensions": "4032x3024",
+    "file size": 1357572
+  },
+  {
+    "filename": "images/anti-roll-bar-fixture.jpg",
+    "source": "real",
+    "project association": "Anti-Roll Bar Test Fixture",
+    "generation prompt file": null,
+    "attribution notes": "Existing validation fixture media.",
+    "alt text": "Anti-roll bar test fixture",
+    "poster image": null,
+    "dimensions": "756x562",
+    "file size": 233491
+  },
+  {
+    "filename": "images/generated/formula-sae-suspension-macro.png",
+    "source": "generated",
+    "project association": "Atmospheric suspension showreel connective material",
+    "generation prompt file": "images/generated/README.md",
+    "attribution notes": "Existing generated asset. Used as atmosphere, not documentation of Kyle's work.",
+    "alt text": "Generated atmospheric macro of suspension hardware, not project documentation",
+    "poster image": null,
+    "dimensions": "1672x941",
+    "file size": 2016739
+  },
+  {
+    "filename": "images/generated/thermal-research-printer.png",
+    "source": "generated",
+    "project association": "Atmospheric thermal research showreel connective material",
+    "generation prompt file": "images/generated/README.md",
+    "attribution notes": "Existing generated asset. Used as atmosphere, not documentation of Kyle's work.",
+    "alt text": "Generated atmospheric thermal research printer image, not project documentation",
+    "poster image": null,
+    "dimensions": "1672x941",
+    "file size": 1603244
+  },
+  {
+    "filename": "Generated bridge assets",
+    "source": "generated",
+    "project association": "Golden Gate Bridge showreel atmosphere",
+    "generation prompt file": "prompts/higgsfield/01-bridge-fog-film.md, prompts/higgsfield/02-technical-bridge-plate.md, prompts/higgsfield/03-dark-bridge-silhouette.md, prompts/higgsfield/04-structural-transition.md",
+    "attribution notes": "Generation attempted through Higgsfield on 2026-07-31. The connected workspace returned plan errors: Requires basic plan or higher / job_minimum_basic_plan_required. CSS/SVG bridge geometry is used instead.",
+    "alt text": "No generated bridge file was created because generation was plan-blocked.",
+    "poster image": null,
+    "dimensions": null,
+    "file size": null
+  }
+]
