@@ -112,7 +112,7 @@
   {
     "filename": "images/generated/formula-sae-suspension-macro.png",
     "source": "generated",
-    "project association": "Atmospheric suspension showreel connective material",
+    "project association": "Unused atmospheric suspension material",
     "generation prompt file": "images/generated/README.md",
     "attribution notes": "Existing generated asset. Used as atmosphere, not documentation of Kyle's work.",
     "alt text": "Generated atmospheric macro of suspension hardware, not project documentation",
@@ -123,7 +123,7 @@
   {
     "filename": "images/generated/thermal-research-printer.png",
     "source": "generated",
-    "project association": "Atmospheric thermal research showreel connective material",
+    "project association": "Unused atmospheric thermal research material",
     "generation prompt file": "images/generated/README.md",
     "attribution notes": "Existing generated asset. Used as atmosphere, not documentation of Kyle's work.",
     "alt text": "Generated atmospheric thermal research printer image, not project documentation",
@@ -132,14 +132,14 @@
     "file size": 1603244
   },
   {
-    "filename": "Generated bridge assets",
+    "filename": "images/generated/golden-gate-bridge-hero.png",
     "source": "generated",
-    "project association": "Golden Gate Bridge showreel atmosphere",
-    "generation prompt file": "prompts/higgsfield/01-bridge-fog-film.md, prompts/higgsfield/02-technical-bridge-plate.md, prompts/higgsfield/03-dark-bridge-silhouette.md, prompts/higgsfield/04-structural-transition.md",
-    "attribution notes": "Generation attempted through Higgsfield on 2026-07-31. The connected workspace returned plan errors: Requires basic plan or higher / job_minimum_basic_plan_required. CSS/SVG bridge geometry is used instead.",
-    "alt text": "No generated bridge file was created because generation was plan-blocked.",
+    "project association": "Homepage hero background",
+    "generation prompt file": null,
+    "attribution notes": "Generated on 2026-08-01 as a bridge hero fallback after the connected Higgsfield workspace returned an out-of-credits error.",
+    "alt text": "Golden Gate Bridge structural hero image",
     "poster image": null,
-    "dimensions": null,
-    "file size": null
+    "dimensions": "1680x945",
+    "file size": 2036572
   }
 ]

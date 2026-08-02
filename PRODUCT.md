@@ -20,7 +20,7 @@ Success means a visitor can quickly identify relevant experience, inspect credib
 
 The portfolio emphasizes the full engineering loop: defining problems, designing systems, validating ideas, manufacturing hardware, testing outcomes, and learning from results.
 
-Kyle's work spans Formula SAE, robotics, aerospace manufacturing support, MEMS hardware, biomedical flow research, and 3D printed product development. The durable position is hands-on, product-minded mechanical engineering across analysis, CAD/design, fabrication, testing, leadership, and practical execution.
+Kyle's work spans Formula SAE, robotics, aerospace manufacturing support, biomedical flow research, additive-manufacturing thermal research, and 3D printed product development. The durable position is hands-on, product-minded mechanical engineering across analysis, CAD/design, fabrication, testing, leadership, and practical execution.
 
 ## Operating Context
 

@@ -59,7 +59,7 @@ const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 })();
 
 (function initReveals() {
-  const targets = document.querySelectorAll('.reveal, .case-row, .research-list article, .leadership-grid article');
+  const targets = document.querySelectorAll('.reveal, .identity-statement, .section-heading, .home-section, .entry-panel, .info-panel, .timeline-panel, .rounded-content-card, .experience-row, .skill-row, .project-group, .timeline-list article, .community-list article, .skills-columns article, .case-row, .research-list article, .leadership-feature, .about-footer, .anduril-section, .anduril-section-header, .arsenal-card, .promo-strip article, .experience-rail article, .skill-matrix article, .about-cutout');
   if (!targets.length) return;
 
   if (reduceMotionQuery.matches || !('IntersectionObserver' in window)) {
@@ -71,6 +71,49 @@ const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible');
+
+      if (window.gsap) {
+        const media = entry.target.querySelector('.case-media, .leadership-media-pair, .about-portrait, .about-cutout, .arsenal-card img');
+        const copy = entry.target.querySelector('.case-copy, .contact-block, .research-list, h2, h3, p');
+
+        window.gsap.fromTo(entry.target, {
+          y: 26,
+          opacity: 0,
+          filter: 'blur(10px)'
+        }, {
+          y: 0,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.95,
+          ease: 'power3.out'
+        });
+
+        if (media) {
+          window.gsap.fromTo(media, {
+            scale: 1.05,
+            filter: 'brightness(1.08) saturate(0.9)'
+          }, {
+            scale: 1,
+            filter: 'brightness(1) saturate(1)',
+            duration: 1.15,
+            ease: 'power3.out'
+          });
+        }
+
+        if (copy) {
+          window.gsap.fromTo(copy, {
+            y: 18,
+            opacity: 0
+          }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.78,
+            delay: 0.08,
+            ease: 'power3.out'
+          });
+        }
+      }
+
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
@@ -80,288 +123,142 @@ const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 (function initHeroMotion() {
   const hero = document.querySelector('[data-hero]');
-  if (!hero || reduceMotionQuery.matches) return;
+  if (!hero || reduceMotionQuery.matches || !window.gsap) return;
 
-  const { gsap, ScrollTrigger } = window;
-  if (!gsap) return;
+  const ctx = window.gsap.context(() => {
+    if (hero.classList.contains('anduril-hero')) {
+      window.gsap.from('.anduril-brand, .anduril-links a, .anduril-utilities > *, .anduril-hero-copy > *', {
+        y: 28,
+        opacity: 0,
+        filter: 'blur(10px)',
+        duration: 1,
+        stagger: 0.08,
+        ease: 'power3.out'
+      });
 
-  const nav = hero.querySelector('.hero-nav');
-  const role = hero.querySelector('.hero-role-statement');
-  const socials = hero.querySelector('.hero-socials');
-  const portrait = hero.querySelector('.hero-portrait');
-  const nameBack = hero.querySelector('.name-layer-back');
-  const nameFront = hero.querySelector('.name-layer-front');
-  const bridgeBlue = hero.querySelector('.hero-bridge-blue');
-  const bridgeBlack = hero.querySelector('.hero-bridge-black');
-  const labels = hero.querySelectorAll('.hero-annotations span, .hero-figure');
-
-  const ctx = gsap.context(() => {
-    gsap.from([nav, role, socials], {
-      y: 12,
-      opacity: 0,
-      duration: 0.7,
-      stagger: 0.08,
-      ease: 'power3.out'
-    });
-
-    gsap.from(labels, {
-      y: 8,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.06,
-      delay: 0.25,
-      ease: 'power3.out'
-    });
-
-    if (ScrollTrigger) {
-      gsap.registerPlugin(ScrollTrigger);
-      const scrub = {
-        trigger: hero,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 0.6
-      };
-
-      gsap.to(portrait, { y: -18, ease: 'none', scrollTrigger: scrub });
-      gsap.to(nameBack, { x: -18, y: 8, ease: 'none', scrollTrigger: scrub });
-      gsap.to(nameFront, { x: 6, ease: 'none', scrollTrigger: scrub });
-      gsap.to(bridgeBlue, { x: 18, y: -4, ease: 'none', scrollTrigger: scrub });
-      gsap.to(bridgeBlack, { x: -8, ease: 'none', scrollTrigger: scrub });
+      window.gsap.fromTo('.anduril-hero-media', {
+        scale: 1.08
+      }, {
+        scale: 1.02,
+        duration: 1.8,
+        ease: 'power3.out'
+      });
+      return;
     }
+
+    window.gsap.from('.poster-brand, .poster-links a, .poster-name, .poster-portrait, .poster-role, .poster-socials, .poster-thesis', {
+      y: 34,
+      opacity: 0,
+      filter: 'blur(12px)',
+      duration: 1.08,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    window.gsap.fromTo('.poster-frame', {
+      boxShadow: 'inset 0 0 0 1px rgba(13, 17, 19, 0.08)'
+    }, {
+      boxShadow: 'inset 0 0 0 1px rgba(13, 17, 19, 0.24)',
+      duration: 1.1,
+      ease: 'power3.out'
+    });
   }, hero);
 
   window.addEventListener('beforeunload', () => ctx.revert(), { once: true });
 })();
 
-(function initShowreel() {
-  const section = document.querySelector('[data-retired-showreel]');
-  const pin = section?.querySelector('.showreel-pin');
-  const track = section?.querySelector('.showreel-track');
-  const scenes = Array.from(section?.querySelectorAll('.showreel-scene') || []);
-  const progress = section?.querySelector('.showreel-progress span');
-  const counter = section?.querySelector('.scene-counter');
-  if (!section || !pin || !track || !scenes.length) return;
+(function initScrollDrama() {
+  if (reduceMotionQuery.matches || !window.gsap || !window.ScrollTrigger) return;
 
-  const gsapReady = Boolean(window.gsap && window.ScrollTrigger);
-  const videos = scenes.flatMap(scene => Array.from(scene.querySelectorAll('video')));
+  window.gsap.registerPlugin(window.ScrollTrigger);
 
-  function setActiveScene(index) {
-    scenes.forEach((scene, sceneIndex) => {
-      const active = sceneIndex === index;
-      scene.classList.toggle('active', active);
-      scene.setAttribute('aria-current', active ? 'true' : 'false');
-    });
-    if (counter) counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(scenes.length).padStart(2, '0')}`;
-
-    videos.forEach(video => {
-      const active = scenes[index]?.contains(video);
-      if (active && !reduceMotionQuery.matches) {
-        video.play?.().catch(() => {});
-      } else {
-        video.pause?.();
+  window.gsap.utils.toArray('.case-media img, .arsenal-card img, .anduril-hero-media').forEach(img => {
+    window.gsap.fromTo(img, {
+      yPercent: -4
+    }, {
+      yPercent: 4,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img.closest('.case-row') || img.closest('.arsenal-card') || img.closest('.anduril-hero') || img,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
       }
     });
-  }
-
-  function refreshForMedia() {
-    if (window.ScrollTrigger) window.ScrollTrigger.refresh();
-  }
-
-  section.querySelectorAll('img, video').forEach(media => {
-    if (media.complete || media.readyState >= 1) return;
-    media.addEventListener('load', refreshForMedia, { once: true });
-    media.addEventListener('loadedmetadata', refreshForMedia, { once: true });
   });
 
-  setActiveScene(0);
+  window.gsap.utils.toArray('.skills-words span').forEach((word, index) => {
+    window.gsap.fromTo(word, {
+      y: 44,
+      opacity: 0,
+      filter: 'blur(10px)'
+    }, {
+      y: 0,
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 0.9,
+      delay: index * 0.08,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.skills-typographic',
+        start: 'top 70%',
+        once: true
+      }
+    });
+  });
 
-  if (!gsapReady || reduceMotionQuery.matches) {
-    section.dataset.gsapReady = 'false';
-    return;
+  window.gsap.utils.toArray('[data-count-to]').forEach(stat => {
+    const target = Number(stat.dataset.countTo || stat.textContent || 0);
+    if (!Number.isFinite(target)) return;
+    const state = { value: 0 };
+
+    window.gsap.to(state, {
+      value: target,
+      duration: 1.4,
+      ease: 'power2.out',
+      snap: { value: 1 },
+      onUpdate: () => {
+        stat.textContent = String(Math.round(state.value));
+      },
+      scrollTrigger: {
+        trigger: stat,
+        start: 'top 82%',
+        once: true
+      }
+    });
+  });
+})();
+
+(function initProjectSearch() {
+  const toggle = document.querySelector('[data-search-toggle]');
+  const panel = document.getElementById('projectSearch');
+  const input = document.getElementById('projectFilter');
+  const cards = Array.from(document.querySelectorAll('[data-project-card]'));
+  const empty = document.querySelector('[data-empty-projects]');
+  if (!toggle || !panel || !input || !cards.length) return;
+
+  function setOpen(open) {
+    panel.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open) input.focus();
   }
 
-  const { gsap, ScrollTrigger } = window;
-  gsap.registerPlugin(ScrollTrigger);
+  function filterProjects() {
+    const query = input.value.trim().toLowerCase();
+    let visibleCount = 0;
 
-  const ctx = gsap.context(() => {
-    const mm = gsap.matchMedia();
-
-    mm.add('(min-width: 821px) and (prefers-reduced-motion: no-preference)', () => {
-      section.dataset.gsapReady = 'true';
-      section.classList.add('motion-ready');
-
-      const introTitle = scenes[0]?.querySelector('.scene-copy h1');
-      const introLabel = scenes[0]?.querySelector('.scene-label');
-      const introLede = scenes[0]?.querySelector('.scene-lede');
-      const introMeta = scenes[0]?.querySelectorAll('.scene-meta div');
-      const introPortrait = scenes[0]?.querySelector('.portrait-cutout');
-      const introLines = scenes[0]?.querySelectorAll('.bridge-lines path');
-
-      gsap.set(introLines, { strokeDashoffset: 1400 });
-      const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      intro
-        .from(introLines, {
-          strokeDashoffset: 1400,
-          duration: 1.1,
-          stagger: 0.08
-        })
-        .from(introTitle, {
-          clipPath: 'inset(0 0 100% 0)',
-          yPercent: 8,
-          duration: 0.72
-        }, 0.18)
-        .from([introLabel, introLede], {
-          y: 16,
-          opacity: 0,
-          filter: 'blur(6px)',
-          duration: 0.5,
-          stagger: 0.08
-        }, 0.42)
-        .from(introPortrait, {
-          clipPath: 'polygon(48% 0, 100% 0, 52% 100%, 0 100%)',
-          x: 28,
-          opacity: 0,
-          duration: 0.7
-        }, 0.54)
-        .from(introMeta, {
-          y: 14,
-          opacity: 0,
-          duration: 0.42,
-          stagger: 0.06
-        }, 0.74);
-
-      const getScrollSpan = () => {
-        const measured = Math.max(1, track.scrollWidth - window.innerWidth);
-        const min = window.innerHeight * 3.5;
-        const max = window.innerHeight * 5;
-        return Math.min(max, Math.max(min, measured * 0.75));
-      };
-
-      const updateDistance = () => {
-        const distance = Math.max(1, track.scrollWidth - window.innerWidth);
-        section.style.setProperty('--showreel-scroll', `${Math.round(getScrollSpan())}px`);
-        return distance;
-      };
-
-      let distance = updateDistance();
-      const ro = 'ResizeObserver' in window ? new ResizeObserver(() => {
-        distance = updateDistance();
-        ScrollTrigger.refresh();
-      }) : null;
-      ro?.observe(track);
-      ro?.observe(section);
-
-      const tween = gsap.to(track, {
-        x: () => -distance,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: () => `+=${getScrollSpan()}`,
-          pin: pin,
-          scrub: 0.9,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          onUpdate: self => {
-            const index = Math.min(scenes.length - 1, Math.max(0, Math.round(self.progress * (scenes.length - 1))));
-            setActiveScene(index);
-            if (progress) progress.style.width = `${(self.progress * 100).toFixed(2)}%`;
-            section.style.setProperty('--dash', `${1400 - self.progress * 1400}`);
-          }
-        }
-      });
-
-      scenes.forEach((scene, sceneIndex) => {
-        const media = scene.querySelector('.scene-media > img:first-child, .systems-montage, .portrait-cutout');
-        const title = scene.querySelector('.scene-copy h1, .scene-copy h2');
-        const meta = scene.querySelectorAll('.scene-meta div');
-        if (media) {
-          gsap.fromTo(media, { scale: 1.05 }, {
-            scale: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: scene,
-              containerAnimation: tween,
-              start: 'left 80%',
-              end: 'right 20%',
-              scrub: true
-            }
-          });
-        }
-        if (title && sceneIndex > 0) {
-          gsap.fromTo(title, { clipPath: 'inset(0 0 100% 0)' }, {
-            clipPath: 'inset(0 0 0% 0)',
-            duration: 0.8,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: scene,
-              containerAnimation: tween,
-              start: 'left 70%',
-              toggleActions: 'play none none reverse'
-            }
-          });
-        }
-        if (meta.length) {
-          gsap.fromTo(meta, { y: 16, opacity: 0 }, {
-            y: 0,
-            opacity: 1,
-            duration: 0.46,
-            stagger: 0.045,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: scene,
-              containerAnimation: tween,
-              start: 'left 58%',
-              toggleActions: 'play none none reverse'
-            }
-          });
-        }
-      });
-
-      const onPointerMove = event => {
-        const x = (event.clientX / window.innerWidth - 0.5) * 10;
-        const y = (event.clientY / window.innerHeight - 0.5) * 8;
-        gsap.to('.active .scene-media, .active .portrait-cutout, .active .systems-montage', {
-          x,
-          y,
-          duration: 0.55,
-          ease: 'power2.out',
-          overwrite: true
-        });
-      };
-
-      section.addEventListener('pointermove', onPointerMove, { passive: true });
-
-      return () => {
-        section.classList.remove('motion-ready');
-        section.removeEventListener('pointermove', onPointerMove);
-        ro?.disconnect();
-        intro.kill();
-        tween.scrollTrigger?.kill();
-        tween.kill();
-      };
+    cards.forEach(card => {
+      const text = `${card.textContent || ''} ${card.dataset.keywords || ''}`.toLowerCase();
+      const visible = !query || text.includes(query);
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
     });
 
-    mm.add('(max-width: 820px), (prefers-reduced-motion: reduce)', () => {
-      section.dataset.gsapReady = 'false';
-      gsap.set(track, { clearProps: 'transform' });
-      gsap.set(scenes, { clearProps: 'transform' });
+    if (empty) empty.hidden = visibleCount !== 0;
+  }
 
-      if (!('IntersectionObserver' in window)) return undefined;
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          setActiveScene(scenes.indexOf(entry.target));
-        });
-      }, { threshold: 0.42 });
-      scenes.forEach(scene => observer.observe(scene));
-      return () => observer.disconnect();
-    });
-
-    return () => mm.revert();
-  }, section);
-
-  window.addEventListener('beforeunload', () => ctx.revert(), { once: true });
+  toggle.addEventListener('click', () => setOpen(!panel.classList.contains('open')));
+  input.addEventListener('input', filterProjects);
 })();
 
 (function initCaseToc() {
@@ -402,9 +299,7 @@ const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 (function initImageFallbacks() {
   document.querySelectorAll('img').forEach(img => {
-    if (!img.hasAttribute('loading') && !img.closest('.portrait-cutout') && !img.closest('.scene-media')) {
-      img.loading = 'lazy';
-    }
+    if (!img.hasAttribute('loading')) img.loading = 'lazy';
 
     img.addEventListener('error', () => {
       const fallback = document.createElement('div');

@@ -5,6 +5,7 @@ These assets were generated for the Kyle Young mechanical-engineering portfolio 
 ## Still Assets
 
 - `editorial-engineering-hero.png` - Hero image with engineer, Formula SAE suspension hardware, and left-side negative space.
+- `golden-gate-bridge-hero.png` - Homepage hero background with Golden Gate Bridge structural photography, generated after the Higgsfield workspace returned an out-of-credits error.
 - `thermal-research-printer.png` - Material-extrusion printer with realistic IR-camera observation and controlled thermal gradient.
 - `formula-sae-suspension-macro.png` - Macro Formula SAE suspension assembly still for project/case-study use.
 - `robotics-workshop-build.png` - Competition robot build scene with students assembling and wiring hardware.
