@@ -3315,27 +3315,8 @@ h1, h2, h3 {
   line-height: 0.94;
 }
 
-.about-cutout {
-  grid-column: 7 / span 3;
-  grid-row: 1 / span 2;
-  min-height: clamp(220px, 24vw, 340px);
-  margin: 0;
-  display: grid;
-  align-items: end;
-  overflow: hidden;
-  border: 1px solid var(--industrial-line);
-  background: rgba(244, 241, 233, 0.035);
-}
-
-.about-cutout img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
 .about-specs {
-  grid-column: 10 / span 3;
+  grid-column: 8 / span 5;
   grid-row: 1 / span 2;
   display: grid;
   gap: 0;
@@ -4417,12 +4398,8 @@ h1, h2, h3 {
     grid-column: 1 / -1;
   }
 
-  .about-cutout {
-    grid-column: span 4;
-  }
-
   .about-specs {
-    grid-column: span 8;
+    grid-column: 1 / -1;
   }
 
   .arsenal-grid {
@@ -4529,6 +4506,24 @@ h1, h2, h3 {
     width: calc(100% - 32px);
   }
 
+  .anduril-about {
+    grid-template-columns: 1fr;
+    row-gap: clamp(18px, 6vw, 30px);
+    padding-top: clamp(32px, 8vw, 52px);
+    padding-bottom: clamp(34px, 8vw, 56px);
+  }
+
+  .anduril-about .anduril-section-header,
+  .about-copy,
+  .about-specs {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .anduril-about .anduril-section-header {
+    margin-bottom: 0;
+  }
+
   .about-command,
   .about-specs,
   .promo-strip,
@@ -4536,16 +4531,6 @@ h1, h2, h3 {
   .footer-columns,
   .footer-bottom {
     grid-template-columns: 1fr;
-  }
-
-  .about-copy,
-  .about-cutout,
-  .about-specs {
-    grid-column: 1 / -1;
-  }
-
-  .about-cutout {
-    min-height: 260px;
   }
 
   .contact-card {
