@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Printing Thermal Analysis - Kyle Young</title>
-  <meta name="description" content="Case study placeholder for Kyle Young's CFIP Laboratory thermal analysis research on FDM 3D printing." />
-  <link rel="stylesheet" href="../style.css?v=20260802-project-pages" />
+  <title>3D Printing Thermal Analysis — Kyle Young</title>
+  <meta name="description" content="Final CFIP research: a residual CNN predicts 560 temperatures per frame with 3.59°C validation RMSE." />
+  <link rel="stylesheet" href="../style.css?v=20260917-projects" />
 </head>
 <body class="case-page theme-thermal">
   <nav class="project-topbar case-nav" aria-label="Project navigation">
@@ -21,53 +21,64 @@
     </div>
   </nav>
 
-  <main>
-    <header class="case-hero">
-      <div>
-        <p class="kicker">Project / Additive manufacturing research</p>
-        <h1>3D Printing Thermal Analysis</h1>
-        <p class="case-summary">A research space for IR thermography, Python analysis, COMSOL LiveLink simulation, and thermal modeling of FDM filament deposition.</p>
-      </div>
-      <dl class="project-meta">
-        <div><dt>Role</dt><dd>Research, analysis, simulation</dd></div>
-        <div><dt>Lab</dt><dd>Complex Fluids and Interfacial Physics Laboratory</dd></div>
-        <div><dt>Tools</dt><dd>Python, MATLAB, COMSOL LiveLink</dd></div>
-        <div><dt>Status</dt><dd>Content in progress</dd></div>
-      </dl>
-      <figure class="case-hero-figure reveal">
-        <img src="../images/generated/thermal-research-printer.png" alt="Thermal research visualization for FDM 3D printing" />
-        <figcaption class="figure-caption">Thermal analysis research page reserved for project content and verified artifacts.</figcaption>
-      </figure>
-    </header>
+<main>
 
-    <section class="case-section">
-      <div><p class="kicker">Research direction</p><h2>Thermal behavior during filament deposition.</h2></div>
-      <div class="case-copy reveal">
-        <p>This page will hold the detailed CFIP research writeup once the full content pass is ready. Current work centers on spatial temperature profiles, model identifiability, and simulation of cooling during FDM printing.</p>
-        <aside class="engineering-callout compact">
-          <span>Placeholder</span>
-          <strong>Full project content to come.</strong>
-          <p>The page is intentionally present in the project system now so the homepage can reserve a visible space for the research.</p>
-        </aside>
-      </div>
-    </section>
+  <header class="case-hero">
+    <div><p class="kicker">Research / CFIP Laboratory / Summer 2026</p>
+      <h1>3D Printing Thermal Analysis</h1>
+      <p class="case-summary">From thermal-camera measurements to full-field prediction: a residual neural network that models how a printed wall heats, cools, and reheats.</p>
+    </div>
+    <dl class="project-meta">
+      <div><dt>Role</dt><dd>Experiments, data pipeline, model development</dd></div>
+      <div><dt>Lab</dt><dd>UCLA CFIP · Professor Pirouz Kavehpour</dd></div>
+      <div><dt>Methods</dt><dd>FLIR thermography · Python · Residual CNN</dd></div>
+      <div><dt>Status</dt><dd>Summer research results complete</dd></div>
+    </dl>
+    <figure class="case-hero-figure research-figure">
+      <img src="../images/thermal/measured-predicted.png" alt="Measured FLIR and predicted thermal fields showing the moving heat front and cooling wall" />
+      <figcaption class="figure-caption">Measured and predicted temperature fields from the final research presentation, at 242.07 seconds.</figcaption>
+    </figure>
+  </header>
+  <section class="case-section">
+    <div><p class="kicker">Final results</p><h2>560 temperatures. One evolving field.</h2></div>
+    <div class="case-copy">
+      <p>The final residual CNN achieved <strong>3.59°C root mean squared error (RMSE)</strong> on a complete printing trial excluded from training. It predicts all 560 locations in a 14 × 40 thermal grid, using 32 recent frames to estimate the next temperature map.</p>
+      <p>Compared with the earlier 49-region feed-forward model’s approximately 22°C RMSE, the final result represents <strong>about 84% lower field error</strong>. The project’s thermal simulation ran <strong>8× faster than physical printing</strong>.</p>
+      <p>These are the final presentation’s headline results. The speed comparison is against elapsed printing time; it is not a comparison with a numerical solver.</p>
+    </div>
+  </section>
+  <section class="case-section">
+    <div><p class="kicker">Experiment to model</p><h2>Learning the thermal history.</h2></div>
+    <div class="case-copy">
+      <p>I printed single-wall PLA specimens while a FLIR camera recorded surface temperature, then aligned the thermal fields with printer conditions and deposition timing. Eight complete trials covered multiple print speeds and nozzle temperatures.</p>
+      <p>The model looks back over 32 frames, learns the temperature change ΔT, and adds that change to the latest field. This residual formulation predicts local heating and cooling across the wall instead of collapsing the process to one average temperature.</p>
+      <p>The work combined experimental setup, thermal-image registration, data preparation, neural-network training, and spatial error analysis.</p>
+    </div>
+  </section>
+  <section class="case-section">
+    <div><p class="kicker">Validation</p><h2>A complete print held out.</h2></div>
+    <div class="case-copy">
+      <p>Seven trials supplied approximately 39,900 training samples. The complete 40 mm/s, 210°C trial supplied 4,677 validation samples. Holding out an entire trial avoids placing nearly identical neighboring frames in both training and validation.</p>
+      <p>The best checkpoint was selected at epoch 47. Because this trial was used for checkpoint selection, the result is a validation score; a separate test set and further held-out trials remain future work.</p>
+      <figure class="technical-figure"><img src="../images/thermal/convergence.png" alt="Training and validation root mean squared error across epochs" loading="lazy" /><figcaption class="figure-caption">Training and validation convergence from the final presentation.</figcaption></figure>
+    </div>
+  </section>
+  <section class="case-section">
+    <div><p class="kicker">Local fidelity</p><h2>The difficult region beneath the nozzle.</h2></div>
+    <div class="case-copy">
+      <p>A low whole-field error can hide a mismatch in the small, rapidly changing hot front. I sampled a vertical line at x = 38.1 mm to compare the measured and reconstructed temperature profiles directly.</p>
+      <p>The separate physics-informed hot-front reconstruction reached <strong>11.30°C line-profile RMSE</strong>, with a predicted peak of 162.05°C versus 161.66°C measured. This augmented reconstruction fills a camera blind spot beneath the nozzle; it is distinct from the direct CNN output behind the 3.59°C field score.</p>
+      <figure class="technical-figure"><img src="../images/thermal/hot-front.png" alt="Cyan sampling line on experimental and reconstructed thermal fields for the local hot-front comparison" loading="lazy" /><figcaption class="figure-caption">Targeted hot-front comparison. The reconstructed field includes physics-informed augmentation where the nozzle obscures the camera.</figcaption></figure>
+      <p>The next step is sharper local temperature profiles, followed by validation on more complete trials and uncertainty estimates.</p>
+    </div>
+  </section>
+  <section class="next-project"><a href="six-dof-robotic-arm.html"><span class="project-number">In development</span><strong>6-DOF Robotic Arm</strong><span class="text-link">Explore project</span></a></section>
 
-    <section class="next-project">
-      <a href="anti-roll-bar-test-fixture.html">
-        <span class="project-number">Next</span>
-        <strong>Anti-Roll Bar Fixture</strong>
-        <span class="text-link">Continue</span>
-      </a>
-    </section>
-  </main>
-
+</main>
   <footer class="site-footer">
     <div><strong>Kyle Young</strong><span>Mechanical Engineering / UCLA</span></div>
     <a href="../index.html#top">Back to home</a>
   </footer>
   <script src="../script.js?v=20260802-project-pages"></script>
-<!-- impeccable-live-start -->
-<script src="http://localhost:8400/live.js?token=14a97b5d-d22f-459c-9fb9-a79662cb3c04"></script>
-<!-- impeccable-live-end -->
 </body>
 </html>
