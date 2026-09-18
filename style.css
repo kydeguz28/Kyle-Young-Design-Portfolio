@@ -4617,3 +4617,20 @@ h1, h2, h3 {
 .arsenal-card .arm-project-mark span { visibility: visible; opacity: 1; transform: none; max-height: none; color: #a8c9e3; font-size: 0.24em; letter-spacing: 0; }
 .case-page .research-figure img { max-height: none; object-fit: contain; }
 .case-page.theme-suspension .case-hero h1 { font-size: clamp(2rem, 4.5vw, 4.5rem); max-width: none; width: 100%; overflow-wrap: normal; }
+
+/* Finish the project collection with two equally sized cards per row. */
+.arsenal-bottom-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 26px);
+  margin-top: clamp(14px, 1.8vw, 26px);
+}
+.arsenal-bottom-grid > .arsenal-card {
+  grid-column: auto;
+  grid-row: auto;
+  aspect-ratio: 1;
+}
+@media (max-width: 760px) {
+  .arsenal-bottom-grid { grid-template-columns: 1fr; }
+}
