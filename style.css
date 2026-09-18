@@ -4616,3 +4616,4 @@ h1, h2, h3 {
 .arsenal-card .arm-project-mark::before { content: none; }
 .arsenal-card .arm-project-mark span { visibility: visible; opacity: 1; transform: none; max-height: none; color: #a8c9e3; font-size: 0.24em; letter-spacing: 0; }
 .case-page .research-figure img { max-height: none; object-fit: contain; }
+.case-page.theme-suspension .case-hero h1 { font-size: clamp(2rem, 4.5vw, 4.5rem); max-width: none; width: 100%; overflow-wrap: normal; }

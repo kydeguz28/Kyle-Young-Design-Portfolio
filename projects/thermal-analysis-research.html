@@ -40,7 +40,7 @@
     </figure>
   </header>
   <section class="case-section">
-    <div><p class="kicker">Final results</p><h2>560 temperatures. One evolving field.</h2></div>
+    <div><p class="kicker">Final results</p><h2>Full-field prediction results.</h2></div>
     <div class="case-copy">
       <p>The final residual CNN achieved <strong>3.59°C root mean squared error (RMSE)</strong> on a complete printing trial excluded from training. It predicts all 560 locations in a 14 × 40 thermal grid, using 32 recent frames to estimate the next temperature map.</p>
       <p>Compared with the earlier 49-region feed-forward model’s approximately 22°C RMSE, the final result represents <strong>about 84% lower field error</strong>. The project’s thermal simulation ran <strong>8× faster than physical printing</strong>.</p>
@@ -48,7 +48,7 @@
     </div>
   </section>
   <section class="case-section">
-    <div><p class="kicker">Experiment to model</p><h2>Learning the thermal history.</h2></div>
+    <div><p class="kicker">Experiment to model</p><h2>Experimental data and model architecture.</h2></div>
     <div class="case-copy">
       <p>I printed single-wall PLA specimens while a FLIR camera recorded surface temperature, then aligned the thermal fields with printer conditions and deposition timing. Eight complete trials covered multiple print speeds and nozzle temperatures.</p>
       <p>The model looks back over 32 frames, learns the temperature change ΔT, and adds that change to the latest field. This residual formulation predicts local heating and cooling across the wall instead of collapsing the process to one average temperature.</p>
@@ -56,7 +56,7 @@
     </div>
   </section>
   <section class="case-section">
-    <div><p class="kicker">Validation</p><h2>A complete print held out.</h2></div>
+    <div><p class="kicker">Validation</p><h2>Trial-level validation.</h2></div>
     <div class="case-copy">
       <p>Seven trials supplied approximately 39,900 training samples. The complete 40 mm/s, 210°C trial supplied 4,677 validation samples. Holding out an entire trial avoids placing nearly identical neighboring frames in both training and validation.</p>
       <p>The best checkpoint was selected at epoch 47. Because this trial was used for checkpoint selection, the result is a validation score; a separate test set and further held-out trials remain future work.</p>
@@ -64,7 +64,7 @@
     </div>
   </section>
   <section class="case-section">
-    <div><p class="kicker">Local fidelity</p><h2>The difficult region beneath the nozzle.</h2></div>
+    <div><p class="kicker">Local fidelity</p><h2>Hot-front temperature accuracy.</h2></div>
     <div class="case-copy">
       <p>A low whole-field error can hide a mismatch in the small, rapidly changing hot front. I sampled a vertical line at x = 38.1 mm to compare the measured and reconstructed temperature profiles directly.</p>
       <p>The separate physics-informed hot-front reconstruction reached <strong>11.30°C line-profile RMSE</strong>, with a predicted peak of 162.05°C versus 161.66°C measured. This augmented reconstruction fills a camera blind spot beneath the nozzle; it is distinct from the direct CNN output behind the 3.59°C field score.</p>
